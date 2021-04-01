@@ -1,2 +1,76 @@
 footer.footer
-	.st-width footer
+	.footer-main
+		.container
+			.row
+				.col-3
+					.logo
+						a(href="/")
+							img(src="assets/img/logo-white.jpg", alt="")
+
+					.choose-city
+						.choose-city__label Ваш город:
+
+						select.js-select
+							option(value="") Зеленоград
+							option(value="") Тверь
+							option(value="") Дубна
+							option(value="") Клин
+							option(value="") Фрязино
+							option(value="") Открытый центр
+
+					.footer-address г. Зеленоград, корпус 118, правый вход с лица здания
+						.footer-address__link
+							a(href="#") Как проехать?
+				.col-4
+					.footer-main__call
+						.footer-main__phone
+							a(href="tel:+74997365684") +7 (499) 736-56-84
+
+						a.btn.btn_green(href='#') Экспресс консультация
+
+					.footer-time
+						.footer-time__label График работы:
+						.footer-time__text
+							|Пн-Пт 9.00 - 21.00
+							br
+							|Сб 9.00 - 18.00
+							br
+							|Вс выходной
+
+				.col-5
+					.footer-menu-wrap
+						ul.footer-menu
+							-
+								var list=[
+									{text:'О центрах Морозова'},
+									{text:'Что лечим?'},
+									{text:'Как лечим?'},
+									{text:'Цены'},
+									{text:'Контакты'},
+								]
+
+							each item in list
+								li.footer-menu__item
+									a.footer-menu__link(href="#")= item.text
+
+						ul.footer-menu.footer-menu_opacity
+							-
+								var list=[
+									{text:'Вопросы'},
+									{text:'Видео'},
+									{text:'Отзывы'},
+									{text:'Симптомы'},
+									{text:'Статьи'},
+								]
+
+							each item in list
+								li.footer-menu__item
+									a.footer-menu__link(href="#")= item.text
+
+	.footer-bottom
+		.container
+			.row
+				.col-12
+					.footer-bottom__content
+						a(href="#").footer-bottom__link Карта сайта
+						.footer-bottom__text Самые лучшие сайты медецинской темы разрабатывают в компании ЛДМ и Ко
