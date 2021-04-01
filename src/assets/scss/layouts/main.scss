@@ -1,0 +1,154 @@
+html,
+body{
+	background: #fff;
+	font-family: $font-site;
+	@include font(normal, 500, 10px, 1.375, $color-text);
+	box-sizing:border-box;
+	height:100%;
+}
+
+body{font-size: 1.6rem;}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	font-size: inherit;
+	font-family: inherit;
+}
+
+img{max-width: 100%;}
+
+a{
+	color: $color-turquoise;
+	text-decoration: underline;
+}
+
+a:hover{text-decoration: none;}
+
+p{
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5
+{
+	font-family: $font-lora;
+	color: $color-dark-blue;
+	font-weight: bold;
+}
+
+h1,.h1{
+	font-size: 4.2rem;
+	margin-bottom: 20px;
+}
+
+h2,.h2{
+	font-size: 3rem;
+	margin-bottom: 20px;
+}
+
+h3,.h3{
+	font-size: 2.4rem;
+	margin-bottom: 20px;
+}
+
+h4,.h4{
+	font-size: 2rem;
+	margin-bottom: 10px;
+}
+
+h5,.h5{
+	font-size: 1.8rem;
+	margin-bottom: 10px;
+}
+
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	width: 100%;
+	min-height: 100%;
+	margin: 0 auto;
+}
+
+main{
+	flex: 1 1 auto;
+	padding-bottom: 76px;
+	width: 100%;
+}
+
+.btn,
+input[type="submit"].btn,
+button.btn{
+	display: inline-block;
+	height: 4rem;
+	background: $color-blue;
+	border: 1px solid $color-blue;
+	border-radius: 5px;
+	@include font(normal, 500, 1.6rem, 3.8rem, #fff);
+	text-align: center;
+	text-decoration: none;
+	padding: 0 20px;
+	cursor: pointer;
+	transition: all 0.25s ease 0s;
+}
+
+.btn:hover,
+input[type="submit"].btn:hover,
+button.btn:hover{
+	color: #fff;
+	border-color: $color-blue-hover;
+	box-shadow: inset -3.5em 0 0 0 $color-blue-hover, inset 3.5em 0 0 0 $color-blue-hover;
+}
+
+.btn_green,
+input[type="submit"].btn_green,
+button.btn_green{
+	background: $color-green;
+	border-color: $color-green;
+}
+
+.btn_green:hover,
+input[type="submit"].btn_green:hover,
+button.btn_green:hover{
+	border-color: $color-green-hover;
+	box-shadow: inset -3.5em 0 0 0 $color-green-hover, inset 3.5em 0 0 0 $color-green-hover;
+}
+
+.btn_border,
+input[type="submit"].btn_border,
+button.btn_border{
+	background: transparent;
+	border-color: $color-dark-blue;
+	color: $color-dark-blue;
+}
+
+.btn_border:hover,
+input[type="submit"].btn_border:hover,
+button.btn_border:hover{
+	border-color: $color-dark-blue;
+	box-shadow: inset -3.5em 0 0 0 $color-dark-blue, inset 3.5em 0 0 0 $color-dark-blue;
+	color: #fff;
+}
+
+.code{
+	background-color: #f7f7f7;
+	border: 1px solid #e1e1e8;
+	color: #d14;
+	padding: 1px 4px;
+	display: inline-block;
+	font-family: monospace, arial;
+	border-radius: 3px;
+}
+
+.text-left{text-align: left !important;}
+.text-center{text-align: center !important;}
+.text-right{text-align: right !important;}
+.text-justify{text-align: justify !important;}
+.text-uppercase{text-transform: uppercase !important;}
+.text-bold {font-weight: 700 !important;}

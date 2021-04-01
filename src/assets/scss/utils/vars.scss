@@ -1,0 +1,36 @@
+//Path
+$path-img: "../img";
+$path-fonts: "../fonts";
+
+//Font
+$font-site: 'Lato', Arial, sans-serif;
+$font-lora: 'Lora', Arial, sans-serif;
+
+// Site
+$color-text: #1c1c1c;
+$color-dark-blue: #143352;
+$color-blue: #7ea9e0;
+$color-blue-hover: #5f80ac;
+$color-green: #65d189;
+$color-green-hover: #498a5e;
+$color-turquoise: #048589;
+$color-light-grey: #dee6ef;
+$color-grey: #c2cedc;
+$color-beige: #faf0eb;
+$color-light-red: #e24a73;
+$color-yellow: #ebc250;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1175px
+) !default;
