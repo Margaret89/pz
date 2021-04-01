@@ -1,2 +1,70 @@
 header.header
-	.st-width header
+	.container
+		.row
+			.col-12
+				.header-top
+					.logo
+						a(href="/")
+							img(src="assets/img/logo.png", alt="")
+
+					.choose-city
+						.choose-city__label Ваш город:
+
+						select.js-select
+							option(value="") Зеленоград
+							option(value="") Тверь
+							option(value="") Дубна
+							option(value="") Клин
+							option(value="") Фрязино
+							option(value="") Открытый центр
+
+					.header-address г. Зеленоград, корпус 118, правый вход с лица здания
+						.header-address__link
+							a(href="#") Как проехать?
+
+					.header-time
+						.header-time__label График работы:
+						.header-time__text
+							|Пн-Пт 9.00 - 21.00
+							br
+							|Сб 9.00 - 18.00
+							br
+							|Вс выходной
+
+					.header-top__call
+						.header-top__phone
+							a(href="tel:+74997365684") +7 (499) 736-56-84
+
+						a.btn.btn_green(href='#') Экспресс консультация
+
+	.nav
+		.container
+			.row
+				.col-12
+					.nav__content
+						nav.main-menu
+							ul.main-menu__list
+								-
+									var list=[
+										{text:'О центрах Морозова', status:'active'},
+										{text:'Что лечим?'},
+										{text:'Как лечим?'},
+										{text:'Цены'},
+									]
+
+								each item in list
+									li.main-menu__item(class=item.status?'active':'')
+										a.main-menu__link(href="#")= item.text
+
+						nav.top-menu
+							ul.top-menu__list
+								-
+									var list=[
+										{text:'Вопросы'},
+										{text:'Видео'},
+										{text:'Отзывы'},
+									]
+
+								each item in list
+									li.top-menu__item(class=item.status?'active':'')
+										a.top-menu__link(href="#")= item.text

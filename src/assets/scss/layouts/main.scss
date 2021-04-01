@@ -103,7 +103,7 @@ input[type="submit"].btn:hover,
 button.btn:hover{
 	color: #fff;
 	border-color: $color-blue-hover;
-	box-shadow: inset -3.5em 0 0 0 $color-blue-hover, inset 3.5em 0 0 0 $color-blue-hover;
+	box-shadow: inset -7em 0 0 0 $color-blue-hover, inset 7em 0 0 0 $color-blue-hover;
 }
 
 .btn_green,
@@ -117,7 +117,7 @@ button.btn_green{
 input[type="submit"].btn_green:hover,
 button.btn_green:hover{
 	border-color: $color-green-hover;
-	box-shadow: inset -3.5em 0 0 0 $color-green-hover, inset 3.5em 0 0 0 $color-green-hover;
+	box-shadow: inset -7em 0 0 0 $color-green-hover, inset 7em 0 0 0 $color-green-hover;
 }
 
 .btn_border,
@@ -132,7 +132,7 @@ button.btn_border{
 input[type="submit"].btn_border:hover,
 button.btn_border:hover{
 	border-color: $color-dark-blue;
-	box-shadow: inset -3.5em 0 0 0 $color-dark-blue, inset 3.5em 0 0 0 $color-dark-blue;
+	box-shadow: inset -7em 0 0 0 $color-dark-blue, inset 7em 0 0 0 $color-dark-blue;
 	color: #fff;
 }
 
