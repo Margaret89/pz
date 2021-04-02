@@ -1,0 +1,99 @@
+/*-------------- fact -----------------*/
+.fact{
+	background: #f0f3f6 url(../img/bg-fact.png) calc(100% + 30px) top no-repeat;
+	background-size: auto 100%;
+	margin-top: 125px;
+	margin-bottom: 110px;
+
+	&__content{display: flex;}
+
+	&__info{
+		max-width: 380px;
+		padding: 55px 50px;
+		position: relative;
+		border-left: 3px dashed #fff;
+	}
+
+	&__info::after{
+		content: '';
+		display: inline-block;
+		width: 87px;
+		height: 137px;
+		background: url(../img/face.png) center bottom no-repeat;
+		background-size: contain;
+		position: absolute;
+		bottom: 0;
+		left: -44px;
+	}
+
+	&__title{
+		font-family: $font-lora;
+		@include font(normal, bold, 3rem, 1.2, $color-dark-blue);
+	}
+
+	&__text{
+		@include font(normal, 500, 1.6rem, 1.2, $color-text);
+		margin-top: 37px;
+	}
+
+	.btn{
+		margin-top: 45px;
+		min-width: 175px;
+	}
+}
+
+.fact-list{
+	min-width: 485px;
+	padding: 58px 30px 60px 0;
+
+	&__item:not(:last-child){margin-bottom: 42px;}
+
+	&__item{
+		display: flex;
+		align-items: center;
+		position: relative;
+		padding: 10px 0 10px 15px;
+	}
+
+	&__item:before{
+		content: '';
+		display: inline-block;
+		position: absolute;
+		@include top-center;
+		left: 0;
+	}
+
+	&__item:nth-child(3n+1):before{
+		width: 116px;
+		height: 111px;
+		background: url(../img/bg-num1.png) center no-repeat;
+		background-size: contain;
+	}
+
+	&__item:nth-child(3n+2):before{
+		width: 127px;
+		height: 95px;
+		background: url(../img/bg-num2.png) center no-repeat;
+		background-size: contain;
+	}
+
+	&__item:nth-child(3n+3):before{
+		width: 128px;
+		height: 111px;
+		background: url(../img/bg-num3.png) center no-repeat;
+		background-size: contain;
+	}
+
+	&__num{
+		position: relative;
+		@include font(normal, 900, 7.2rem, 1, $color-dark-blue);
+		margin-right: 17px;
+	}
+
+	&__text{
+		max-width: 185px;
+		@include font(normal, 500, 1.6rem, 1.2, $color-dark-blue);
+		letter-spacing: -0.4px;
+		position: relative;
+	}
+}

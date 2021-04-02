@@ -1,0 +1,99 @@
+/*-------------- program -----------------*/
+.program-wrap{
+	margin-top: 110px;
+
+	h2, .h2{margin-bottom: 47px;}
+}
+
+.program-list{
+	.program-card{
+		&::before{
+			content: '';
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+	}
+
+	[class^=col-]:nth-child(4n+1) .program-card::before{
+		width: 241px;
+		height: 213px;
+		background: url(../img/bg-program1.png) left bottom no-repeat;
+		background-size: contain;
+	}
+	
+	[class^=col-]:nth-child(4n+2) .program-card::before{
+		width: 165px;
+		height: 239px;
+		background: url(../img/bg-program2.png) right top no-repeat;
+		background-size: contain;
+		top: 0;
+		right: 0;
+		bottom: auto;
+		left: auto;
+	}
+
+	[class^=col-]:nth-child(4n+3) .program-card::before{
+		width: 202px;
+		height: 252px;
+		background: url(../img/bg-program3.png) left bottom no-repeat;
+		background-size: contain;
+	}
+
+	[class^=col-]:nth-child(4n+4) .program-card::before{
+		width: 214px;
+		height: 193px;
+		background: url(../img/bg-program4.png) left top no-repeat;
+		background-size: contain;
+		top: 0;
+		bottom: auto;
+	}
+}
+
+.program-card{
+	height: calc(100% - 30px);
+	background: $color-beige;
+	border-radius: 5px;
+	position: relative;
+	border-bottom: 12px solid $color-light-red;
+	margin-bottom: 30px;
+	overflow: hidden;
+
+	&_yellow{border-color: $color-yellow;}
+	&_green{border-color: $color-green;}
+	&_grey{border-color: #bec4cc;}
+
+	&__content{position: relative;}
+
+	&__title{
+		min-height: 147px;
+		padding: 37px 33px 30px;
+		border-bottom: 4px dashed #fff;
+		font-family: $font-lora;
+		@include font(normal, bold, 2.1rem, 1.2, $color-dark-blue);
+	}
+
+	&__info{
+		min-height: 110px;
+		padding: 30px 33px;
+	}
+
+	&__price{
+		@include font(normal, bold, 1.6rem, 1.2, $color-dark-blue);
+	}
+
+	&__num{font-size: 2.1rem;}
+
+	&__text{
+		@include font(normal, 500, 1.4rem, 1.2, $color-dark-blue);
+		margin-top: 7px;
+	}
+
+	&__more{
+		padding: 4px 33px 28px;
+		text-align: center;
+
+		.btn{min-width: 175px;}
+	}
+}

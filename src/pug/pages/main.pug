@@ -1,0 +1,175 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Главная';
+
+block content
+	section.top-slider
+		.container
+			.row
+				.col-12
+					.top-slider__content
+						.top-slider__info
+							.top-slider__title Лечим позвоночник и суставы без нагрузки на суставы
+							.top-slider__text
+								p Уникальный способ лечения Морозова позволяет жить полной жизнью без ограничений не прибегая к операции и лекарствам.
+
+								p Разработан на основе опыта<br>в лечении <a href="#">собственной болезни</a>
+
+
+							a.btn(href='#') Узнайте как это возможно
+
+						.top-slider-img.js-top-slider-img
+							-
+								var list=[
+									'top-slide1.png',
+									'top-slide2.png',
+									'top-slide3.png',
+									'top-slide4.png',
+									'top-slide5.png',
+								]
+							each item in list
+								.top-slider-img__item
+									img(src="assets/img/"+item, alt="")
+
+	section.info-block
+		.container
+			.row
+				.col-7
+					.info-block__content
+						.h2 Мы лечим
+
+						ul.type-list.type-list_col
+							-
+								var list=[
+									{text:'Остеохондроз', link:'true'},
+									{text:'Межпозвоночная грыжа'},
+									{text:'Боли в спине'},
+									{text:'Артрит и артроз'},
+									{text:'Коксартроз'},
+									{text:'Заболевания суставов'},
+									{text:'Остеопороз'},
+									{text:'Плоскостопие'},
+									{text:'Нарушение осанки'},
+									{text:'Плечелопаточный периартрит'},
+								]
+								
+							each item in list
+								li
+									if(item.link)
+										a(href="#")= item.text
+									else
+										= item.text
+
+						.h2 Какая у вас цель лечения?
+						
+						ul.type-list.type-list_col
+							-
+								var list=[
+									{text:'чтобы не болело'},
+									{text:'чтобы похудеть'},
+									{text:'чтобы вскопать огород без боли'},
+									{text:'чтобы активно играть с внуками'},
+									{text:'чтобы полететь в космос'},
+									{text:'реабилитация после операции	'},
+									{text:'поддержка здорового состояния'},
+									{text:'чтобы зарядиться энергией'},
+								]
+
+							each item in list
+								li
+									if(item.link)
+										a(href="#")= item.text
+									else
+										= item.text
+
+						p
+							a(href="#") Допишите свой вариант
+
+						a.btn(href='#') Подобрать индивидуальную программу
+
+				.col-5
+					.event-calendar
+						.event-calendar__title Бесплатное лечение
+
+						.event-calendar__list
+							-
+								var list=[
+									{month:'Март', date:'17', text:'Гимнастика “Бодрая старушка” для тех кому за 60'},
+									{month:'Март', date:'24', text:'Зарядка для программиста и тех, кто работает “в кресле”'},
+									{month:'Март', date:'31', text:'Урок похудения для пышных и энергичных'},
+									{month:'Апрель', date:'7', text:'Гимнастика “Бодрая старушка” для тех кому за 60'},
+								]
+
+							each item in list
+								.event-calendar__item
+									.event-calendar__paper
+										.event-calendar__month= item.month
+										.event-calendar__date= item.date
+
+									.event-calendar__text= item.text
+
+
+						.event-calendar__more
+							a(href="#") Все события центра
+
+	section.fact
+		.container
+			.row
+				.col-12
+					.fact__content
+						.fact-list
+							-
+								var list=[
+									{num:'18', text:'лет практики в лечении спины и суставов'},
+									{num:'27 489', text:'пациентов центра, вернувшихся к активному образу жизни'},
+									{num:'99', text:'публикаций с участием Игоря Морозова на ТВ, радио и СМИ'},
+								]
+
+							each item in list
+								.fact-list__item
+									.fact-list__num.js-fact-list-num(data-count=item.num)= item.num
+									.fact-list__text= item.text
+
+						.fact__info
+							.fact__title Задайте вопрос Игорю Морозову
+							.fact__text Вы можете получить пофессиональную консультацию у Игоря Морозова по вашему случаю бесплатно.
+
+							a.btn.btn_green(href='#') Задать вопрос
+
+	section.program-wrap
+		.container
+			.row
+				.col-12
+					.h2 Программы лечения
+			
+		.program-list
+			.container
+				.row
+					-
+						var list=[
+							{title:'Комплексное лечение до результата', price:'30 000', cur:'р' , text:'в рассрочку по 750р. в неделю'},
+							{title:'Кинезитерапия', price:'19 500', cur:'р / месяц', color:'yellow'},
+							{title:'Мануальная терапия', price:'2 350', cur:'р / посещение', text:'скидки  от 10 посещений', color:'green'},
+							{title:'Программы гимнастического зала', price:'350', cur:'р / месяц', text:'в группах до 20 человек', color:'grey'},
+						]
+
+					each item in list
+						.col-3
+							.program-card(class=item.color?'program-card_'+item.color:'')
+								.program-card__content
+									.program-card__title= item.title
+
+									.program-card__info
+										.program-card__price
+											|от&nbsp;
+											span.program-card__num= item.price
+											|&nbsp;
+											= item.cur
+
+										if(item.text)
+											.program-card__text= item.text
+									
+									.program-card__more
+										a.btn.btn_border(href='#') Узнать больше
+

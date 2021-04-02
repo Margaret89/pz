@@ -1,0 +1,81 @@
+/*-------------- event-calendar -----------------*/
+.event-calendar{
+	border-radius: 5px;
+	background: $color-light-grey;
+	padding: 47px 50px;
+
+	&__title{
+		font-family: $font-lora;
+		@include font(normal, bold, 2.4rem, 1.2, $color-dark-blue);
+		margin-bottom: 34px;
+	}
+
+	&__list{padding: 0 5px;}
+
+	&__item{
+		display: flex;
+		align-items: center;
+	}
+
+	&__item:not(:last-child){margin-bottom: 40px;}
+
+	&__paper{
+		width: 68px;
+		flex: 0 0 68px;
+		font-family: Arial;
+		position: relative;
+		margin-right: 27px;
+	}
+
+	&__paper::before{
+		content: '';
+		display: inline-block;
+		width: calc(100% + 7px);
+		height: 55px;
+		background: url(../img/data-shadow.png) bottom center no-repeat;
+		background-size: contain;
+		position: absolute;
+		bottom: -8px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&__paper::after{
+		content: '';
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		background: url(../img/pin.png) center no-repeat;
+		background-size: contain;
+		position: absolute;
+		top: -5px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	&__month{
+		background: linear-gradient(to right, rgba(47,65,92,1) 0%, rgba(32,47,73,1) 100%);
+		padding: 5px 2px;
+		@include font(normal, bold, 1rem, 1, #fff);
+		text-align: center;
+		position: relative;
+	}
+
+	&__date{
+		padding: 3px 10px;
+		@include font(normal, bold, 4rem, 1, #2d2d2d);
+		text-align: center;
+		background: radial-gradient(ellipse at center, rgba(247,247,247,1) 0%, rgba(221,221,221,1) 100%);
+		position: relative;
+	}
+
+	&__text{
+		@include font(normal, 500, 1.6rem, 1.2, $color-dark-blue);
+	}
+
+	&__more{
+		margin-top: 28px;
+		padding: 0 5px;
+	}
+}

@@ -9,9 +9,18 @@ import {$} from './common';
 // });
 // $('.js-move-up').click(function(){$('body,html').animate({scrollTop:0},800);return false;});
 
-/* select */
+// select
 if($('.js-select').length){
 	$('.js-select').select2({
 		minimumResultsForSearch: -1,
+	});
+}
+
+// top-slider
+if($('.js-top-slider-img').length){
+	$('.js-top-slider-img').slick({
+		infinite: true,
+		arrows: false,
+		dots: true,
 	});
 }

@@ -1,0 +1,77 @@
+/*-------------- top-slider -----------------*/
+.top-slider{
+	&__content{
+		display: flex;
+		justify-content: space-between;
+		padding: 60px 0 35px;
+	}
+
+	&__info{
+		width: 60%;
+		padding-top: 35px;
+		position: relative;
+		z-index: 2;
+	}
+
+	&__title{
+		font-family: $font-lora;
+		@include font(normal, bold, 4.2rem, 1, $color-dark-blue);
+		letter-spacing: 0.2px;
+	}
+
+	&__text{
+		max-width: 395px;
+		@include font(normal, 500, 1.6rem, 1.375, $color-text);
+		margin-top: 40px;
+		letter-spacing: -0.1px;
+
+		p:last-child{margin-bottom: 0;}
+	}
+
+	.btn{margin-top: 50px;}
+}
+
+.top-slider-img{
+	width: calc(54% + 50px);
+	margin-left: -14%;
+	margin-right: -50px;
+
+	.slick-dots{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		position: absolute;
+		bottom: 73px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+
+		&,
+		& li{
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+
+		button{
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			border-radius: 50%;
+			border: 1px solid $color-dark-blue;
+			background: #fff;
+			outline: 0;
+			box-shadow: none;
+			font-size: 0;
+			padding: 0;
+			margin: 5px;
+			transition: background 0.2s ease 0s;
+			cursor: pointer;
+		}
+
+		button:hover,
+		.slick-active button{
+			background: $color-dark-blue;
+		}
+	}
+}
