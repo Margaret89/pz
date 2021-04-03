@@ -25,6 +25,8 @@
 		margin-top: 40px;
 		letter-spacing: -0.1px;
 
+		p{line-height: 1.375;}
+		p{margin-bottom: 22px;}
 		p:last-child{margin-bottom: 0;}
 	}
 
@@ -32,9 +34,12 @@
 }
 
 .top-slider-img{
+	display: none;
 	width: calc(54% + 50px);
 	margin-left: -14%;
 	margin-right: -50px;
+
+	&.slick-initialized{display: block;}
 
 	.slick-dots{
 		display: flex;

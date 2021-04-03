@@ -1,0 +1,42 @@
+/*-------------- news-list -----------------*/
+.news-wrap{
+	margin-top: 107px;
+
+	h2, .h2{margin-bottom: 35px;}
+}
+
+.news-list{
+	&__item{
+		display: flex;
+		align-items: center;
+	}
+
+	&__img{
+		flex: 0 0 270px;
+		margin-right: 20px;
+	}
+
+	&__title{
+		@include font(normal, 900, 1.6rem, 1.2, $color-dark-blue);
+
+		a{
+			color: $color-dark-blue;
+			text-decoration: none;
+			transition: color 0.2s ease 0s;
+		}
+
+		a:hover{color: $color-green;}
+	}
+
+	&__text{
+		@include font(normal, 500, 1.3rem, 1.4, $color-text);
+		margin-top: 20px;
+	}
+
+	&__date{
+		@include font(normal, 500, 1.3rem, 1.2, $color-dark-blue);
+		margin-top: 27px;
+	}
+
+	&__more{margin-top: 45px;}
+}

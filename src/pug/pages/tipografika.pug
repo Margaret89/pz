@@ -95,6 +95,28 @@ block content
 					option(value="") Самара
 					option(value="") Киров
 					option(value="") Санкт-Петербург
+					
+				br
+				br
+				br
+				.h2 Нестандартный radio
+					.input-radio
+						input#radio1(type='radio' name='param1')
+						label.input-radio__label(for='radio1')
+							span.input-radio__mark
+							span.input-radio__text Текст
+
+				br
+				br
+				br
+				.h2 Нестандартный checkbox
+					.input-check
+						input#check1(type='checkbox')
+						label.input-check__label(for='check1')
+							span.input-check__mark
+								+svg('ic-tick','ic-tick', '12', '12')
+							span.input-check__text Текст
+
 
 				br
 				br
@@ -118,5 +140,20 @@ block content
 				.type-icon
 					.type-icon__item
 						.type-icon__img
-							+svg('ic-twitter','ic-twitter', '17', '14')
-						.type-icon__name ic-twitter
+							+svg('ic-arrow-right','ic-arrow-right', '7', '14')
+						.type-icon__name ic-arrow-right
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-prev','ic-prev', '12', '32')
+						.type-icon__name ic-prev
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-next','ic-next', '12', '32')
+						.type-icon__name ic-next
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-tick','ic-tick', '16', '16')
+						.type-icon__name ic-tick

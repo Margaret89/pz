@@ -1,0 +1,27 @@
+/*-------------- history -----------------*/
+.history-wrap{
+	margin-top: 106px;
+	margin-bottom: 110px;
+
+	h2, .h2{margin-bottom: 38px;}
+}
+
+.history-comp{
+	display: flex;
+	margin: -35px -15px 0;
+
+	&__item{
+		width: calc(50% - 30px);
+		margin: 0 15px;
+		text-align: center;
+	}
+
+	&__img{
+		max-width: 276px;
+		margin: 0 auto 15px;
+	}
+
+	&__label{
+		@include font(normal, bold, 2.4rem, 1.2, $color-dark-blue);
+	}
+}

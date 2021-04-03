@@ -173,3 +173,351 @@ block content
 									.program-card__more
 										a.btn.btn_border(href='#') Узнать больше
 
+	section.faq-wrap
+		.container
+			.row
+				.col-12
+					.h2 Частые вопросы
+
+					.faq.js-faq
+						-
+							var list=[
+								{
+									head:'А что, если мне станет хуже?',
+									title:'Нагрузка на ваши мышцы будет минимальна на старте, всего 1-5 кг',
+									icon:'question1.png',
+									status:'active',
+									text:[
+										'Как правило большую травмоопасность будет представлять собой автобус который повезет вас к нам в центр. Т.к. может резко затормозить или дернуться.',
+										'Так или иначе вы уже поднимаете свой собственный вес нагружая мышцы и суставы, мы в центре дадим локальную нагрузку только на мышцы чтобы создать мышечный контент.',
+										'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.',
+									]
+								},
+								{
+									head:'Разве можно давать нагрузку при болях?',
+									title:'Заголовок 2',
+									icon:'question2.png',
+									text:[
+										'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.',
+									]
+								},
+								{
+									head:'Я слышал(а), что нельзя ходить на зарядку',
+									title:'Заголовок 3',
+									icon:'question3.png',
+									text:[
+										'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+									]
+								},
+								{
+									head:'А мой врач сказал, что мне нельзя',
+									title:'Заголовок 4',
+									icon:'question1.png',
+									text:[
+										'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.',
+										'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+									]
+								},
+								{
+									head:'Разве можно давать нагрузку при болях?',
+									title:'Заголовок 5',
+									icon:'question2.png',
+									text:[
+										'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+									]
+								},
+								{
+									head:'Я слышал(а), что нельзя ходить на зарядку',
+									title:'Заголовок 6',
+									icon:'question3.png',
+									text:[
+										'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.',
+										'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+									]
+								},
+							]
+
+						.faq__list
+							each item, index in list
+								.faq__item.js-faq-item(class=item.status?'active':'', data-num="faq"+index)
+									.faq__head.js-faq-head
+										.faq__icon
+											img(src="assets/img/"+item.icon, alt="")
+										.faq__title= item.head
+
+										.faq__arr
+											+svg('ic-arrow-right','ic-arrow-right', '7', '14')
+
+							.faq__btn
+								a.btn.btn_green(href='#') Задать свой вопрос
+								a.btn(href='#') Перейти в раздел Вопрос-ответ
+
+						.faq__main
+							each item, index in list
+								.faq__item.js-faq-item(class=item.status?'active':'', data-num="faq"+index)
+									.faq__head.js-faq-head
+										.faq__icon
+											img(src="assets/img/"+item.icon, alt="")
+										.faq__title= item.head
+
+										.faq__arr
+											+svg('ic-arrow-right','ic-arrow-right', '7', '14')
+									
+									.faq__content
+										.h3= item.title 
+
+										each text in item.text
+											p= text
+
+	section.team-wrap.bg-grey
+		.container
+			.row
+				.col-12
+					.h2 Персонал центра
+
+					.team-slider.js-team-slider
+						-
+							var list=[
+								{img:'person1.jpg', lastname:'Афонина', name:'Ольга Владимировна', text:'Врач высшей категории стаж 10 лет', path:'1'},
+								{img:'person2.jpg', lastname:'Баева', name:'Галина Алексеевна', text:'Врач высшей категории', path:'2'},
+								{img:'person3.jpg', lastname:'Белюстов', name:'Василий Васильевич', text:'Врач высшей категории стаж 10 лет', path:'3'},
+								{img:'person4.jpg', lastname:'Гордиеенко', name:'Татьяна Григорьевна', path:'4'},
+								{img:'person2.jpg', lastname:'Баева', name:'Галина Алексеевна', text:'Врач высшей категории', path:'2'},
+								{img:'person3.jpg', lastname:'Белюстов', name:'Василий Васильевич', text:'Врач высшей категории стаж 10 лет', path:'3'},
+								{img:'person1.jpg', lastname:'Афонина', name:'Ольга Владимировна', text:'Врач высшей категории стаж 10 лет', path:'1'},
+								{img:'person4.jpg', lastname:'Гордиеенко', name:'Татьяна Григорьевна', path:'4'},
+							]
+
+						each item, index in list
+							.team-slider__item
+								.team-slider__img
+									if(item.path == '1')
+										svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 260 243' preserveAspectRatio='xMinYMin meet')
+											path(fill="#7ea9e0" style="opacity: 0.6" d='M96.491,7.327C108.1,5.914,116.917,6.17,125.26,8.611c32.553,9.524,77.935,50.59,96.2,78.647,7.813,12,16.294,32.194,12.73,51.211-5.675,30.276-29.893,48-50.609,66.219-12.792,11.252-42.077,38.041-68.76,36.205-56.8-3.91-89.693-84.675-76.993-152.193C43.5,58.562,54.734,32.633,77.1,16.028,82.736,11.845,89.614,11.106,96.491,7.327Z')
+											path(fill="#7ea9e0" d='M106.468,3.991c11.345-.179,19.823.968,27.623,4.175,30.435,12.516,70.034,56.8,84.795,85.751,6.316,12.387,12.442,32.746,7.067,50.744-8.558,28.653-33.726,43.292-55.567,58.773-13.486,9.56-44.466,32.437-70.02,27.942-54.4-9.57-77.907-90.907-58.779-154.8,8.538-28.52,22.02-52.41,45.289-66.16C92.738,6.95,99.449,6.939,106.468,3.991Z')
+											clippath(id='clip'+index)
+												path(fill='#ffffff' d='M106.815,7.368c11-.174,19.212.938,26.771,4.051,29.5,12.144,67.875,55.109,82.181,83.2,6.12,12.019,12.058,31.772,6.848,49.235-8.293,27.8-32.686,42-53.853,57.026-13.07,9.275-43.095,31.472-67.861,27.11-52.722-9.285-75.5-88.2-56.966-150.2C52.21,50.121,65.276,26.941,87.827,13.6,93.509,10.239,100.012,10.227,106.815,7.368Z')
+											image(xlink:href='assets/img/person1.jpg' width='100%' height='100%' style="clip-path:url(#clip"+index+");")
+
+									else if(item.path == '2')
+										svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 260 243' preserveAspectRatio='xMinYMin meet')
+											path(fill="#7ea9e0" style="opacity: 0.6" d='M245.465,122.654c-2.141,11.483-5.034,19.8-9.871,27.019-18.873,28.156-71.716,59.086-103.988,68.079-13.808,3.848-35.63,5.88-52.714-3.212-27.2-14.473-36.837-42.85-48.01-68.04-6.9-15.555-23.673-51.475-13.9-76.342C37.78,17.223,124.768,10.081,185.408,42.4c27.068,14.427,48.446,32.9,57.576,59.177C245.285,108.2,243.924,114.971,245.465,122.654Z')
+											path(fill="#7ea9e0" d='M245.651,133.157c-3.238,10.86-6.88,18.592-12.286,25.062-21.094,25.242-75.268,49.7-107.344,55.09-13.723,2.305-35,2.043-50.567-8.468-24.783-16.732-31.195-45.091-39.412-70.533-5.074-15.709-17.6-52.072-5.635-75.067C55.89,10.289,140.6,12.257,195.854,49.614c24.662,16.675,43.417,36.673,49.552,62.955C246.952,119.192,244.947,125.588,245.651,133.157Z')
+
+											clippath(id='clip'+index)
+												path(fill='#ffffff' d='M242.323,132.476c-3.137,10.526-6.669,18.019-11.911,24.288-20.457,24.459-73.006,48.149-104.124,53.362-13.313,2.231-33.955,1.971-49.061-8.222-24.048-16.227-30.278-43.716-38.258-68.378-4.927-15.227-17.1-50.477-5.49-72.762,24.706-47.439,106.893-45.5,160.507-9.278,23.931,16.17,42.133,35.559,48.093,61.035C243.581,118.941,241.638,125.139,242.323,132.476Z')
+											image(xlink:href='assets/img/person2.jpg' width='100%' height='100%' style="clip-path:url(#clip"+index+");")
+
+									else if(item.path == '3')
+										svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 260 243' preserveAspectRatio='xMinYMin meet')
+											path(fill="#7ea9e0" style="opacity: 0.6" d='M133.111,238.441c-11.552-1.744-19.97-4.349-27.351-8.932-28.8-17.886-61.546-69.607-71.651-101.534C29.785,114.316,27,92.588,35.5,75.212c13.527-27.662,41.561-38.264,66.357-50.288,15.311-7.423,50.638-25.411,75.834-16.5,53.636,18.961,63.785,105.6,33.573,167.281-13.486,27.531-31.211,49.518-57.165,59.539C147.556,237.766,140.738,236.639,133.111,238.441Z')
+											path(fill="#7ea9e0" d='M122.619,238.987c-10.969-2.861-18.824-6.234-25.478-11.412-25.963-20.2-52.286-73.476-58.783-105.33-2.779-13.629-3.254-34.889,6.715-50.8,15.87-25.328,44-32.705,69.146-41.785,15.528-5.606,51.444-19.37,74.846-8.2,49.817,23.773,50.779,108.457,15.345,164.925-15.816,25.2-35.158,44.625-61.22,51.654C136.624,239.808,130.161,238.025,122.619,238.987Z')
+											
+											clippath(id='clip'+index)
+												path(fill='#ffffff' d='M123.184,235.64c-10.63-2.773-18.243-6.043-24.691-11.065C73.334,204.981,47.835,153.305,41.548,122.4c-2.69-13.222-3.144-33.849,6.523-49.287C63.46,48.539,90.724,41.374,115.1,32.558c15.052-5.444,49.868-18.807,72.547-7.98,48.277,23.05,49.186,105.209,14.826,160-15.337,24.458-34.089,43.305-59.351,50.131C136.758,236.433,130.494,234.7,123.184,235.64Z')
+											image(xlink:href='assets/img/person3.jpg' width='100%' height='100%' style="clip-path:url(#clip"+index+");")
+
+									else if(item.path == '4')
+										svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 260 243' preserveAspectRatio='xMinYMin meet')
+											path(fill="#7ea9e0" style="opacity: 0.6" d='M172.82,16.875c10.332,5.444,17.422,10.668,22.883,17.419,21.308,26.341,35.225,85.9,34.273,119.342-0.407,14.308-4.916,35.721-18.647,49.321-21.859,21.65-51.805,22.435-79.162,25.626-16.892,1.97-56.15,7.325-77.008-9.361C10.759,183.7,29.649,98.627,78.435,50.371,100.211,28.832,124.168,13.917,151.96,13,158.963,12.764,165.028,16.068,172.82,16.875Z')
+											path(fill="#7ea9e0" d='M182.9,19.81c9.413,6.306,15.72,12.07,20.3,19.143,17.869,27.6,25.213,86.507,20.878,118.694-1.854,13.77-8.393,33.984-23.03,45.715-23.3,18.677-52.279,16.39-79,16.688-16.5.185-54.927,1.362-73.347-16.867C9.49,164.376,36.408,84.17,88.411,42.548c23.213-18.579,47.852-30.541,74.763-28.6C169.953,14.431,175.468,18.238,182.9,19.81Z')
+		
+
+											clippath(id='clip'+index)
+												path(fill='#ffffff' d='M181.27,22.781c9.124,6.111,15.236,11.7,19.672,18.556,17.31,26.756,24.4,83.891,20.181,115.111-1.8,13.357-8.154,32.966-22.352,44.352-22.6,18.127-50.694,15.923-76.6,16.227-16,.187-53.254,1.349-71.1-16.323-38-37.617-11.859-115.423,38.58-155.821,22.514-18.032,46.409-29.646,72.5-27.782C168.717,17.572,174.062,21.261,181.27,22.781Z')
+											image(xlink:href='assets/img/person4.jpg' width='100%' height='100%' style="clip-path:url(#clip"+index+");")
+
+								.team-slider__name= item.lastname
+									br
+									= item.name
+								.team-slider__text= item.text
+
+	section.history-wrap
+		.container
+			.row
+				.col-12
+					.h2 Истории успеха
+
+			.row
+				.col-6
+					.history-content
+						.h3 Из инвалиндной коляски на сноуборд!
+						p Как правило большую травмоопасность будет представлять собой автобус который повезет вас к нам в центр. Т.к. может резко затормозить или дернуться.
+						p Так или иначе вы уже поднимаете свой собственный вес нагружая мышцы и суставы, мы в центре дадим локальную нагрузку только на мышцы чтобы создать мышечный контент. 
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+
+						a.btn(href='#') Читать всю историю оздоровления
+
+				.col-6
+					.history-comp
+						.history-comp__item
+							.history-comp__img
+								svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 276 380' preserveAspectRatio='xMinYMin meet')
+									path(fill="#e24a73" style="opacity: 0.65" d='M14.582,271.45L5.1,226.352C-0.494,164.906-5.611,105.9,23.885,64.374c10.9-15.342,23.4-29.125,41.4-40.637C126.825-15.629,201.3-1.227,237.3,32.086c26.035,24.087,40.838,69.064,38.426,108.8-4.3,70.882-25.974,148.351-70.421,196.534-22.392,24.274-66.843,47.1-104.274,37.219-31.706-8.369-53.566-31.916-71.775-64.771L18.994,285.338Z')
+									path(fill="#e24a73" d='M31.746,275.521L16.695,234.4C3.089,177.38-9.741,122.586,12.376,79.536,20.549,63.629,30.442,48.97,45.815,35.7,98.38-9.673,170.416-6.244,208.824,20.192c27.772,19.114,47.81,59.4,50.938,97.089,5.578,67.237-4.293,143.027-39.575,194.371-17.775,25.867-56.5,53.367-93.07,49.16-30.973-3.564-54.743-22.739-76.34-51.161l-12.992-21.67Z')
+
+									clippath(id='clip-before')
+										path(fill='#ffffff' d='M40.094,280.28l-17.37-39.107C5.734,186.467-10.354,133.882,8.45,90.47,15.4,74.429,24.108,59.493,38.259,45.554,86.647-2.108,157.22-3.459,196.446,19.811,224.809,36.637,247,74.6,252.5,111.148c9.814,65.188,5.1,139.722-26.025,192.079-15.679,26.377-51.717,55.711-87.7,53.992-30.48-1.456-54.938-18.6-77.875-44.9L46.8,292.035Z')
+									image(xlink:href='assets/img/before.jpg' width='100%' height='100%' style="clip-path:url(#clip-before);")
+							
+							.history-comp__label До центра
+
+						.history-comp__item
+							.history-comp__img
+								svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 276 380' preserveAspectRatio='xMinYMin meet')
+									path(fill="#65d189" style="opacity: 0.65" d='M241.454,288.59l15.709-43.28c14.149-60,27.488-117.652,4.136-162.864-8.629-16.706-19.064-32.094-35.251-46.007C170.7-11.137,95.008-7.34,54.718,20.56,25.585,40.734,4.633,83.147,1.445,122.791-4.242,193.51,6.327,273.183,43.534,327.082c18.745,27.154,59.514,55.97,97.926,51.449,32.537-3.829,57.465-24.055,80.085-54q6.8-11.409,13.6-22.822Z')
+									path(fill="#65d189" d='M242.6,268.8l12.541-41.912c10.143-57.685,19.646-113.1-5-154.705-9.106-15.372-19.853-29.4-35.98-41.706C159.014-11.612,87.38-3.863,50.664,24.809,24.116,45.54,6.552,86.918,5.7,124.7,4.173,192.085,18.57,267.076,56.84,316.161c19.28,24.729,59.557,49.827,95.77,43.433,30.675-5.415,53.228-25.966,73.059-55.609q5.827-11.195,11.655-22.392Z')
+		
+									clippath(id='clip'+index)
+										path(fill='#ffffff' d='M228.761,279.683q8.676-19.534,17.354-39.072c16.974-54.657,33.048-107.194,14.261-150.567C253.435,74.018,244.732,59.1,230.6,45.17,182.251-2.45,111.742-3.8,72.552,19.45c-28.337,16.81-50.5,54.744-56,91.254-9.806,65.129-5.092,139.6,26,191.9,15.665,26.353,51.669,55.661,87.62,53.943,30.452-1.455,54.888-18.584,77.8-44.863l14.083-20.261Q225.41,285.555,228.761,279.683Z')
+									image(xlink:href='assets/img/after.jpg' width='100%' height='100%' style="clip-path:url(#clip"+index+");")
+							
+							.history-comp__label После лечения
+
+
+	section.survey-wrap
+		.container
+			.row.align-items-center
+				.col-7
+					.survey-about
+						.survey-about__content
+							.survey-about__title Болит спина?
+								br
+								|Узнай причину боли!
+
+							.survey-about__text Пройдите простой тест, который поможет диагностировать возможные проблемы и расскажет что делать
+
+				.col-5
+					form.quiz.js-quiz
+						.quiz__step.js-quiz-step.active(data-step='1')
+							.quiz__title Охарактеризуйте свой привычный образ жизни
+
+							.quiz__list
+								.quiz__item
+									.quiz__radio
+										.input-radio
+											input#radio1(type='radio', name='param1', checked='checked')
+											label.input-radio__label(for='radio1')
+												span.input-radio__mark
+												span.input-radio__text Малоподвижный образ жизни
+
+									.quiz__radio
+										.input-radio
+											input#radio2(type='radio' name='param1')
+											label.input-radio__label(for='radio2')
+												span.input-radio__mark
+												span.input-radio__text Много двигаюсь / Занимаюсь спортом
+
+									.quiz__radio
+										.input-radio
+											input#radio3(type='radio' name='param1')
+											label.input-radio__label(for='radio3')
+												span.input-radio__mark
+												span.input-radio__text Занимаюсь тяжёлым физическим трудом
+
+						.quiz__step.js-quiz-step(data-step='2')
+							.quiz__title Личные данные
+
+							.quiz__list
+								.quiz__item
+									.quiz__label Ваш возраст
+									input(type='number', value='18')
+
+								.quiz__item
+									.quiz__label Ваш вес (кг.)
+									input(type='number', value='40')
+
+								.quiz__item
+									.quiz__label Ваш рост (см.)
+									input(type='number', value='180')
+
+								.quiz__item
+									.quiz__label Пол
+
+									.quiz__radio
+										.input-radio
+											input#man(type='radio', name='param2', checked='checked')
+											label.input-radio__label(for='man')
+												span.input-radio__mark
+												span.input-radio__text М
+
+									.quiz__radio
+										.input-radio
+											input#woman(type='radio', name='param2')
+											label.input-radio__label(for='woman')
+												span.input-radio__mark
+												span.input-radio__text М
+
+						.quiz__step.js-quiz-step(data-step='3')
+							.quiz__title Что вас беспокоит?
+
+							.quiz__list.js-req-check
+								.quiz__check
+									.input-check
+										input#check1(type='checkbox')
+										label.input-check__label(for='check1')
+											span.input-check__mark
+												+svg('ic-tick','ic-tick', '12', '12')
+											span.input-check__text Спина
+
+								.quiz__check
+									.input-check
+										input#check2(type='checkbox')
+										label.input-check__label(for='check2')
+											span.input-check__mark
+												+svg('ic-tick','ic-tick', '12', '12')
+											span.input-check__text Суставы
+
+								.quiz__check
+									.input-check
+										input#check3(type='checkbox')
+										label.input-check__label(for='check3')
+											span.input-check__mark
+												+svg('ic-tick','ic-tick', '12', '12')
+											span.input-check__text Ничего не беспокоит
+
+						.quiz__error.js-quiz-error Выберите один из пунктов
+
+						button.btn.js-quiz-next(type='submit')
+							span Далее
+							+svg('ic-arrow-right','ic-arrow-right', '7', '14')
+
+						.quiz__success.js-quiz-success Спасибо за пройденный тест!
+	
+	section.news-wrap
+		.container
+			.row
+				.col-12
+					.h2 Новости центра
+
+		.news-list
+			.container
+				.row
+					-
+						var list=[
+							{img:'news1.jpg', title:'Холодовая травма: неотложная помощь (в прозе и стихах)', text:'Как правило большую травмоопасность будет представлять собой автобус который повезет вас к нам в центр. Т.к. может резко затормозить или дернуться. Так или иначе вы уже поднимаете свой собственный вес нагружая мышцы. и суставы, мы в центре дадим ', date:'15.03.2018'},
+							{img:'news2.jpg', title:'Холодовая травма: неотложная помощь (в прозе и стихах)', text:'Как правило большую травмоопасность будет представлять собой автобус который повезет вас к нам в центр. Т.к. может резко затормозить или дернуться.Так или иначе вы уже поднимаете свой собственный вес нагружая мышцы. и суставы, мы в центре дадим .локальнуюнагрузку только.', date:'15.03.2018'},
+						]
+
+					each item, index in list
+						.col-6
+							.news-list__item
+								a(href="#").news-list__img
+									svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 270 182' preserveAspectRatio='xMinYMin meet')
+										path(fill='#fbf4f1' d='M75.641,167.127l29.389,7.989c40.325,6.049,79.061,11.692,107.592-6.153,10.543-6.593,20.118-14.3,28.407-25.724,28.343-39.05,21.711-88.694,1.12-113.71C227.26,11.44,198.156-.048,171.847.013c-46.932.108-98.879,11.411-132.381,38.855-16.879,13.826-33.651,42.248-28.575,67.3,4.3,21.222,18.994,36.537,39.969,49.8l15.787,7.711Z')
+										path(fill='#eee0d9' d='M78.292,159.65l27.266,9.69c37.766,8.639,74.055,16.779,102.372,1.915,10.463-5.491,20.09-12.112,28.767-22.342,29.668-34.981,26.966-82.522,9.263-107.722C233.16,22.97,206.417,9.982,181.489,8.145c-44.469-3.277-94.5,3.7-128.215,27.3C36.287,47.341,18.347,73.079,21.349,97.2c2.543,20.429,15.358,36.007,34.272,50.095l14.4,8.447Z')
+
+										clippath(id='clip-news'+index)
+											path(fill='#ffffff' d='M75.1,154.167l25.95,11.233c36.256,10.887,71.106,21.192,99.682,8.514,10.559-4.684,20.377-10.525,29.5-19.953,31.206-32.236,31.671-78.841,16.056-104.6C235,30.736,209.77,16.317,185.586,12.905,142.446,6.819,93.217,10.384,58.8,31.249,41.467,41.76,22.3,65.731,23.653,89.479,24.8,109.6,36.278,125.64,53.8,140.626l13.488,9.184Z')
+										image(xlink:href='assets/img/'+item.img width='100%' height='100%' style="clip-path:url(#clip-news"+index+");")
+
+								.news-list__content
+									.news-list__title
+										a(href="#")= item.title
+									.news-list__text= item.text
+									.news-list__date= item.date
+
+				.row
+					.col-12
+						.news-list__more
+							a.btn(href='#') Архив новостей

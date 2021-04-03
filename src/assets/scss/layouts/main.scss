@@ -7,7 +7,7 @@ body{
 	height:100%;
 }
 
-body{font-size: 1.6rem;}
+body{font-size: 1.4rem;}
 
 *,
 *:before,
@@ -27,8 +27,10 @@ a{
 a:hover{text-decoration: none;}
 
 p{
+	line-height: 1.7;
+	letter-spacing: 0.1px;
 	padding: 0;
-	margin-bottom: 22px;
+	margin-bottom: 25px;
 }
 
 h1,.h1,
@@ -54,7 +56,8 @@ h2,.h2{
 
 h3,.h3{
 	font-size: 2.4rem;
-	margin-bottom: 20px;
+	line-height: 1.2;
+	margin-bottom: 25px;
 }
 
 h4,.h4{
@@ -94,7 +97,7 @@ ul + .h2{
 
 main{
 	flex: 1 1 auto;
-	padding-bottom: 76px;
+	padding-bottom: 100px;
 	width: 100%;
 }
 
@@ -109,7 +112,7 @@ button.btn{
 	@include font(normal, 500, 1.6rem, 3.8rem, #fff);
 	text-align: center;
 	text-decoration: none;
-	padding: 0 20px;
+	padding: 0 30px;
 	cursor: pointer;
 	transition: all 0.25s ease 0s;
 }
@@ -133,7 +136,7 @@ button.btn_green{
 input[type="submit"].btn_green:hover,
 button.btn_green:hover{
 	border-color: $color-green-hover;
-	box-shadow: inset -7em 0 0 0 $color-green-hover, inset 7em 0 0 0 $color-green-hover;
+	box-shadow: inset -12em 0 0 0 $color-green-hover, inset 12em 0 0 0 $color-green-hover;
 }
 
 .btn_border,
@@ -148,9 +151,19 @@ button.btn_border{
 input[type="submit"].btn_border:hover,
 button.btn_border:hover{
 	border-color: $color-dark-blue;
-	box-shadow: inset -7em 0 0 0 $color-dark-blue, inset 7em 0 0 0 $color-dark-blue;
+	box-shadow: inset -12em 0 0 0 $color-dark-blue, inset 12em 0 0 0 $color-dark-blue;
 	color: #fff;
 }
+
+.btn{
+	.icon{fill: #fff;}
+	&_border .icon{fill: $color-dark-blue;}
+
+	.icon:first-child{margin-right: 25px;}
+	.icon:last-child{margin-left: 25px;}
+}
+
+p + .btn{margin-top: 15px;}
 
 .code{
 	background-color: #f7f7f7;

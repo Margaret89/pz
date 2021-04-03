@@ -1,0 +1,117 @@
+/*-------------- faq -----------------*/
+.faq-wrap{
+	margin-top: 77px;
+	margin-bottom: 145px;
+
+	h2, .h2{margin-bottom: 50px;}
+}
+
+.faq{
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+
+	&::after{
+		content: '';
+		display: inline-block;
+		width: 264px;
+		height: 246px;
+		background: url(../img/msg.png) center no-repeat;
+		position: absolute;
+		top: 85%;
+		left: 79%;
+	}
+
+	&__main &__head{display: none;}
+
+	&__list{width: calc(50% - 52px);}
+	&__main{width: 50%;}
+
+	&__head{
+		display: flex;
+		align-items: center;
+		min-height: 63px;
+		background: $color-light-grey;
+		padding: 5px 90px 8px 12px;
+		position: relative;
+		transition: all 0.2s ease 0s;
+		cursor: pointer;
+	}
+
+	&__head:hover,
+	&__item.active &__head{
+		background: $color-grey;
+	}
+
+	&__item{position: relative;}
+
+	&__item.active &__head::after{
+		content: '';
+		display: inline-block;
+		width: 22px;
+		height: 100%;
+		background: $color-grey;
+		clip-path: polygon(0 0, 100% 50%, 0 100%);
+		position: absolute;
+		top: 0;
+		left: 100%;
+	}
+
+	&__icon{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 45px;
+		margin-right: 20px;
+	}
+
+	&__title{
+		@include font(normal, 500, 1.8rem, 1.2, $color-dark-blue);
+	}
+
+	&__list &__item:not(:last-child){border-bottom: 1px solid #fff;}
+
+	&__list &__item:not(:last-child)::before{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 1px;
+		background: #cbcfd5;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+	}
+
+	&__arr{
+		position: absolute;
+		@include top-center;
+		right: 70px;
+
+		.icon{fill: $color-blue;}
+	}
+
+	&__content{
+		display: none;
+		max-width: 435px;
+		margin-top: -5px;
+		padding-bottom: 40px;
+
+		p:last-child{margin-bottom: 0;}
+		h3{margin-bottom: 42px;}
+	}
+
+	&__item.active &__content{display: block;}
+
+	&__btn{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: 45px -10px 0;
+
+		.btn{
+			min-width: 210px;
+			margin: 10px;
+		}
+	}
+}

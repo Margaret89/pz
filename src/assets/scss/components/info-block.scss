@@ -2,5 +2,8 @@
 .info-block{
 	margin-bottom: 125px;
 	
-	&__content{margin-top: -15px;}
+	&__content{
+		margin-top: -15px;
+		font-size: 1.6rem;
+	}
 }
