@@ -1,13 +1,14 @@
-import {$} from './common';
+import {$, Inputmask} from './common';
 
-// $(window).scroll(function(){
-// 	if($(this).scrollTop()>300){
-// 		$('.js-move-up').addClass('visible');
-// 	}else{
-// 		$('.js-move-up').removeClass('visible');
-// 	}
-// });
-// $('.js-move-up').click(function(){$('body,html').animate({scrollTop:0},800);return false;});
+// Стрелка наверх
+$(window).on('scroll', function(){
+	if($(this).scrollTop()>300){
+		$('.js-move-up').addClass('visible');
+	}else{
+		$('.js-move-up').removeClass('visible');
+	}
+});
+$('.js-move-up').on('click', function(){$('body,html').animate({scrollTop:0},500);return false;});
 
 // select
 if($('.js-select').length){
@@ -85,3 +86,22 @@ if($('.js-quiz-step').length){
 		e.preventDefault();
 	});
 }
+
+// Маска для телефона 
+Inputmask('+7 (999) 999-9999').mask('.js-phone');
+
+// Вывод сообщения об успешной отправке в попапе
+$('.js-valid-form').each(function(){
+	$(this).on('submit',function(e){
+		$.fancybox.close();
+		$.fancybox.open({
+			src  : '#msg-success',
+			type : 'inline',
+			opts : {
+				
+			}
+		});
+		$(this)[0].reset();
+		e.preventDefault();
+	});
+});

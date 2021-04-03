@@ -11,22 +11,22 @@ footer.footer
 						.choose-city__label Ваш город:
 
 						select.js-select
-							option(value="") Зеленоград
-							option(value="") Тверь
-							option(value="") Дубна
-							option(value="") Клин
-							option(value="") Фрязино
-							option(value="") Открытый центр
+							option(value="Зеленоград") Зеленоград
+							option(value="Тверь") Тверь
+							option(value="Дубна") Дубна
+							option(value="Клин") Клин
+							option(value="Фрязино") Фрязино
+							option(value="Открытый центр") Открытый центр
 
 					.footer-address г. Зеленоград, корпус 118, правый вход с лица здания
 						.footer-address__link
-							a(href="#") Как проехать?
+							a(data-fancybox='', data-src='#popup-address', href='javascript:;') Как проехать?
 				.col-3
 					.footer-main__call
 						.footer-main__phone
 							a(href="tel:+74997365684") +7 (499) 736-56-84
 
-						a.btn.btn_green(href='#') Экспресс консультация
+						a.btn.btn_green(data-fancybox='', data-src='#consult-form', href='javascript:;') Экспресс консультация
 
 					.footer-time
 						.footer-time__label График работы:
@@ -74,3 +74,63 @@ footer.footer
 					.footer-bottom__content
 						a(href="#").footer-bottom__link Карта сайта
 						.footer-bottom__text Самые лучшие сайты медецинской темы разрабатывают в компании ЛДМ и Ко
+
+
+<!-- Форма экспресс консультации' -->
+#consult-form.popup-form(style='display: none;')
+	form.form-site.js-valid-form(method='get')
+		.h2 Экспресс консультация
+
+		.form-site__content
+			.form-site__item
+				input(type='text', placeholder='Имя, фамилия', required='required')
+
+			.form-site__item
+				input(type='email' placeholder='Ваш e-mail')
+
+			.form-site__item
+				input.js-phone(type='text' placeholder='Ваш телефон' data-icon='phone' required='required')
+
+			.form-site__item
+				select.js-select(data-placeholder='Город')
+					option
+					option(value="Зеленоград") Зеленоград
+					option(value="Тверь") Тверь
+					option(value="Дубна") Дубна
+					option(value="Клин") Клин
+					option(value="Фрязино") Фрязино
+					option(value="Открытый центр") Открытый центр
+
+			.form-site__item
+				textarea(placeholder="Введите ваш вопрос")
+				
+			.form-site__polit
+				.input-check
+					input#check-polit(type='checkbox', checked="")
+					label.input-check__label(for='check-polit')
+						span.input-check__mark
+							+svg('ic-tick','ic-tick', '12', '12')
+						span.input-check__text Я согласен на обработку 
+							a(href="#") персональных данных
+
+			button.btn.btn_green(type='submit') Отправить
+
+<!-- Попап об успешной отправки письма -->
+#msg-success.success-alert(style='display: none;')
+	.success-alert__text Ваше сообщение успешно отправлено!
+
+<!-- Попап "Как проехать" -->
+#popup-address.popup-address(style='display: none;')
+	.h2 Как добраться
+
+	p <b>Наш адрес:</b> г. Зеленоград, корпус 118, правый вход с лица здания
+
+	iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3A793e1d1f4bb60b45feeb9e4ab5e99bc35f9b6939fab82ff34a8cbdb08238d621&source=constructor' width='100%' height='400' frameborder='0')
+
+	p На автобусе 1,3,7,9,10,11,12,15,19,29,32 до остановки «первый торговый»
+
+	img(src="assets/img/build.jpg", alt="")
+
+.move-up.js-move-up
+	+svg('ic-arrow-up','ic-arrow-up', '14', '8')
+	.move-up__text Наверх

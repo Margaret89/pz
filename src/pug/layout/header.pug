@@ -11,16 +11,16 @@ header.header
 						.choose-city__label Ваш город:
 
 						select.js-select
-							option(value="") Зеленоград
-							option(value="") Тверь
-							option(value="") Дубна
-							option(value="") Клин
-							option(value="") Фрязино
-							option(value="") Открытый центр
+							option(value="Зеленоград") Зеленоград
+							option(value="Тверь") Тверь
+							option(value="Дубна") Дубна
+							option(value="Клин") Клин
+							option(value="Фрязино") Фрязино
+							option(value="Открытый центр") Открытый центр
 
 					.header-address г. Зеленоград, корпус 118, правый вход с лица здания
 						.header-address__link
-							a(href="#") Как проехать?
+							a(data-fancybox='', data-src='#popup-address', href='javascript:;') Как проехать?
 
 					.header-time
 						.header-time__label График работы:
@@ -35,7 +35,7 @@ header.header
 						.header-top__phone
 							a(href="tel:+74997365684") +7 (499) 736-56-84
 
-						a.btn.btn_green(href='#') Экспресс консультация
+						a.btn.btn_green.fancybox(data-fancybox='', data-src='#consult-form', href='javascript:;') Экспресс консультация
 
 	.nav
 		.container

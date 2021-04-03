@@ -164,6 +164,7 @@ button.btn_border:hover{
 }
 
 p + .btn{margin-top: 15px;}
+iframe + p{margin-top: 20px;}
 
 .code{
 	background-color: #f7f7f7;
@@ -185,3 +186,5 @@ p + .btn{margin-top: 15px;}
 .bg-grey{background: $color-light-grey;}
 .bg-beige{background: $color-beige;}
 .bg-dark-blue{background: $color-dark-blue; color: #fff;}
+
+.fancybox-content{padding: 30px 25px;}
