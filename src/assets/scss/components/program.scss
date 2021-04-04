@@ -98,3 +98,17 @@
 		.btn{min-width: 175px;}
 	}
 }
+
+@media (max-width: 767px) {
+	.program-wrap{
+		margin-top: 55px;
+		margin-bottom: 25px;
+	}
+
+	.program-card{
+		&__title,
+		&__info{
+			min-height: auto;
+		}
+	}
+}

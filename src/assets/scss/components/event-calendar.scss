@@ -1,4 +1,4 @@
-/*-------------- event-calendar -----------------*/
+/*-------------- mobile-sidebar -----------------*/
 .event-calendar{
 	border-radius: 5px;
 	background: $color-light-grey;
@@ -78,4 +78,12 @@
 		margin-top: 28px;
 		padding: 0 5px;
 	}
+}
+
+@media (max-width: 991px) {
+	.event-calendar{margin-top: 50px;}
+}
+
+@media (max-width: 767px) {
+	.event-calendar{padding: 20px 15px;}
 }

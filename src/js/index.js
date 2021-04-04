@@ -10,13 +10,6 @@ $(window).on('scroll', function(){
 });
 $('.js-move-up').on('click', function(){$('body,html').animate({scrollTop:0},500);return false;});
 
-// select
-if($('.js-select').length){
-	$('.js-select').select2({
-		minimumResultsForSearch: -1,
-	});
-}
-
 // top-slider
 if($('.js-top-slider-img').length){
 	$('.js-top-slider-img').slick({
@@ -44,7 +37,30 @@ if($('.js-team-slider').length){
 		slidesToShow: 4,
 		slidesToScroll: 4,
 		prevArrow: '<button id="prev" type="button" class="slider-prev"><svg class="icon ic-prev" width="24" height="65"><use xlink:href="assets/sprites/sprite.svg#ic-prev"></use></svg></button>',
-		nextArrow: '<button id="next" type="button" class="slider-next"><svg class="icon ic-next" width="24" height="65"><use xlink:href="assets/sprites/sprite.svg#ic-next"></use></svg></button>'
+		nextArrow: '<button id="next" type="button" class="slider-next"><svg class="icon ic-next" width="24" height="65"><use xlink:href="assets/sprites/sprite.svg#ic-next"></use></svg></button>',
+		responsive: [
+			{
+			  breakpoint: 1280,
+			  settings: {
+				slidesToShow: 3,
+				slidesToScroll: 3,
+			  }
+			},
+			{
+			  breakpoint: 992,
+			  settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2,
+			  }
+			},
+			{
+				breakpoint: 768,
+				settings: {
+				  slidesToShow: 1,
+				  slidesToScroll: 1,
+				}
+			  },
+		  ]
 	});
 }
 
@@ -105,3 +121,42 @@ $('.js-valid-form').each(function(){
 		e.preventDefault();
 	});
 });
+
+// Создание мобильного меню
+var arrMobileMenu = [];
+$('.js-add-mm').each(function(){
+	var indexItem = $(this).attr('data-order');
+	arrMobileMenu[indexItem] = $(this);
+});
+
+for (var i = 0; i < arrMobileMenu.length; i++) {
+	$(arrMobileMenu[i]).clone().appendTo('.js-mobile-sidebar-content');
+}
+
+// Открыть/Закрыть мобильное меню
+$('.js-open-menu').on('click', function(){
+	$('.js-shadow').addClass('is-visible');
+	$('.js-mobile-sidebar').addClass('open');
+	$('.js-body').addClass('no-scroll');
+});
+
+$('.js-close-menu').on('click', function(){
+	 closeCatMenu();
+});
+
+$('.js-shadow').on('click', function(){
+	closeCatMenu();
+});
+
+function closeCatMenu() {
+	$('.js-shadow').removeClass('is-visible');
+	$('.js-mobile-sidebar').removeClass('open');
+	$('.js-body').removeClass('no-scroll');
+}
+
+// select
+if($('.js-select').length){
+	$('.js-select').select2({
+		minimumResultsForSearch: -1,
+	});
+}

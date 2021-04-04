@@ -9,9 +9,11 @@
 	&__item{
 		display: flex;
 		align-items: center;
+		margin-bottom: 30px;
 	}
 
 	&__img{
+		display: inline-block;
 		flex: 0 0 270px;
 		margin-right: 20px;
 	}
@@ -38,5 +40,19 @@
 		margin-top: 27px;
 	}
 
-	&__more{margin-top: 45px;}
+	&__more{margin-top: 15px;}
+}
+
+@media (max-width: 991px) {
+	.news-wrap{margin-top: 80px;}
+}
+
+@media (max-width: 767px) {
+	.news-wrap{margin-top: 55px;}
+
+	.news-list{
+		&__item{display: block;}
+		&__img{margin: 0 0 20px;}
+		&__more{margin-top: 0;}
+	}
 }

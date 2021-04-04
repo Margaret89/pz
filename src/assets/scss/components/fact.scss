@@ -87,6 +87,7 @@
 	&__num{
 		position: relative;
 		@include font(normal, 900, 7.2rem, 1, $color-dark-blue);
+		white-space: nowrap;
 		margin-right: 17px;
 	}
 
@@ -95,5 +96,64 @@
 		@include font(normal, 500, 1.6rem, 1.2, $color-dark-blue);
 		letter-spacing: -0.4px;
 		position: relative;
+	}
+}
+
+@media (max-width: 1799px) {
+	.fact{background-position: 120% top;}
+}
+
+@media (max-width: 1550px) {
+	.fact{background-position: 150% top;}
+}
+
+@media (max-width: 1279px) {
+	.fact{
+		background-image: none;
+
+		&__info{
+			width: 50%;
+			max-width: none;
+		}
+	}
+
+	.fact-list{width: 50%;}
+}
+
+@media (max-width: 991px) {
+	.fact{
+		margin-top: 80px;
+
+		&__content{display: block;}
+
+		&__info{
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+			border-left: 0;
+			border-top: 3px dashed #fff;
+		}
+
+		&__info::after{
+			left: auto;
+			right: 0;
+		}
+	}
+
+	.fact-list{
+		min-width: 0;
+		width: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+	.fact{
+		margin-top: 55px;
+		margin-bottom: 55px;
+	}
+
+	.fact-list{
+		padding-right: 0;
+		&__num{font-size: 5rem;}
 	}
 }

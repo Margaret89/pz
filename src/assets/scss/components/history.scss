@@ -25,3 +25,23 @@
 		@include font(normal, bold, 2.4rem, 1.2, $color-dark-blue);
 	}
 }
+
+@media (max-width: 991px) {
+	.history-wrap{
+		margin-top: 80px;
+		margin-bottom: 80px;
+	}
+	
+	.history-comp{margin-top: 50px;}
+}
+
+@media (max-width: 767px) {
+	.history-wrap{
+		margin-top: 55px;
+		margin-bottom: 55px;
+	}
+
+	.history-comp{
+		&__label{font-size: 2rem;}
+	}
+}

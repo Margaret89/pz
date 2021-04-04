@@ -7,3 +7,14 @@
 		font-size: 1.6rem;
 	}
 }
+
+@media (max-width: 991px) {
+	.info-block{margin-bottom: 80px;}
+}
+
+@media (max-width: 767px) {
+	.info-block{
+		margin-bottom: 50px;
+		&__content{margin-top: 0;}
+	}
+}

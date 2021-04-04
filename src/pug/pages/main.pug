@@ -9,7 +9,7 @@ block content
 			.row
 				.col-12
 					.top-slider__content
-						.top-slider__info
+						.top-slider__info.order-2.order-md-1
 							.top-slider__title Лечим позвоночник и суставы без нагрузки на суставы
 							.top-slider__text
 								p Уникальный способ лечения Морозова позволяет жить полной жизнью без ограничений не прибегая к операции и лекарствам.
@@ -19,7 +19,7 @@ block content
 
 							a.btn(href='#') Узнайте как это возможно
 
-						.top-slider-img.js-top-slider-img
+						.top-slider-img.js-top-slider-img.order-1.order-md-2
 							-
 								var list=[
 									'top-slide1.png',
@@ -35,7 +35,7 @@ block content
 	section.info-block
 		.container
 			.row
-				.col-7
+				.col-lg-7
 					.info-block__content
 						.h2 Мы лечим
 
@@ -88,7 +88,7 @@ block content
 
 						a.btn(href='#') Подобрать индивидуальную программу
 
-				.col-5
+				.col-lg-5
 					.event-calendar
 						.event-calendar__title Бесплатное лечение
 
@@ -155,7 +155,7 @@ block content
 						]
 
 					each item in list
-						.col-3
+						.col-md-6.col-xl-3
 							.program-card(class=item.color?'program-card_'+item.color:'')
 								.program-card__content
 									.program-card__title= item.title
@@ -339,7 +339,7 @@ block content
 					.h2 Истории успеха
 
 			.row
-				.col-6
+				.col-lg-6
 					.history-content
 						.h3 Из инвалиндной коляски на сноуборд!
 						p Как правило большую травмоопасность будет представлять собой автобус который повезет вас к нам в центр. Т.к. может резко затормозить или дернуться.
@@ -348,7 +348,7 @@ block content
 
 						a.btn(href='#') Читать всю историю оздоровления
 
-				.col-6
+				.col-lg-6
 					.history-comp
 						.history-comp__item
 							.history-comp__img
@@ -378,7 +378,7 @@ block content
 	section.survey-wrap
 		.container
 			.row.align-items-center
-				.col-7
+				.col-lg-7
 					.survey-about
 						.survey-about__content
 							.survey-about__title Болит спина?
@@ -387,7 +387,7 @@ block content
 
 							.survey-about__text Пройдите простой тест, который поможет диагностировать возможные проблемы и расскажет что делать
 
-				.col-5
+				.col-lg-5
 					form.quiz.js-quiz
 						.quiz__step.js-quiz-step.active(data-step='1')
 							.quiz__title Охарактеризуйте свой привычный образ жизни
@@ -500,7 +500,7 @@ block content
 						]
 
 					each item, index in list
-						.col-6
+						.col-xl-6
 							.news-list__item
 								a(href="#").news-list__img
 									svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 270 182' preserveAspectRatio='xMinYMin meet')
