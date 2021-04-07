@@ -35,10 +35,8 @@
 		border-color: $color-blue;
 	}
 
-	select,
-	.select2{
-		width: 100%!important;
-	}
+	select{width: 1px!important;}
+	.select2{width: 100%!important;}
 
 	.select2-container .select2-selection--single,
 	.select2-container--default .select2-selection--single .select2-selection__rendered{

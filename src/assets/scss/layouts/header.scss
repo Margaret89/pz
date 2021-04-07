@@ -6,6 +6,8 @@
 	.logo{margin-right: 15px;}
 	.choose-city{margin: 0 15px;}
 
+	&__phone{text-align: right;}
+
 	&__phone,
 	&__phone a{
 		@include font(normal, 900, 2.2rem, 1.2, $color-dark-blue);
@@ -17,7 +19,12 @@
 	&__phone{margin-bottom: 7px;}
 
 	&__call{
-		.btn{font-size: 1.4rem}
+		.btn{
+			font-size: 1.4rem;
+			line-height: 2rem;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 	}
 }
 
@@ -201,5 +208,9 @@
 		}
 
 		&__call{flex: 0 0 24px;}
+	}
+
+	.header-top{
+		&__phone{text-align: left;}
 	}
 }
