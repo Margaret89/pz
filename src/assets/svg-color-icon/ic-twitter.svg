@@ -1,0 +1,11 @@
+<svg id="ТВИТ" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34" height="34" viewBox="0 0 34 34">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #43c7f4;
+      }
+    </style>
+  </defs>
+  <rect id="Прямоугольник_12" data-name="Прямоугольник 12" class="cls-1" width="34" height="34"/>
+  <image id="twittericon" width="34" height="34" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAADR0lEQVRYhc2YS2sTURTH//fO5B1NUIstVmgLaikiVFTcK4JL/RyCuHLhzkVFXOoHEISKG3VfNyLiwoKCT2iViraGtrRpavOYxz1ybhN1yMxkpk6rB0IIk3vzu+f+zyvizIsfhP/ATD8ECcAhYMUmbLgEEFAwBfamhX62HeRdICkBLFqEuks4XjJwpCAhhcD7dRfTay72pATKKaFBtw1EAFiyCDkJ3BjN4Vzf78f8u4++25iYbWHdIeQMkSiI/PODTYSmItway3ogOpAXB1K4NJRGpUWJX48HpOECB7MSJ0pG4ILxkoGsBFTCJB4QPrUCUHOCF7B4RbK30g3CRhQeFbRNwe4bvmFmKWDZIhhQMCK4hjW9yxT6PewMsUGKpsBY0fiVU0JNABsOYXZD6ZAPC/vYICzkqdOFyN/nfPRk2cHETAtVm7R3/Fhig/BtBMdUt/EPX+hPgRP01Q9NnaH9LrSnd5MyhjlckDoZ+tmOgbBYD2QlGu4/BkFbL2ZApO0YyJuai9c1F6WU//MdAfnSUFqopuDq7u+R2FHD7cCdOQulVIQ8AuhoeVl1ULFI17HE8sh8k3D3m4WBjETUToB7mMEQiC2B5A1gJC/Rl44OgrZnwiy2Riza3DTpAhwbpGgI1F2/AvZ3ZdkDwltJEU7HjdH5PhPTVUdX4aZLsBShpYCWfve+nIgdlEcjDMGbWrrpCAgzAdw+msNwXuLZiqM7fW4NRMCKmiKdTTliWFMqAMQz1zhEWLUI98bzOLa7d2ljrXxtKDQUdXmxA7XmAI8rNh5WbAxkhJ4IfA/oPa1A1VF4u+5GAuETDuV7y+xk2dDX/mDBxkjevw3o2oXFOLUU0rRu0S4Pp3U+aQRopgtkf0bi6YqL6aqbKAjvO1qM0QawGHnAuj7TTBQE7asMar67QFjVgzmJV2surn1MDobbxE91pXveSCAahoBDBQOT8zauvGtgrh4UdNHt/oKlIywfUBcC/5YQ7QT3ua7QnxE4u8/EqbKh80fJFDrn9EpVoh3iz1dd3JxtomAIZOOCdIzXscAWW5sTXtkUKBjcRHdQw429y/8ucMTwtQQVv57VlxeyO4c4/mlzULd5Gow48jEuJzIexgIrMICfxDdTA6UlYU8AAAAASUVORK5CYII="/>
+</svg>

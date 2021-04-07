@@ -1,0 +1,19 @@
+/*-------------- gallery -----------------*/
+.gallery{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+
+	&__item{
+		width: calc(33.33% - 30px);
+		margin: 15px;
+	}
+}
+
+@media (max-width: 480px) {
+	.gallery{
+		&__item{width: calc(100% - 30px);}
+	}
+	
+}

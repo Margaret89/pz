@@ -1,0 +1,124 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Мероприятия детальная';
+	- var h1 = 'Гимнастика для лиц уважаемого возраста: Бесплатно в Центре кинезитерапии';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Мероприятия'},
+			{href:'#',name:'Гимнастика для лиц уважаемого возраста: Бесплатно в Центре кинезитерапии'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.event-detail
+		.container
+			.row.event-detail__sect
+				.col-lg-9
+					.event-det-main
+						.event-det-main__content
+							.calendar-paper
+								.calendar-paper__month Март
+								.calendar-paper__date 17
+
+							.event-det-main__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+
+						a.btn(href='#') Зарегистрируйтесь бесплатно
+
+				.col-lg-3.d-flex.justify-content-lg-end
+					.social
+						.social__title Рассказать друзьям о событии
+						
+						.social-list
+							.social-list__item
+								+svg('ic-facebook','ic-facebook', '34', '34')
+
+							.social-list__item
+								+svg('ic-vk','ic-vk', '34', '34')
+
+							.social-list__item
+								+svg('ic-twitter','ic-twitter', '34', '34')
+
+			.row.event-detail__sect
+				.col-12
+					.h2 Эффективность занятий
+
+					.btn-advant
+						-
+							var list=[
+								'Устранение боли',
+								'Укрепление мышц',
+								'Разработка суставов',
+								'Развитие координации',
+							]
+						each item in list
+							.btn-advant__item= item
+
+			.row.event-detail__sect
+				.col-12
+					.h2 Дополнительный эффект
+
+					.event-det-add
+						.event-det-add__desc
+							p
+								b Суставная гимнастика способствует улучшению работы:
+
+							ul.type-list
+								li сердечно-сосудистой системы,
+								li дыхательной системы,
+								li обмена веществ,
+								li желудочно-кишечного тракта,
+								li мочеполовой системы,
+								li вегетососудистой системы.
+
+
+						.info
+							.info__icon
+								img(src="assets/img/info.svg", alt="")
+
+							.info__text
+								p В комплекс партерной гимнастики входят упражнения для основных групп мышц спины, пресса, ног, рук и упражнения на растягивание, которые улучшают кровообращение, способствуют развитию гибкости, силы, выносливости, координации.
+
+								p Проводится гимнастика на ковриках и с использованием гимнастического мяча (фитбола), скакалок и другого гимнастического инвентаря. Главное достоинство партерной гимнастики – она подходит для всех! Нет никаких ограничений по возрасту, полу, уровню физической подготовки. Ведь все упражнения выполняются лёжа или сидя, поэтому нет излишней нагрузки на суставы и кровеносную систему (в частности, варикозное заболевание вен отнюдь не является препятствием для занятий).
+
+			.row.event-detail__sect
+				.col-12
+					.h2 Как проходят занятия
+
+					.gallery
+						-
+							var list=[
+								'gallery1.jpg',
+								'gallery2.jpg',
+								'gallery3.jpg',
+							]
+
+						each item, index in list
+							.gallery__item
+								svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 375 309' preserveAspectRatio='xMinYMin meet')
+									path(fill="#a4c2e6" d='M123.384,6.062l46.363-4.406c62.011,1.952,121.524,4.1,158.173,41.5,13.542,13.82,25.279,29.176,33.889,50.193,29.443,71.87,3.353,150.751-35.474,185.454-28.075,25.092-75.157,35.279-114.3,27.482-69.836-13.909-143.482-47.512-184.4-102C7.021,176.841-8.666,125.661,7.075,86.358,20.408,53.066,47.287,32.431,82.848,16.97L108.87,9.036Z')
+									path(fill="#7ea9e0" d='M130.034-1.007L175-.355c59.6,8.428,116.783,16.779,149.507,56.678,12.091,14.742,22.338,30.774,29.183,51.93,23.4,72.342-7.171,145.574-46.967,174.9-28.776,21.207-74.834,26.049-112.008,14.4C128.4,276.789,59.775,236.642,24.121,179.838,6.158,151.221-5.422,100.261,12.453,64.063,27.594,33.4,54.91,16.36,90.232,5.221l25.615-4.9Z')
+								    
+									clippath(id='clip-gallery-'+index)
+										path(fill="#ffffff" d='M138.53,1.4l43.706,3.256C239.879,16.311,295.171,27.75,325.471,68.369c11.2,15.009,20.549,31.162,26.4,52.087,20,71.553-12.536,140.82-52.361,166.955-28.8,18.9-73.773,20.908-109.481,7.441-63.7-24.023-128.906-66.978-161.41-124.17C12.24,141.868,2.925,91.751,21.692,57.673c15.9-28.866,43.114-43.8,77.892-52.551l25.1-3.256Z')
+									image(xlink:href='assets/img/'+item width='100%' height='100%' style="clip-path:url(#clip-gallery-"+index+");")
+			
+			.row.event-detail__sect
+				.col-12
+					.h2 Как проходят занятия
+
+					.events-small-list
+						- for (var x = 0; x < 4; x++)
+							.events-small
+								.events-small__content
+									.calendar-paper
+										.calendar-paper__month Март
+										.calendar-paper__date 17
+									
+									.events-small__title Гимнастика для лиц уважаемого возраста: Бесплатно в Центре кинезитерапии
+
+								a.btn(href='#') Подробнее
