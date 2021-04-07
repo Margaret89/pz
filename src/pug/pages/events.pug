@@ -1,0 +1,55 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Мероприятия';
+	- var h1 = 'Мероприятия';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Мероприятия'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.events
+		.container
+			.row
+				.col-lg-7
+					.events-list
+						- for (var x = 0; x < 2; x++)
+							.events-item
+								.events-item__top
+									.events-item__title Гимнастика для лиц уважаемого возраста: Бесплатно в Центре кинезитерапии
+
+									.calendar-paper
+										.calendar-paper__month Март
+										.calendar-paper__date 17
+
+								.events-item__content
+									.events-item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+
+									a.btn(href='#') Подробнее
+
+
+				.col-lg-5
+					.form-site-wrap.form-site-wrap_grey
+						form.form-site.js-valid-form(method='get')
+							.h2 Не пропускайте самое полезное и интересное
+
+							.form-site__subtitle Подписаться на рассылку
+
+							.form-site__content
+								.form-site__item
+									input(type='email' placeholder='Ваш e-mail*', required='required')
+
+								.form-site__item-wrap
+									.form-site__item
+										input(type='text', placeholder='Имя')
+
+									.form-site__item
+										input(type='text', placeholder='Фамилия')
+
+								button.btn.btn_green(type='submit') Подписаться

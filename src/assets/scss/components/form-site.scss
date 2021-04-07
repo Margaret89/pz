@@ -11,6 +11,19 @@
 
 	&__item{margin-bottom: 15px;}
 
+	&__item-wrap{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__item-wrap &__item{width: calc(50% - 10px);}
+
+	&__subtitle{
+		@include font(normal, 900, 1.6rem, 1.2, $color-text);
+		margin-bottom: 20px;
+	}
+
 	input[type="text"],
 	input[type="email"],
 	input[type="number"],
@@ -90,7 +103,7 @@
 		}
 	}
 
-	.btn{margin-top: 25px;}
+	.btn{margin-top: 40px;}
 
 	&__note{
 		@include font(normal, 500, 1.8rem, 1.2, $color-dark-blue);

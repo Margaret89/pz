@@ -19,15 +19,27 @@
 
 	&__item:not(:last-child){margin-bottom: 40px;}
 
-	&__paper{
+	&__text{
+		@include font(normal, 500, 1.6rem, 1.2, $color-dark-blue);
+	}
+
+	&__more{
+		margin-top: 28px;
+		padding: 0 5px;
+	}
+
+	.calendar-paper{margin-right: 27px;}
+}
+
+.calendar-paper{
+	&{
 		width: 68px;
 		flex: 0 0 68px;
 		font-family: Arial;
 		position: relative;
-		margin-right: 27px;
 	}
 
-	&__paper::before{
+	&::before{
 		content: '';
 		display: inline-block;
 		width: calc(100% + 7px);
@@ -68,15 +80,6 @@
 		text-align: center;
 		background: radial-gradient(ellipse at center, rgba(247,247,247,1) 0%, rgba(221,221,221,1) 100%);
 		position: relative;
-	}
-
-	&__text{
-		@include font(normal, 500, 1.6rem, 1.2, $color-dark-blue);
-	}
-
-	&__more{
-		margin-top: 28px;
-		padding: 0 5px;
 	}
 }
 

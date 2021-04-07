@@ -1,0 +1,83 @@
+/*-------------- events-list -----------------*/
+.events{
+	.events-list{padding-right: 85px;}
+
+	.form-site{
+		h2, .h2{
+			line-height: 1.2;
+			margin-bottom: 80px;
+		}
+	}
+}
+
+.events-item{
+	background: $color-beige;
+	border-radius: 5px;
+
+	&:not(:last-child){margin-bottom: 105px;}
+
+	&__top{
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		padding: 42px 52px 45px;
+
+		.calendar-paper{
+			flex: 0 0 68px;
+			margin-left: 30px;
+			margin-top: 7px
+		}
+	}
+
+	&__title{
+		font-family: $font-lora;
+		@include font(normal, bold, 2.1rem, 1.2, $color-dark-blue);
+	}
+
+	&__content{
+		padding: 40px 50px 70px;
+		border-top: 3px dashed #fff;
+	}
+
+	&__text{
+		@include font(normal, normal, 1.6rem, 1.5, $color-text);
+		p:last-child{margin-bottom: 0;}
+	}
+
+	.btn{
+		min-width: 177px;
+		margin-top: 42px;
+	}
+}
+
+@media (max-width: 1279px) {
+	.events{
+		.events-list{padding-right: 0px;}
+	}
+}
+
+@media (max-width: 991px) {
+	.events-item{
+		&:not(:last-child){margin-bottom: 60px;}
+	}
+
+	.events{
+		.form-site-wrap{margin-top: 60px;}
+	}
+}
+
+@media (max-width: 767px) {
+	.events-item{
+		&__top{padding: 20px 15px;}
+		&__title{font-size: 1.8rem;}
+		&__content{padding: 20px 15px 30px;}
+	}
+
+	.events-item{
+		&:not(:last-child){margin-bottom: 40px;}
+	}
+
+	.events{
+		.form-site-wrap{margin-top: 40px;}
+	}
+}
