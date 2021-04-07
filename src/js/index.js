@@ -160,3 +160,16 @@ if($('.js-select').length){
 		minimumResultsForSearch: -1,
 	});
 }
+
+// Button for attach file
+$('.js-input-file').on('change', function(){
+	var f_name = [];
+	var $elemName = $(this).closest('.js-file-upload').find('.js-name-file')
+
+	for (var i = 0; i < $(this).get(0).files.length; ++i) {
+		f_name.push(" " + $(this).get(0).files[i].name);
+	}
+
+	$elemName.html(f_name);
+	$elemName.attr("title", f_name);
+});

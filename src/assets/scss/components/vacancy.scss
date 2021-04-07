@@ -1,4 +1,4 @@
-/*-------------- vacancy-list -----------------*/
+/*-------------- vacancy -----------------*/
 .vacancy-list{
 	&__item:not(:last-child){margin-bottom: 40px;}
 
@@ -19,6 +19,9 @@
 	&__desc{
 		@include font(normal, 500, 1.6rem, 1.5, $color-text);
 		margin-top: 27px;
+
+		ul{margin-bottom: 0;}
+		li{margin-bottom: 0;}
 	}
 
 	&__link{
@@ -41,6 +44,39 @@
 	.btn{
 		white-space: nowrap;
 		margin-left: 20px;
+	}
+}
+
+.vacancy-detail{
+	&__info{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include font(normal, 500, 2.4rem, 1.2, $color-dark-blue);
+		background: $color-beige;
+		border-radius: 5px;
+		padding: 18px 38px;
+		margin-bottom: 60px;
+	}
+
+	&__price{margin-right: 15px;}
+
+	&__text{
+		.list-line li{margin-bottom: 27px;}
+	}
+
+	&__content{padding-right: 85px;}
+}
+
+@media (max-width: 1279px) {
+	.vacancy-detail{
+		&__content{padding-right: 0;}
+	}
+}
+
+@media (max-width: 991px) {
+	.vacancy-detail{
+		.form-site-wrap{margin-top: 50px;}
 	}
 }
 
@@ -72,5 +108,21 @@
 			margin-left: 0;
 			margin-top: 15px;
 		}
+	}
+
+	.vacancy-detail{
+		&__info{
+			display: block;
+			padding: 18px 15px;
+			font-size: 2rem;
+			margin-bottom: 40px;
+		}
+
+		&__price{
+			margin-right: 0;
+			margin-bottom: 5px;
+		}
+
+		.form-site-wrap{margin-top: 30px;}
 	}
 }

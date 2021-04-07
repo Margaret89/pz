@@ -5,3 +5,15 @@
 		column-gap: 30px;
 	}
 }
+
+.list-line{
+	&,
+	li{
+		list-style: none;
+	}
+
+	li::before{
+		content: '-';
+		margin-right: 5px;
+	}
+}

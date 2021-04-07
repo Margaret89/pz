@@ -1,0 +1,91 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Вакансии';
+	- var h1 = 'Врач-ортопед';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'О центре'},
+			{href:'#',name:'Дипломы и награды'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.vacancy-detail
+		.container
+			.row
+				.col-lg-7
+					.vacancy-detail__content
+						.vacancy-detail__info
+							.vacancy-detail__price З/п от 45 000 р.
+							.vacancy-detail__expertise Опыт работы от 3 лет
+
+						.vacancy-detail__text
+							.h2 Должностные обязанности
+							ul.list-line
+								li Амбулаторный прием пациентов (первичный, повторный).
+								li Квалифицированное оказание медицинской помощи в рамках амбулаторно-поликлинической практики согласно медицинским стандартам.
+								li Ведение электронных медицинских карт.
+
+							.h2 Требования
+							ul.list-line
+								li Образование – высшее профессиональное медицинское. Обязательно наличие действующего сертификата на осуществление медицинской деятельности в области кардиологии.
+								li Официально подтвержденный опыт работы в должности кардиолога (зафиксированный в трудовой книжке).
+								li Приветствуется опыт ведения амбулаторных приемов в частных медицинских учреждениях.
+								li Знание ПК в объеме пользователя
+
+							.h2 Мы предлагаем
+							ul.list-line
+								li Фиксированный оклад 45 000 руб. + премии, надбавки за учёную степень, доплаты за стаж работы в Компании.
+								li Оплата отпусков и больничных согласно ТК РФ.
+								li Страхование профессиональной ответственности врача.
+								li Сохранение медицинского стажа.
+								li Бесплатное корпоративное обучение.
+								li Оснащение рабочих мест современным оборудованием.
+								li Ведение истории пациента в специализированной компьютерной программе.
+								li Предоставление медицинского обслуживания сотрудникам и членам их семей.
+								li Оплата ресертификационных циклов.
+
+				.col-lg-5
+					.form-site-wrap.form-site-wrap_grey
+						form.form-site.js-valid-form(method='get')
+							.h3 Откликнуться на вакансию
+
+							.form-site__content
+								.form-site__item
+									.form-site__field
+										input(type='text', placeholder='ФИО*', required='required')
+										.form-site__icon
+											+svg('ic-person','ic-person', '24', '24')
+
+								.form-site__item
+									.form-site__field
+										input.js-phone(type='text' placeholder='Ваш телефон' data-icon='phone')
+										.form-site__icon
+											+svg('ic-call','ic-call', '24', '24')
+
+								.form-site__item
+									.form-site__field
+										input(type='email' placeholder='Ваш e-mail')
+										.form-site__icon
+											+svg('ic-mail','ic-mail', '23', '14')
+
+								.form-site__item
+									.file-upload.js-file-upload
+										.file-upload__content
+											label.file-upload__btn
+												input.js-input-file(type='file' name='file')
+												span.file-upload__btn-text Прикрепить файл
+											.file-upload__name.js-name-file
+										.file-upload__label Загрузите файл в формате MS Word или PDF
+
+								.form-site__item
+									textarea(placeholder="Сопроводительное письмо")
+
+								button.btn.btn_green(type='submit') Отправить
+
+								.form-site__note Сотрудник отдела кадров свяжется с вами для уточнения деталей.

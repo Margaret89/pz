@@ -7,7 +7,7 @@ body{
 	height:100%;
 }
 
-body{font-size: 1.4rem;}
+body{font-size: 1.6rem;}
 
 body.no-scroll{
 	height: 100%;
@@ -88,10 +88,8 @@ ul{
 
 li{margin-bottom: 8px;}
 
-ul + h2,
-ul + .h2{
-	margin-top: 60px;
-}
+ul + h2, ul + .h2{margin-top: 60px;}
+h2 + .list-line, .h2 + .list-line{margin-top: -4px;}
 
 .wrapper{
 	display: flex;
