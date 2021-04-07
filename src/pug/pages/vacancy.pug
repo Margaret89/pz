@@ -1,0 +1,51 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Вакансии';
+	- var h1 = 'Вакансии центра';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'О центре'},
+			{href:'#',name:'Дипломы и награды'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.vacancy
+		.container
+			.row
+				.col-12
+					.vacancy-list
+						-
+							var list=[
+								{name:'Врач-ортопед', price:'З/п от 45 000 р.', expertise:'Опыт работы от 3 лет'},
+								{name:'Врач-мануальный терапевт', price:'З/п от 45 000 р.', expertise:'Опыт работы от 3 лет'},
+							]
+
+						each item in list
+							.vacancy-list__item
+								.vacancy-list__title= item.name
+								.vacancy-list__info
+									.vacancy-list__price= item.price
+									.vacancy-list__expertise= item.expertise
+								
+								.vacancy-list__desc
+									|- Амбулаторный прием пациентов (первичный, повторный).
+									br
+									|- Квалифицированное оказание медицинской помощи в рамках
+									br
+									|- амбулаторно-поликлинической практики согласно медицинским стандартам.
+									br
+									|- Ведение электронных медицинских карт.
+
+								a(href="#").vacancy-list__link Смотреть полное описание
+
+
+					.vacancy-feedback
+						.vacancy-feedback__text Если вы не увидели подходящей вам вакансии, но&nbsp;считаете, что мы можем быть полезны друг другу.
+
+						a.btn(href='#') Напишите нам

@@ -28,6 +28,7 @@ img{max-width: 100%;}
 a{
 	color: $color-turquoise;
 	text-decoration: underline;
+	text-decoration-thickness: 1px;
 }
 
 a:hover{text-decoration: none;}
@@ -208,6 +209,11 @@ iframe + p{margin-top: 20px;}
 
 .shadow-site.is-visible{display: block;}
 
+.page-title{
+	margin-bottom: 95px;
+	h1, .h1{margin-bottom: 0;}
+}
+
 @media (max-width: 1279px) {
 	.btn,
 	input[type="submit"].btn,
@@ -221,6 +227,7 @@ iframe + p{margin-top: 20px;}
 	.container{max-width: 100%!important;}
 	.wrapper{overflow: hidden;}
 	main{padding-bottom: 50px;}
+	body{font-size: 1.5rem;}
 	.fancybox-content{padding: 30px 15px;}
 	h1,.h1{font-size: 3rem;}
 	h2,.h2{font-size: 2.2rem; margin-bottom: 20px;}
@@ -228,4 +235,5 @@ iframe + p{margin-top: 20px;}
 	h4,.h4{font-size: 1.8rem;}
 	h5,.h5{font-size: 1.6rem;}
 	ul + .h2, ul + h2{margin-top: 40px;}
+	.page-title{margin-bottom: 40px;}
 }
