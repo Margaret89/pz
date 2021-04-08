@@ -1,0 +1,112 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Вопросы и ответы';
+	- var h1 = 'Вопросы и ответы';
+	- var top_btn = 'Задать свой вопрос';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Вопросы и ответы'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.faq-wrap
+		.container
+			.row
+				.col-12
+					.h2 Частые вопросы
+
+					.faq.js-faq
+						-
+							var list=[
+								{
+									head:'А что, если мне станет хуже?',
+									title:'Нагрузка на ваши мышцы будет минимальна на старте, всего 1-5 кг',
+									icon:'question1.png',
+									status:'active',
+									text:[
+										'Как правило большую травмоопасность будет представлять собой автобус который повезет вас к нам в центр. Т.к. может резко затормозить или дернуться.',
+										'Так или иначе вы уже поднимаете свой собственный вес нагружая мышцы и суставы, мы в центре дадим локальную нагрузку только на мышцы чтобы создать мышечный контент.',
+										'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.',
+									]
+								},
+								{
+									head:'Разве можно давать нагрузку при болях?',
+									title:'Заголовок 2',
+									icon:'question2.png',
+									text:[
+										'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.',
+									]
+								},
+								{
+									head:'Я слышал(а), что нельзя ходить на зарядку',
+									title:'Заголовок 3',
+									icon:'question3.png',
+									text:[
+										'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+									]
+								},
+								{
+									head:'А мой врач сказал, что мне нельзя',
+									title:'Заголовок 4',
+									icon:'question1.png',
+									text:[
+										'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.',
+										'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+									]
+								},
+								{
+									head:'Разве можно давать нагрузку при болях?',
+									title:'Заголовок 5',
+									icon:'question2.png',
+									text:[
+										'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+									]
+								},
+								{
+									head:'Я слышал(а), что нельзя ходить на зарядку',
+									title:'Заголовок 6',
+									icon:'question3.png',
+									text:[
+										'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.',
+										'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+									]
+								},
+							]
+
+						.faq__list
+							each item, index in list
+								.faq__item.js-faq-item(class=item.status?'active':'', data-num="faq"+index)
+									.faq__head.js-faq-head
+										.faq__icon
+											img(src="assets/img/"+item.icon, alt="")
+										.faq__title= item.head
+
+										.faq__arr
+											+svg('ic-arrow-right','ic-arrow-right', '7', '14')
+
+							.faq__btn
+								
+								a.btn(href='#') Перейти в раздел Вопрос-ответ
+
+						.faq__main
+							each item, index in list
+								.faq__item.js-faq-item(class=item.status?'active':'', data-num="faq"+index)
+									.faq__head.js-faq-head
+										.faq__icon
+											img(src="assets/img/"+item.icon, alt="")
+										.faq__title= item.head
+
+										.faq__arr
+											+svg('ic-arrow-right','ic-arrow-right', '7', '14')
+									
+									.faq__content
+										.h3= item.title 
+
+										each text in item.text
+											p= text

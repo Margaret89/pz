@@ -2,7 +2,11 @@ mixin h1(v)
 	.container
 		.row
 			.col-12
-				h1= v
+				.page-title__content
+					h1= v
+
+					if top_btn
+						a.btn.btn_green(href='#')= top_btn
 
 
 mixin breadcrumbs(links)
