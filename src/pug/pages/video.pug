@@ -1,0 +1,42 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Видео';
+	- var h1 = 'Полезные видео материалы';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Видео'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.video-list
+		.container
+			.row
+				.col-md-6
+					.video-list__item
+						.video-list__content
+							iframe(allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='' src='https://www.youtube.com/embed/bhNWa0-VBKk' frameborder='0')
+						.video-list__title Мультик о том как люди попадают в наш центр
+
+				.col-md-6
+					.video-list__item
+						.video-list__content
+							iframe(allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='' src='https://www.youtube.com/embed/n94fFtH9ktQ' frameborder='0')
+						.video-list__title В 18 лет болят суставы
+
+				.col-md-6
+					.video-list__item
+						.video-list__content
+							iframe(allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='' src='https://www.youtube.com/embed/lpU6vsAavLY' frameborder='0')
+						.video-list__title Вам снять боль или восстановить функцию?
+
+				.col-md-6
+					.video-list__item
+						.video-list__content
+							iframe(allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='' src='https://www.youtube.com/embed/oF1QEk5we0Q' frameborder='0')
+						.video-list__title Врач запрещает жить 
