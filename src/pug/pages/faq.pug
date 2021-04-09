@@ -15,84 +15,81 @@ block breadcrumb
 	+breadcrumbs(breadcrumbs)
 
 block content
-	section.faq-wrap
+	section.faq-page
 		.container
 			.row
 				.col-12
-					.h2 Частые вопросы
-
 					.faq.js-faq
 						-
 							var list=[
 								{
-									head:'А что, если мне станет хуже?',
-									title:'Нагрузка на ваши мышцы будет минимальна на старте, всего 1-5 кг',
+									head:'Спина',
 									icon:'question1.png',
+									question:[
+										{title:'Разве можно давать нагрузку при болях?', text:'short'},
+										{title:'Я слышал(а), что нельзя ходить на зарядку', text:'short'},
+									]
+								},
+								{
+									head:'Суставы',
+									icon:'question2.png',
 									status:'active',
-									text:[
-										'Как правило большую травмоопасность будет представлять собой автобус который повезет вас к нам в центр. Т.к. может резко затормозить или дернуться.',
-										'Так или иначе вы уже поднимаете свой собственный вес нагружая мышцы и суставы, мы в центре дадим локальную нагрузку только на мышцы чтобы создать мышечный контент.',
-										'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.',
+									question:[
+										{title:'А что, если мне станет хуже?', text:'long'},
+										{title:'Разве можно давать нагрузку при болях?', text:'short'},
+										{title:'Я слышал(а), что нельзя ходить на зарядку', text:'short'},
+										{title:'А мой врач сказал, что мне нельзя', text:'short'},
 									]
 								},
 								{
-									head:'Разве можно давать нагрузку при болях?',
-									title:'Заголовок 2',
-									icon:'question2.png',
-									text:[
-										'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.',
-									]
-								},
-								{
-									head:'Я слышал(а), что нельзя ходить на зарядку',
-									title:'Заголовок 3',
+									head:'Лекарства',
 									icon:'question3.png',
-									text:[
-										'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+									question:[
+										{title:'А что, если мне станет хуже?', text:'long'},
 									]
 								},
 								{
-									head:'А мой врач сказал, что мне нельзя',
-									title:'Заголовок 4',
+									head:'Мануальный терапевт',
 									icon:'question1.png',
-									text:[
-										'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.',
-										'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+									question:[
+										{title:'Я слышал(а), что нельзя ходить на зарядку', text:'short'},
+										{title:'А мой врач сказал, что мне нельзя', text:'short'},
 									]
 								},
 								{
-									head:'Разве можно давать нагрузку при болях?',
-									title:'Заголовок 5',
+									head:'Опасения',
 									icon:'question2.png',
-									text:[
-										'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+									question:[
+										{title:'Разве можно давать нагрузку при болях?', text:'short'},
+										{title:'Я слышал(а), что нельзя ходить на зарядку', text:'short'},
+										{title:'А мой врач сказал, что мне нельзя', text:'short'},
 									]
 								},
 								{
-									head:'Я слышал(а), что нельзя ходить на зарядку',
-									title:'Заголовок 6',
+									head:'Другое',
 									icon:'question3.png',
-									text:[
-										'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.',
-										'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+									question:[
+										{title:'А мой врач сказал, что мне нельзя', text:'short'},
+										{title:'Разве можно давать нагрузку при болях?', text:'short'},
 									]
 								},
+								
 							]
 
-						.faq__list
-							each item, index in list
-								.faq__item.js-faq-item(class=item.status?'active':'', data-num="faq"+index)
-									.faq__head.js-faq-head
-										.faq__icon
-											img(src="assets/img/"+item.icon, alt="")
-										.faq__title= item.head
+						.faq__list-wrap
+							.faq__list-head Категории
 
-										.faq__arr
-											+svg('ic-arrow-right','ic-arrow-right', '7', '14')
+							.faq__list
+								each item, index in list
+									.faq__item.js-faq-item(class=item.status?'active':'', data-num="faq"+index)
+										.faq__head.js-faq-head
+											.faq__icon
+												img(src="assets/img/"+item.icon, alt="")
+											.faq__title= item.head
 
-							.faq__btn
-								
-								a.btn(href='#') Перейти в раздел Вопрос-ответ
+											.faq__arr
+												+svg('ic-arrow-right','ic-arrow-right', '7', '14')
+
 
 						.faq__main
 							each item, index in list
@@ -106,7 +103,32 @@ block content
 											+svg('ic-arrow-right','ic-arrow-right', '7', '14')
 									
 									.faq__content
-										.h3= item.title 
+										each quest, index in item.question
+											if(index > 2)
+												-var i = 1;
+											else
+												-var i = index + 1;
+											.unwrap-block.js-unwrap-block
+												.unwrap-block__head.js-unwrap-head
+													.unwrap-block__info
+														.unwrap-block__icon
+															img(src="assets/img/question"+i+".png", alt="")
+														.unwrap-block__title= quest.title
+													.unwrap-block__btn.js-unwrap-block-btn
+														+svg('ic-plus','ic-plus', '17', '17')
+														+svg('ic-minus','ic-minus', '17', '2')
 
-										each text in item.text
-											p= text
+												.unwrap-block__content.js-unwrap-content
+													.unwrap-block__desc
+														if(quest.text == 'long')
+															p Как правило большую травмоопасность будет представлять собой автобус который повезет вас к нам в центр. Т.к. может резко затормозить или дернуться.
+															p Так или иначе вы уже поднимаете свой собственный вес нагружая мышцы и суставы, мы в центре дадим локальную нагрузку только на мышцы чтобы создать мышечный контент.
+															p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+														else
+															p Текст
+
+													.short-survey
+														.short-survey__title Ответ был полезен?
+														.short-survey__btn
+															a.btn.btn_green(href='#') Да
+															a.btn.btn_light-red(href='#') Нет

@@ -173,3 +173,18 @@ $('.js-input-file').on('change', function(){
 	$elemName.html(f_name);
 	$elemName.attr("title", f_name);
 });
+
+// unwrap block
+if($('.js-unwrap-block').length){
+	$('.js-unwrap-head').on('click',function(event){
+		event.preventDefault();
+		var $parent = $(this).parents('.js-unwrap-block');
+		
+		$parent.toggleClass('opened');
+		if($parent.hasClass('opened')){
+			$parent.children('.js-unwrap-content').slideDown(400);
+		}else{
+			$parent.children('.js-unwrap-content').slideUp(400);
+		}
+	});
+}
