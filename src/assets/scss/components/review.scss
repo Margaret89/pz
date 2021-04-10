@@ -35,6 +35,8 @@
 		left: 0;
 	}
 
+	&__item_red &__content::before{background: $color-light-red;}
+
 	&__title{
 		font-family: $font-lora;
 		@include font(normal, bold, 2.4rem, 1.2, $color-dark-blue);
@@ -114,23 +116,35 @@
 	}
 
 	&__more{margin-top: 65px;}
+
+	.history-comp{
+		margin: 0;
+		&__img{max-width: 148px;}
+
+		&__label{
+			font-weight: 500;
+			font-size: 1.4rem;
+		}
+	}
 }
 
-@media (max-width: 767px) {
-	.review-wrap{
-		.h2, h2{margin-bottom: 30px;}
+.review-filter{
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 30px;
 
-		&:not(:last-child){margin-bottom: 60px;}
-	}
+	&__item{margin-bottom: 10px;}
 
+	&__item:not(:last-child){margin-right: 68px;}
+}
+
+@media (max-width: 991px) {
 	.review-list{
 		&__item{
 			flex-direction: column;
 
 			.btn{margin: 0 auto;}
 		}
-
-		&__item:not(:last-child){margin-bottom: 40px;}
 
 		&__author{
 			width: 100%;
@@ -152,16 +166,34 @@
 			padding-top: 50%;
 		}
 
+		&__more{
+			text-align: center;
+			margin-top: 40px;
+		}
+
+		.history-comp{margin: 0 auto 30px;}
+	}
+
+	.review-filter{
+		&__item:not(:last-child){margin-right: 30px;}
+	}
+}
+
+@media (max-width: 767px) {
+	.review-wrap{
+		.h2, h2{margin-bottom: 30px;}
+
+		&:not(:last-child){margin-bottom: 60px;}
+	}
+
+	.review-list{
+		&__item:not(:last-child){margin-bottom: 40px;}
+
 		&__content::before{
 			width: 18px;
 			height: 18px;
 		}
 
 		&__title{font-size: 2rem;}
-
-		&__more{
-			text-align: center;
-			margin-top: 40px;
-		}
 	}
 }
