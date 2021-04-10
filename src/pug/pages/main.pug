@@ -290,7 +290,7 @@ block content
 
 						each item, index in list
 							.team-slider__item
-								.team-slider__img
+								a(href="#").team-slider__img
 									if(item.path == '1')
 										svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 260 243' preserveAspectRatio='xMinYMin meet')
 											path(fill="#7ea9e0" style="opacity: 0.6" d='M96.491,7.327C108.1,5.914,116.917,6.17,125.26,8.611c32.553,9.524,77.935,50.59,96.2,78.647,7.813,12,16.294,32.194,12.73,51.211-5.675,30.276-29.893,48-50.609,66.219-12.792,11.252-42.077,38.041-68.76,36.205-56.8-3.91-89.693-84.675-76.993-152.193C43.5,58.562,54.734,32.633,77.1,16.028,82.736,11.845,89.614,11.106,96.491,7.327Z')
@@ -327,9 +327,10 @@ block content
 												path(fill='#ffffff' d='M181.27,22.781c9.124,6.111,15.236,11.7,19.672,18.556,17.31,26.756,24.4,83.891,20.181,115.111-1.8,13.357-8.154,32.966-22.352,44.352-22.6,18.127-50.694,15.923-76.6,16.227-16,.187-53.254,1.349-71.1-16.323-38-37.617-11.859-115.423,38.58-155.821,22.514-18.032,46.409-29.646,72.5-27.782C168.717,17.572,174.062,21.261,181.27,22.781Z')
 											image(xlink:href='assets/img/person4.jpg' width='100%' height='100%' style="clip-path:url(#clip"+index+");")
 
-								.team-slider__name= item.lastname
-									br
-									= item.name
+								.team-slider__name
+									a(href="#")= item.lastname
+										br
+										= item.name
 								.team-slider__text= item.text
 
 	section.history-wrap
