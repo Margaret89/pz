@@ -1,0 +1,42 @@
+/*-------------- page -----------------*/
+.page{
+	display: flex;
+	justify-content: space-between;
+
+	&__content{width: 63%;}
+
+	&__sidebar{
+		width: calc(37% - 110px);
+
+		.faq-list:not(:last-child){margin-bottom: 122px;}
+	}
+}
+
+@media (max-width: 1279px) {
+	.page{
+		&__sidebar{width: calc(37% - 40px);}
+	}
+}
+
+@media (max-width: 991px) {
+	.page{
+		display: block;
+
+		&__content,
+		&__sidebar{
+			width: 100%;
+		}
+
+		&__sidebar{
+			margin-top: 60px;
+
+			.faq-list{display: none;}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.page{
+		&__sidebar{margin-top: 40px;}
+	}
+}

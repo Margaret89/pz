@@ -1,0 +1,167 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Статья детальная';
+	- var h1 = 'Как правило большую травмоопасность будет представлять собой автобус';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Статьи'},
+			{href:'#',name:'Как правило большую травмоопасность будет представлять собой автобус'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section
+		.container
+			.row
+				.col-12
+					.page
+						.page__content
+							.article-detail
+								.article-detail__img(style="background-image: url(assets/img/article.jpg)")
+
+								.article-detail__desc
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+									p Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget
+
+									.article-detail__video
+										iframe(allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='' src='https://www.youtube.com/embed/lpU6vsAavLY' frameborder='0')
+
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+
+									.short-survey
+										.short-survey__title Была ли статья полезной?
+										.short-survey__btn
+											a.btn.btn_green.btn_small(href='#') Да
+											a.btn.btn_light-red.btn_small(href='#') Нет
+
+						.page__sidebar
+							.faq-list
+								-
+									var list=[
+										{head:'Спина', icon:'question1.png',},
+										{head:'Суставы', icon:'question2.png', status:'active'},
+										{head:'Лекарства', icon:'question3.png'},
+										{head:'Мануальный терапевт', icon:'question1.png'},
+										{head:'Опасения', icon:'question2.png'},
+										{head:'Другое', icon:'question3.png'},
+									]
+
+								.faq__list-wrap
+									.faq__list-head Категории
+
+									.faq__list.faq__list_right
+										each item, index in list
+											.faq__item(class=item.status?'active':'')
+												.faq__head
+													.faq__icon
+														img(src="assets/img/"+item.icon, alt="")
+													.faq__title= item.head
+
+													.faq__arr
+														+svg('ic-arrow-right','ic-arrow-right', '7', '14')
+
+
+							.quiz-wrap
+								.quiz-wrap__title Пройдите тест, чтобы получить персональные рекомендации
+
+								form.quiz.js-quiz
+									.quiz__step.js-quiz-step.active(data-step='1')
+										.quiz__title Охарактеризуйте свой привычный образ жизни
+
+										.quiz__list
+											.quiz__item
+												.quiz__radio
+													.input-radio
+														input#radio1(type='radio', name='param1', checked='checked')
+														label.input-radio__label(for='radio1')
+															span.input-radio__mark
+															span.input-radio__text Малоподвижный образ жизни
+
+												.quiz__radio
+													.input-radio
+														input#radio2(type='radio' name='param1')
+														label.input-radio__label(for='radio2')
+															span.input-radio__mark
+															span.input-radio__text Много двигаюсь / Занимаюсь спортом
+
+												.quiz__radio
+													.input-radio
+														input#radio3(type='radio' name='param1')
+														label.input-radio__label(for='radio3')
+															span.input-radio__mark
+															span.input-radio__text Занимаюсь тяжёлым физическим трудом
+
+									.quiz__step.js-quiz-step(data-step='2')
+										.quiz__title Личные данные
+
+										.quiz__list
+											.quiz__item
+												.quiz__label Ваш возраст
+												input(type='number', value='18')
+
+											.quiz__item
+												.quiz__label Ваш вес (кг.)
+												input(type='number', value='40')
+
+											.quiz__item
+												.quiz__label Ваш рост (см.)
+												input(type='number', value='180')
+
+											.quiz__item
+												.quiz__label Пол
+
+												.quiz__radio
+													.input-radio
+														input#man(type='radio', name='param2', checked='checked')
+														label.input-radio__label(for='man')
+															span.input-radio__mark
+															span.input-radio__text М
+
+												.quiz__radio
+													.input-radio
+														input#woman(type='radio', name='param2')
+														label.input-radio__label(for='woman')
+															span.input-radio__mark
+															span.input-radio__text М
+
+									.quiz__step.js-quiz-step(data-step='3')
+										.quiz__title Что вас беспокоит?
+
+										.quiz__list.js-req-check
+											.quiz__check
+												.input-check
+													input#check1(type='checkbox')
+													label.input-check__label(for='check1')
+														span.input-check__mark
+															+svg('ic-tick','ic-tick', '12', '12')
+														span.input-check__text Спина
+
+											.quiz__check
+												.input-check
+													input#check2(type='checkbox')
+													label.input-check__label(for='check2')
+														span.input-check__mark
+															+svg('ic-tick','ic-tick', '12', '12')
+														span.input-check__text Суставы
+
+											.quiz__check
+												.input-check
+													input#check3(type='checkbox')
+													label.input-check__label(for='check3')
+														span.input-check__mark
+															+svg('ic-tick','ic-tick', '12', '12')
+														span.input-check__text Ничего не беспокоит
+
+									.quiz__error.js-quiz-error Выберите один из пунктов
+
+									button.btn.js-quiz-next(type='submit')
+										span Далее
+										+svg('ic-arrow-right','ic-arrow-right', '7', '14')
+
+									.quiz__success.js-quiz-success Спасибо за пройденный тест!

@@ -51,6 +51,25 @@
 	}
 }
 
+.quiz-wrap{
+	background: $color-light-grey;
+	border-radius: 5px;
+	padding: 50px 37px;
+
+	&__title{
+		font-family: $font-lora;
+		@include font(normal, bold, 2rem, 1.2, $color-dark-blue);
+		margin-bottom: 53px;
+	}
+
+	.quiz{
+		&__title{
+			font-family: $font-site;
+			@include font(normal, 900, 1.6rem, 1.2, $color-text);
+		}
+	}
+}
+
 .quiz{
 	&__step{display: none;}
 	&__step.active{display: block;}
@@ -176,7 +195,10 @@
 		&__title{font-size: 3rem;}
 	}
 
+	.quiz-wrap{padding: 20px 15px 25px;}
+
 	.quiz{
 		&__title{font-size: 2.2rem;}
+		&__success{font-size: 1.8rem;}
 	}
 }

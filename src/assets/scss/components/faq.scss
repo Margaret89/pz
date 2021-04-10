@@ -153,6 +153,45 @@
 			margin: 10px;
 		}
 	}
+
+	&__list_right &__head{flex-direction: row-reverse;}
+
+	&__list_right &__icon{
+		margin-right: 0;
+		margin-left: 20px;
+	}
+
+	&__list_right &__item.active &__head::after{
+		left: auto;
+		right: 100%;
+		clip-path: polygon(100% 0,100% 100%,0 50%);
+	}
+
+	&__list_right &__title{text-align: right;}
+}
+
+.faq-list{
+	.faq{
+		&__list-wrap{width: auto;}
+		&__arr{right: 20px;}
+
+		&__head{
+			padding-left: 36px;
+			padding-right: 40px;
+		}
+
+		&__list_right .faq__head{
+			padding-left: 40px;
+			padding-right: 36px;
+		}
+
+		&__list_right .faq__arr{
+			right: auto;
+			left: 20px;
+
+			.icon{transform: rotate(180deg);}
+		}
+	}
 }
 
 @media (max-width: 1279px) {

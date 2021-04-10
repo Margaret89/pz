@@ -1,0 +1,54 @@
+/*-------------- article -----------------*/
+.article-detail{
+	background: $color-light-grey;
+	border-radius: 5px;
+	padding: 40px 52px 80px;
+	overflow: hidden;
+
+	&__img{
+		height: 200px;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-size: cover;
+		margin: -40px -52px 35px;
+	}
+
+	&__desc{
+		@include font(normal, 500, 1.4rem, 1.7, $color-text);
+	}
+
+	&__video{
+		padding-top: 63%;
+		margin: 37px -52px 40px;
+		position: relative;
+
+		iframe{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	.short-survey{margin-top: 75px;}
+}
+
+@media (max-width: 767px) {
+	.article-detail{
+		padding: 25px 15px;
+
+		&__img{
+			height: 150px;
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+
+		&__video{
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+
+		.short-survey{margin-top: 40px;}
+	}
+}
