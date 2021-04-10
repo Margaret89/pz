@@ -1,0 +1,117 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Статьи';
+	- var h1 = 'Сатьи Игоря Морозова';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Статьи'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.faq-page
+		.container
+			.row
+				.col-12
+					.faq.js-faq
+						-
+							var list=[
+								{
+									head:'Спина',
+									icon:'question1.png',
+									articles:[
+										{title:'Как правило, большую травмоопасность будет представлять собой автобус', img:'article.jpg', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.'},
+										{title:'Как правило, большую травмоопасность будет представлять собой автобус', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.'},
+									]
+								},
+								{
+									head:'Суставы',
+									icon:'question2.png',
+									status:'active',
+									articles:[
+										{title:'Как правило, большую травмоопасность будет представлять собой автобус', img:'article.jpg', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.'},
+										{title:'Как правило, большую травмоопасность будет представлять собой автобус', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.'},
+									]
+								},
+								{
+									head:'Лекарства',
+									icon:'question3.png',
+									articles:[
+										{title:'Как правило, большую травмоопасность будет представлять собой автобус', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.'},
+									]
+								},
+								{
+									head:'Мануальный терапевт',
+									icon:'question1.png',
+									articles:[
+										{title:'Как правило, большую травмоопасность будет представлять собой автобус', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.'},
+										{title:'Как правило, большую травмоопасность будет представлять собой автобус', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.'},
+										{title:'Как правило, большую травмоопасность будет представлять собой автобус', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.'},
+										{title:'Как правило, большую травмоопасность будет представлять собой автобус', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.'},
+									]
+								},
+								{
+									head:'Опасения',
+									icon:'question2.png',
+									articles:[
+										{title:'Как правило, большую травмоопасность будет представлять собой автобус', img:'article.jpg', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.'},
+									]
+								},
+								{
+									head:'Другое',
+									icon:'question3.png',
+									articles:[
+										{title:'Как правило, большую травмоопасность будет представлять собой автобус', img:'article.jpg', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.'},
+										{title:'Как правило, большую травмоопасность будет представлять собой автобус', img:'article.jpg', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.'},
+										{title:'Как правило, большую травмоопасность будет представлять собой автобус', img:'article.jpg', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.'},
+										{title:'Как правило, большую травмоопасность будет представлять собой автобус', img:'article.jpg', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.'},
+										{title:'Как правило, большую травмоопасность будет представлять собой автобус', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.'},
+									]
+								},
+								
+							]
+
+						.faq__list-wrap
+							.faq__list-head Категории
+
+							.faq__list
+								each item, index in list
+									.faq__item.js-faq-item(class=item.status?'active':'', data-num="faq"+index)
+										.faq__head.js-faq-head
+											.faq__icon
+												img(src="assets/img/"+item.icon, alt="")
+											.faq__title= item.head
+
+											.faq__arr
+												+svg('ic-arrow-right','ic-arrow-right', '7', '14')
+
+
+						.faq__main
+							each item, index in list
+								.faq__item.js-faq-item(class=item.status?'active':'', data-num="faq"+index)
+									.faq__head.js-faq-head
+										.faq__icon
+											img(src="assets/img/"+item.icon, alt="")
+										.faq__title= item.head
+
+										.faq__arr
+											+svg('ic-arrow-right','ic-arrow-right', '7', '14')
+									
+									.faq__content
+										.article-list
+											each article, index in item.articles
+												.article-list__item
+													.article-list__title= article.title
+
+													if(article.img)
+														.article-list__img(style="background-image: url(assets/img/"+article.img+")")
+
+													.article-list__content
+														.article-list__text= article.text
+
+														a.btn(href='#') Читать статью

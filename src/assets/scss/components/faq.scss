@@ -11,6 +11,12 @@
 		&::after{display: none;}
 		&__list-wrap{width: calc(37% - 110px);}
 		&__main{width: 63%;}
+		&__arr{right: 20px;}
+
+		&__head{
+			padding-left: 36px;
+			padding-right: 40px;
+		}
 
 		&__content{
 			max-width: 100%;
@@ -41,7 +47,7 @@
 	&__list-head{
 		font-family: $font-lora;
 		@include font(normal, bold, 2.4rem, 1.2, $color-dark-blue);
-		padding: 40px;
+		padding: 32px 43px 23px;
 	}
 
 	&__list{
@@ -101,9 +107,9 @@
 		@include font(normal, 500, 1.8rem, 1.2, $color-dark-blue);
 	}
 
-	&__item:not(:last-child){border-bottom: 1px solid #fff;}
+	&__list &__item:not(:last-child){border-bottom: 1px solid #fff;}
 
-	&__item:not(:last-child)::before{
+	&__list &__item:not(:last-child)::before{
 		content: '';
 		display: block;
 		width: 100%;
@@ -196,6 +202,21 @@
 			max-width: none;
 			padding: 20px 0;
 		}
+
+		&__item:not(:last-child){border-bottom: 1px solid #fff;}
+
+		&__item:not(:last-child)::before{
+			content: '';
+			display: block;
+			width: 100%;
+			height: 1px;
+			background: #cbcfd5;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 2;
+		}
+
 	}
 }
 
