@@ -1,0 +1,108 @@
+section.survey-wrap
+	.container
+		.row.align-items-center
+			.col-lg-7
+				.survey-about
+					.survey-about__content
+						.survey-about__title Болит спина?
+							br
+							|Узнай причину боли!
+
+						.survey-about__text Пройдите простой тест, который поможет диагностировать возможные проблемы и расскажет что делать
+
+			.col-lg-5
+				form.quiz.js-quiz
+					.quiz__step.js-quiz-step.active(data-step='1')
+						.quiz__title Охарактеризуйте свой привычный образ жизни
+
+						.quiz__list
+							.quiz__item
+								.quiz__radio
+									.input-radio
+										input#radio1(type='radio', name='param1', checked='checked')
+										label.input-radio__label(for='radio1')
+											span.input-radio__mark
+											span.input-radio__text Малоподвижный образ жизни
+
+								.quiz__radio
+									.input-radio
+										input#radio2(type='radio' name='param1')
+										label.input-radio__label(for='radio2')
+											span.input-radio__mark
+											span.input-radio__text Много двигаюсь / Занимаюсь спортом
+
+								.quiz__radio
+									.input-radio
+										input#radio3(type='radio' name='param1')
+										label.input-radio__label(for='radio3')
+											span.input-radio__mark
+											span.input-radio__text Занимаюсь тяжёлым физическим трудом
+
+					.quiz__step.js-quiz-step(data-step='2')
+						.quiz__title Личные данные
+
+						.quiz__list
+							.quiz__item
+								.quiz__label Ваш возраст
+								input(type='number', value='18')
+
+							.quiz__item
+								.quiz__label Ваш вес (кг.)
+								input(type='number', value='40')
+
+							.quiz__item
+								.quiz__label Ваш рост (см.)
+								input(type='number', value='180')
+
+							.quiz__item
+								.quiz__label Пол
+
+								.quiz__radio
+									.input-radio
+										input#man(type='radio', name='param2', checked='checked')
+										label.input-radio__label(for='man')
+											span.input-radio__mark
+											span.input-radio__text М
+
+								.quiz__radio
+									.input-radio
+										input#woman(type='radio', name='param2')
+										label.input-radio__label(for='woman')
+											span.input-radio__mark
+											span.input-radio__text М
+
+					.quiz__step.js-quiz-step(data-step='3')
+						.quiz__title Что вас беспокоит?
+
+						.quiz__list.js-req-check
+							.quiz__check
+								.input-check
+									input#check1(type='checkbox')
+									label.input-check__label(for='check1')
+										span.input-check__mark
+											+svg('ic-tick','ic-tick', '12', '12')
+										span.input-check__text Спина
+
+							.quiz__check
+								.input-check
+									input#check2(type='checkbox')
+									label.input-check__label(for='check2')
+										span.input-check__mark
+											+svg('ic-tick','ic-tick', '12', '12')
+										span.input-check__text Суставы
+
+							.quiz__check
+								.input-check
+									input#check3(type='checkbox')
+									label.input-check__label(for='check3')
+										span.input-check__mark
+											+svg('ic-tick','ic-tick', '12', '12')
+										span.input-check__text Ничего не беспокоит
+
+					.quiz__error.js-quiz-error Выберите один из пунктов
+
+					button.btn.js-quiz-next(type='submit')
+						span Далее
+						+svg('ic-arrow-right','ic-arrow-right', '7', '14')
+
+					.quiz__success.js-quiz-success Спасибо за пройденный тест!

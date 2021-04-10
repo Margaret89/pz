@@ -222,3 +222,11 @@ if($('.js-unwrap-block').length){
 		}
 	});
 }
+
+// Cutting text by the number of characters
+if ($('.js-read-more').length) {
+	$('.js-read-more').readmore({
+		moreLink: '<a href="#" class="more-link">Читать далее</a>',
+		lessLink: '<a href="#" class="more-link">Свернуть</a>'
+	});
+}

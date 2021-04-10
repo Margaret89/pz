@@ -1,0 +1,23 @@
+.event-calendar
+	.event-calendar__title Бесплатное лечение
+
+	.event-calendar__list
+		-
+			var list=[
+				{month:'Март', date:'17', text:'Гимнастика “Бодрая старушка” для тех кому за 60'},
+				{month:'Март', date:'24', text:'Зарядка для программиста и тех, кто работает “в кресле”'},
+				{month:'Март', date:'31', text:'Урок похудения для пышных и энергичных'},
+				{month:'Апрель', date:'7', text:'Гимнастика “Бодрая старушка” для тех кому за 60'},
+			]
+
+		each item in list
+			.event-calendar__item
+				.calendar-paper
+					.calendar-paper__month= item.month
+					.calendar-paper__date= item.date
+
+				.event-calendar__text= item.text
+
+
+	.event-calendar__more
+		a(href="#") Все события центра

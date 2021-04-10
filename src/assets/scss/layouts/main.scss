@@ -248,6 +248,18 @@ iframe + p{margin-top: 20px;}
 	}
 }
 
+.read-more{
+	overflow: hidden;
+	transition: all 0.3s ease 0s;
+	margin-bottom: 10px;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
 @media (max-width: 1279px) {
 	.btn,
 	input[type="submit"].btn,

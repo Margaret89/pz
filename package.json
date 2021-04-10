@@ -66,6 +66,7 @@
     "bootstrap": "^4.6.0",
     "inputmask": "^4.0.9",
     "jquery": "^3.6.0",
+    "readmore-js": "^2.2.1",
     "sass-rem": "^2.0.1",
     "select2": "^4.0.13",
     "slick-slider": "^1.8.2"

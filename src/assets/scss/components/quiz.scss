@@ -3,6 +3,8 @@
 	overflow: hidden;
 	margin-top: 123px;
 	margin-bottom: 107px;
+
+	&:last-child{margin-bottom: 0;}
 }
 
 .survey-about{

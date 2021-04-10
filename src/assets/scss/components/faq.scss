@@ -168,6 +168,14 @@
 	}
 
 	&__list_right &__title{text-align: right;}
+
+	&_white &__head{background: transparent;}
+
+	&__more{
+		font-size: 1.6rem;
+		margin-top: 20px;
+		padding-left: 12px;
+	}
 }
 
 .faq-list{
