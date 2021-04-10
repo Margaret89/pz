@@ -64,6 +64,40 @@ if($('.js-team-slider').length){
 	});
 }
 
+// staf slider
+if($('.js-staf-slider').length){
+	$('.js-staf-slider').slick({
+		infinite: true,
+		slidesToShow: 5,
+		slidesToScroll: 5,
+		prevArrow: '<button id="prev" type="button" class="slider-prev"><svg class="icon ic-prev" width="24" height="65"><use xlink:href="assets/sprites/sprite.svg#ic-prev"></use></svg></button>',
+		nextArrow: '<button id="next" type="button" class="slider-next"><svg class="icon ic-next" width="24" height="65"><use xlink:href="assets/sprites/sprite.svg#ic-next"></use></svg></button>',
+		responsive: [
+			{
+			  breakpoint: 1280,
+			  settings: {
+				slidesToShow: 3,
+				slidesToScroll: 3,
+			  }
+			},
+			{
+			  breakpoint: 992,
+			  settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2,
+			  }
+			},
+			{
+				breakpoint: 768,
+				settings: {
+				  slidesToShow: 1,
+				  slidesToScroll: 1,
+				}
+			  },
+		  ]
+	});
+}
+
 // quiz
 if($('.js-quiz-step').length){
 	var countSteps = $('.js-quiz-step').length;

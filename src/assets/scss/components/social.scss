@@ -13,9 +13,10 @@
 	margin-right: -8px;
 
 	&__item{
+		display: inline-block;
 		margin: 8px;
 		transition: filter 0.2s ease 0s;
 	}
 
-	&__item:hover{filter: brightness(100%);}
+	&__item:hover{filter: brightness(80%);}
 }

@@ -1,0 +1,115 @@
+/*-------------- team-detail -----------------*/
+.team-detail-top{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	margin-bottom: 65px;
+
+	&__content{
+		max-width: 500px;
+		margin-right: 55px;
+	}
+
+	&__title{
+		@include font(normal, 900, 2.4rem, 1.2, $color-dark-blue);
+	}
+
+	.btn{margin-top: 8px;}
+}
+
+.team-spec{
+	margin: 15px -5px 0;
+
+	&__item{
+		margin: 5px;
+		@include font(normal, 500, 1.6rem, 1.2, $color-turquoise);
+		text-decoration: underline;
+		text-decoration-thickness: 1px;
+	}
+}
+
+.team-det-info{
+	min-height: 530px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+
+	&__wrap{
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	&__content{
+		width: 50%;
+		background: $color-light-grey url(../img/quot.png) calc(100% - 33px) 50px no-repeat;
+		border-radius: 5px;
+		border-top-right-radius: 0;
+		padding: 60px 55px;
+		position: relative;
+		margin-top: -35px;
+	}
+
+	&__content::before{
+		content: '';
+		display: inline-block;
+		width: 10px;
+		height: 35px;
+		background: #a4c2e6;
+		clip-path: polygon(0 0, 100% 100%, 0 100%);
+		position: absolute;
+		top: 0;
+		left: 100%;
+	}
+
+	&__title{
+		font-family: $font-lora;
+		@include font(normal, bold, 2.4rem, 1.2, $color-dark-blue);
+		margin-bottom: 30px;
+	}
+
+	&__text{
+		@include font(normal, 500, 1.6rem, 1.5, $color-text);
+	}
+
+	&__img{
+		width: calc(50% - 57px);
+		margin-top: -122px;
+		margin-right: -43px;
+	}
+}
+
+@media (max-width: 1279px) {
+	.team-det-info{
+		&__img{
+			margin-top: -40px;
+			margin-right: 0;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.team-det-info{
+		min-height: 430px;
+		&__content{padding: 30px 25px;}
+	}
+}
+
+@media (max-width: 767px) {
+	.team-det-info{
+		&__content{
+			width: 100%;
+			padding-top: 130px;
+		}
+
+		&__img{
+			width: 130px;
+			margin-top: 0;
+			position: absolute;
+			top: -15px;
+			right: 30px;
+		}
+
+		&__title{font-size: 2rem;}
+	}
+}
