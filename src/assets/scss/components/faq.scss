@@ -6,9 +6,23 @@
 	h2, .h2{margin-bottom: 50px;}
 }
 
+.faq-page{
+	.faq{
+		&::after{display: none;}
+		&__list-wrap{width: calc(37% - 110px);}
+		&__main{width: 63%;}
+
+		&__content{
+			max-width: 100%;
+			margin-top: 0;
+		}
+	}
+}
+
 .faq{
 	display: flex;
 	justify-content: space-between;
+	align-items: flex-start;
 	position: relative;
 
 	&::after{
@@ -87,9 +101,9 @@
 		@include font(normal, 500, 1.8rem, 1.2, $color-dark-blue);
 	}
 
-	&__list &__item:not(:last-child){border-bottom: 1px solid #fff;}
+	&__item:not(:last-child){border-bottom: 1px solid #fff;}
 
-	&__list &__item:not(:last-child)::before{
+	&__item:not(:last-child)::before{
 		content: '';
 		display: block;
 		width: 100%;
@@ -142,10 +156,28 @@
 			right: 0;
 		}
 	}
+
+	.faq-page{
+		.faq{
+			&__list-wrap{width: calc(37% - 40px);}
+		}
+	}
 }
 
 @media (max-width: 991px) {
 	.faq-wrap{margin-bottom: 80px;}
+
+	.faq-page{
+		.faq{
+			&__list-wrap{display: none;}
+			&__main{width: 100%;}
+
+			&__content{
+				padding-left: 30px;
+				padding-right: 30px;
+			}
+		}
+	}
 	
 	.faq{
 		&__list,
@@ -171,5 +203,14 @@
 	.faq-wrap{
 		margin-top: 25px;
 		margin-bottom: 55px;
+	}
+
+	.faq-page{
+		.faq{
+			&__content{
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
 	}
 }

@@ -175,6 +175,15 @@ button.btn_border:hover{
 	color: #fff;
 }
 
+.btn_small,
+input[type="submit"].btn_small,
+button.btn_small{
+	min-height: 2.7rem;
+	min-width: 57px;
+	line-height: 1.7rem;
+	padding: 4px 15px;
+}
+
 .btn{
 	.icon{fill: #fff;}
 	&_border .icon{fill: $color-dark-blue;}
@@ -228,13 +237,14 @@ iframe + p{margin-top: 20px;}
 	h1, .h1{
 		max-width: 1000px;
 		margin-bottom: 0;
+		margin-right: 15px;
 	}
 
 	&__content{
 		display: flex;
 		justify-content: space-between;
 
-		.btn{margin-left: 15px;}
+		.btn{margin: 5px 0;}
 	}
 }
 
@@ -259,5 +269,12 @@ iframe + p{margin-top: 20px;}
 	h4,.h4{font-size: 1.8rem;}
 	h5,.h5{font-size: 1.6rem;}
 	ul + .h2, ul + h2{margin-top: 40px;}
-	.page-title{margin-bottom: 40px;}
+
+	.page-title{
+		margin-bottom: 40px;
+		&__content{
+			display: block;
+			.btn{margin: 10px 0;}
+		}
+	}
 }
