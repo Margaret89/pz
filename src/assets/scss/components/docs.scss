@@ -1,0 +1,45 @@
+/*-------------- docs -----------------*/
+.docs{
+	&:not(:last-child){margin-bottom: 106px;}
+
+	&__more{margin-top: 12px;}
+}
+
+.docs-list{
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		text-align: center;
+		padding: 10px;
+		margin: 20px 0;
+		cursor: zoom-in;
+
+		img{position: relative;}
+	}
+
+	&__item::before{
+		content: '';
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	[class^=col-]:nth-child(4n+1){background: url(../img/bg-docs1.png) center no-repeat; background-size: contain;}
+	[class^=col-]:nth-child(4n+2){background: url(../img/bg-docs2.png) center no-repeat; background-size: contain;}
+	[class^=col-]:nth-child(4n+3){background: url(../img/bg-docs3.png) center no-repeat; background-size: contain;}
+	[class^=col-]:nth-child(4n+4){background: url(../img/bg-docs4.png) center no-repeat; background-size: contain;}
+}
+
+@media (max-width: 767px) {
+	.docs{
+		&:not(:last-child){margin-bottom: 50px;}
+	}
+	
+	.docs-list{
+		&__item{padding: 5px;}
+	}
+}

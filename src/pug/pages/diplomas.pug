@@ -1,0 +1,72 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Награды и дипломы';
+	- var h1 = 'Наши награды и дипломы';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'О центре'},
+			{href:'#',name:'Награды и дипломы'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.docs
+		.container
+			.row
+				.col-12
+					.h2 Наши дипломы
+			
+			.docs-list
+				.row
+					-
+						var list=[
+							{img:'diploma1.jpg', img_big:'diploma-big1.jpg'},
+							{img:'diploma2.jpg', img_big:'diploma-big2.jpg'},
+							{img:'diploma3.png', img_big:'diploma-big3.jpg'},
+							{img:'diploma4.jpg', img_big:'diploma-big4.jpg'},
+						]
+
+					each item, index in list
+						.col-6.col-md-4.col-lg-3
+							a.docs-list__item(href='assets/img/'+item.img_big, data-fancybox='diploma')
+								img(src='assets/img/'+item.img, alt='')
+
+			.row
+				.col-12
+					.docs__more
+						a.btn(href='#') Показать все дипломы
+	
+	section.docs
+		.container
+			.row
+				.col-12
+					.h2 Наши награды
+			
+			.docs-list
+				.row
+					-
+						var list=[
+							{img:'diploma1.jpg', img_big:'diploma-big1.jpg'},
+							{img:'diploma2.jpg', img_big:'diploma-big2.jpg'},
+							{img:'diploma3.png', img_big:'diploma-big3.jpg'},
+							{img:'diploma4.jpg', img_big:'diploma-big4.jpg'},
+							{img:'diploma1.jpg', img_big:'diploma-big1.jpg'},
+							{img:'diploma2.jpg', img_big:'diploma-big2.jpg'},
+							{img:'diploma3.png', img_big:'diploma-big3.jpg'},
+							{img:'diploma4.jpg', img_big:'diploma-big4.jpg'},
+						]
+
+					each item, index in list
+						.col-6.col-md-4.col-lg-3
+							a.docs-list__item(href='assets/img/'+item.img_big, data-fancybox='awards')
+								img(src='assets/img/'+item.img, alt='')
+
+			.row
+				.col-12
+					.docs__more
+						a.btn(href='#') Показать все награды
