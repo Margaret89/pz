@@ -1,0 +1,72 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Контакты';
+	- var h1 = 'Контакты';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Контакты'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.contacts-wrap
+		.container
+			.row
+				.col-12
+					.contacts-wrap__content
+						.contacts-wrap__item.order-1.order-lg-1
+							.h2 Медицинский центр
+
+							.contact
+								.contact__item
+									.contact__label Телефон:
+									.contact__val
+										a(href="tel:+74997365684").contact__phone +7 (499) 736-56-84
+
+								.contact__item
+									.contact__label E-mail:
+									.contact__val
+										a(href="mailto:info@zelkinezis.ru") info@zelkinezis.ru
+
+								.contact__item
+									.contact__label График работы:
+									.contact__val
+										.contact__time
+											|Пн-Пт 9.00 - 21.00
+											br
+											|Сб 9.00 - 18.00
+											br
+											|Вс выходной
+
+						.contacts-wrap__item.order-3.order-lg-2
+							.h2 Как до нас добраться
+
+							.contact-link
+								.contact-link__item
+									a(href="#") На общественном транспорте
+								.contact-link__item
+									a(href="#").contact-link__item На автомобиле
+
+							.contact
+								.contact__item
+									.contact__label Адрес:
+									.contact__val г. Зеленоград, корпус 118, правый вход с лица здания
+
+						.contacts-wrap__img.order-2.order-lg-3.d-none.d-md-block
+							svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 306 374' preserveAspectRatio='xMinYMin meet')
+								path(fill="#a4c2e6" d='M297.966,118.221q2.988,23.091,5.976,46.187C304.1,226.45,303.969,286,267.833,323.9c-13.353,14-28.3,26.254-49.015,35.573-70.83,31.863-150.55,8.465-186.551-29.163C6.237,303.1-5.541,256.392.923,217,12.455,146.734,43.541,71.99,96.6,29.251,123.337,7.719,173.956-9.695,213.77,4.7c33.725,12.2,55.26,38.359,71.919,73.375l8.812,25.738Z')
+								path(fill="#7ea9e0" d='M305.256,124.627q0.438,22.479.874,44.962c-6.4,59.854-12.807,117.285-51.573,151.344-14.323,12.584-30,23.369-50.91,30.927-71.506,25.845-145.733-2.227-176.4-41.006C5.079,282.815-1.323,236.948,9.054,199.4,27.565,132.42,65.361,62.472,120.922,24.911,148.914,5.988,199.451-7.314,236.235,9.322c31.159,14.092,49.115,40.814,61.447,75.739q2.88,12.716,5.761,25.435Q304.349,117.56,305.256,124.627Z')
+
+								clippath(id='clip-contact')
+									path(fill='#ffffff' d='M303.138,133.2q-0.885,21.893-1.771,43.791C291.675,235,282.119,290.645,242.551,322.306c-14.621,11.7-30.447,21.6-51.162,28.149C120.556,372.868,50.225,342.7,22.754,303.788,2.891,275.65-.645,230.767,11.6,194.622c21.848-64.477,62.566-131.1,118.623-165.529C158.468,11.749,208.24.739,242.935,18.339c29.388,14.908,45.242,41.6,55.163,76.064q2.053,12.486,4.1,24.974Q302.671,126.289,303.138,133.2Z')
+								image(xlink:href='assets/img/contact.jpg' width='100%' height='100%' style="clip-path:url(#clip-contact);")
+			
+			.row
+				.col-12
+					.contact-map
+						iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3A793e1d1f4bb60b45feeb9e4ab5e99bc35f9b6939fab82ff34a8cbdb08238d621&source=constructor' width='100%' height='620' frameborder='0')
