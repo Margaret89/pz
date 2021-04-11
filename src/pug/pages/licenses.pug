@@ -1,0 +1,67 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Лицензии';
+	- var h1 = 'Лицензии';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'О центре'},
+			{href:'#',name:'Лицензии'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.docs
+		.container
+			.docs-list.docs-list_big
+				.row
+					-
+						var list=[
+							{img:'license1.jpg', img_big:'license-big1.jpg'},
+							{img:'license2.jpg', img_big:'license-big2.jpg'},
+							{img:'license3.jpg', img_big:'license-big3.jpg'},
+							{img:'license4.jpg', img_big:'license-big4.jpg'},
+							{img:'license5.jpg', img_big:'license-big5.jpg'},
+						]
+
+					each item, index in list
+						.col-6
+							a.docs-list__item(href='assets/img/'+item.img_big, data-fancybox='diploma')
+								img(src='assets/img/'+item.img, alt='')
+
+	section.contact-info
+		.container
+			.row
+				.col-lg-7
+					.h2 Телефоны вышестоящих организаций
+
+					.contact-info__item
+						.contact-info__title Управление Федеральной службы по надзору в сфере защиты прав потребителей и благополучия человека по Тверской области
+						.contact-info__text
+							|г. Тверь, ул. Дарвина, д. 17
+							br
+							|тел. +7 (4822) 34-22-11
+							br
+							|тел. +7 (4822) 32-35-98 /гор.линия/
+
+					.contact-info__item
+						.contact-info__title Министерство здравоохранения Тверской области
+						.contact-info__text
+							|г. Тверь, ул. Советская, д. 23
+							br
+							|тел. +7 (4822) 32-04-82
+							br
+							|тел. +7 (4822) 32-03-51
+
+					.contact-info__item
+						.contact-info__title Управление Росздравнадзора по Тверской области
+						.contact-info__text
+							|г. Тверь, ш. Петербургское, д. 105
+							br
+							|тел. +7 (4822) 34-36-02
+							br
+							|тел. +7 (4822) 35-85-88 /гор.линия/

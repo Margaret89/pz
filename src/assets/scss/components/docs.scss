@@ -1,8 +1,8 @@
 /*-------------- docs -----------------*/
 .docs{
 	&:not(:last-child){margin-bottom: 106px;}
-
 	&__more{margin-top: 12px;}
+	& + .contact-info{margin-top: -50px;}
 }
 
 .docs-list{
@@ -32,14 +32,18 @@
 	[class^=col-]:nth-child(4n+2){background: url(../img/bg-docs2.png) center no-repeat; background-size: contain;}
 	[class^=col-]:nth-child(4n+3){background: url(../img/bg-docs3.png) center no-repeat; background-size: contain;}
 	[class^=col-]:nth-child(4n+4){background: url(../img/bg-docs4.png) center no-repeat; background-size: contain;}
+
+	&_big &__item{margin: 50px 0;}
 }
 
 @media (max-width: 767px) {
 	.docs{
 		&:not(:last-child){margin-bottom: 50px;}
+		& + .contact-info{margin-top: 0;}
 	}
-	
+
 	.docs-list{
 		&__item{padding: 5px;}
+		&_big &__item{margin: 20px 0;}
 	}
 }
