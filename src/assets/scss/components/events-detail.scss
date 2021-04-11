@@ -43,7 +43,13 @@
 		text-align: center;
 		text-decoration: none;
 		padding: 10px 30px;
-		margin: 12px;
+		margin: 9px 12px;
+	}
+
+	&_col{
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
 	}
 }
 

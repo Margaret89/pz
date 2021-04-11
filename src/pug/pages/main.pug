@@ -138,18 +138,20 @@ block content
 								.program-card__content
 									.program-card__title= item.title
 
-									.program-card__info
-										.program-card__price
-											|от&nbsp;
-											span.program-card__num= item.price
-											|&nbsp;
-											= item.cur
+									.program-card__main
+										.program-card__info
+											.program-card__desc
+												.program-card__price
+													|от&nbsp;
+													span.program-card__num= item.price
+													|&nbsp;
+													= item.cur
 
-										if(item.text)
-											.program-card__text= item.text
-									
-									.program-card__more
-										a.btn.btn_border(href='#') Узнать больше
+												if(item.text)
+													.program-card__text= item.text
+											
+										.program-card__more
+											a.btn.btn_border(href='#') Узнать больше
 
 	section.faq-wrap
 		.container

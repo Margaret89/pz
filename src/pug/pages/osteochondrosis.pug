@@ -13,176 +13,177 @@ block breadcrumb
 	+breadcrumbs(breadcrumbs)
 
 block content
-	section.diagnosis
-		.container
-			.row
-				.col-12
-					.diagnosis__layuot
-						.diagnosis__content
-							.h1 Лечение остеохондроза в&nbsp;центре Игоря Морозова
+	.diagnosis-wrap
+		section.diagnosis
+			.container
+				.row
+					.col-12
+						.diagnosis__layuot
+							.diagnosis__content
+								.h1 Лечение остеохондроза в&nbsp;центре Игоря Морозова
 
-							p Всего за 7-20 занятий, в зависимости от интенсивности лечения и этапов развития болезни вы полностью избавитесь от боли и дискомфорта в шейном отделе позвоночника, нормолизуете сон и сможите жить полной жизнью
+								p Всего за 7-20 занятий, в зависимости от интенсивности лечения и этапов развития болезни вы полностью избавитесь от боли и дискомфорта в шейном отделе позвоночника, нормолизуете сон и сможите жить полной жизнью
 
-							.note
-								.note__title Важно понимать!
-								.note__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
-
-
-							.history
-								.h2 Как происходит лечение
-
-								.history__list
-									-
-										var list=[
-											{title:'Вы проходите консультацию с врачем', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar temporLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor'},
-											{title:'Начинаете занятия с инструктором', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor'},
-											{title:'Пишите восторженный отзыв', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar temporLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.'},
-										]
-
-									each item in list
-										.history__item
-											.history__content
-												.history__title= item.title
-												.history__text.read-more.js-read-more= item.text
-
-							.faq-wrap
-								.h2 Частые вопросы
-
-								.faq.faq_white.js-faq
-									-
-										var list=[
-											{
-												head:'А что, если мне станет хуже?',
-												title:'Нагрузка на ваши мышцы будет минимальна на старте, всего 1-5 кг',
-												icon:'question-grey1.png',
-												//- status:'active',
-												text:[
-													'Как правило большую травмоопасность будет представлять собой автобус который повезет вас к нам в центр. Т.к. может резко затормозить или дернуться.',
-													'Так или иначе вы уже поднимаете свой собственный вес нагружая мышцы и суставы, мы в центре дадим локальную нагрузку только на мышцы чтобы создать мышечный контент.',
-													'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.',
-												]
-											},
-											{
-												head:'Разве можно давать нагрузку при болях?',
-												title:'Заголовок 2',
-												icon:'question-grey2.png',
-												text:[
-													'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.',
-												]
-											},
-											{
-												head:'Я слышал(а), что нельзя ходить на зарядку',
-												title:'Заголовок 3',
-												icon:'question-grey3.png',
-												text:[
-													'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-												]
-											},
-											{
-												head:'А мой врач сказал, что мне нельзя',
-												title:'Заголовок 4',
-												icon:'question-grey4.png',
-												text:[
-													'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.',
-													'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-												]
-											},
-										]
-
-									.faq__main
-										each item, index in list
-											.faq__item.js-faq-item(class=item.status?'active':'', data-num="faq"+index)
-												.faq__head.js-faq-head
-													.faq__icon
-														img(src="assets/img/"+item.icon, alt="")
-													.faq__title= item.head
-
-													.faq__arr
-														+svg('ic-arrow-right','ic-arrow-right', '7', '14')
-												
-												.faq__content
-													.h3= item.title 
-
-													each text in item.text
-														p= text
-
-									.faq__more
-										a(href="#") Читать все вопросы
-
-						.diagnosis__sidebar
-							.event-calendar
-								.event-calendar__title Бесплатное лечение
-
-								.event-calendar__list
-									-
-										var list=[
-											{month:'Март', date:'17', text:'Гимнастика “Бодрая старушка” для тех кому за 60'},
-											{month:'Март', date:'24', text:'Зарядка для программиста и тех, кто работает “в кресле”'},
-											{month:'Март', date:'31', text:'Урок похудения для пышных и энергичных'},
-										]
-
-									each item in list
-										.event-calendar__item
-											.calendar-paper
-												.calendar-paper__month= item.month
-												.calendar-paper__date= item.date
-
-											.event-calendar__text= item.text
+								.note
+									.note__title Важно понимать!
+									.note__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
 
 
-								.event-calendar__more
-									a(href="#") Все события центра
+								.history
+									.h2 Как происходит лечение
 
-							.card-person
-								.card-person__title Запишитесь на консультацию с врачем центра заранее
+									.history__list
+										-
+											var list=[
+												{title:'Вы проходите консультацию с врачем', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar temporLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor'},
+												{title:'Начинаете занятия с инструктором', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor'},
+												{title:'Пишите восторженный отзыв', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar temporLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.'},
+											]
 
-								.card-person__content.clearfix
-									.card-person__info
-										.card-person__img
-											svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 200 236' preserveAspectRatio='xMinYMin meet')
-												path(fill="#7ea9e0" style="opacity: 0.6" d='M61.1,2.448C72.721,1.037,81.543,1.292,89.893,3.73c32.578,9.511,78,50.524,96.273,78.544,7.819,11.988,16.307,32.15,12.74,51.143-5.679,30.236-29.917,47.932-50.649,66.132-12.8,11.237-42.11,37.99-68.813,36.156C22.6,231.8-10.32,151.142,2.391,83.713c5.674-30.1,16.921-55.993,39.3-72.576C47.336,6.959,54.219,6.221,61.1,2.448Z')
-												path(fill="#7ea9e0" d='M71.086-.884c11.353-.179,19.838.967,27.644,4.17,30.458,12.5,70.089,56.723,84.862,85.638,6.32,12.371,12.451,32.7,7.071,50.677-8.564,28.616-33.752,43.235-55.61,58.7-13.5,9.547-44.5,32.394-70.075,27.905C10.537,216.645-12.989,135.415,6.154,71.6,14.7,43.121,28.192,19.263,51.478,5.531,57.346,2.071,64.061,2.06,71.086-.884Z')
+										each item in list
+											.history__item
+												.history__content
+													.history__title= item.title
+													.history__text.read-more.js-read-more= item.text
 
-												clippath(id='clip-card')
-													path(fill='#ffffff' d='M71.434,2.489c11-.174,19.227.937,26.792,4.045,29.519,12.128,67.928,55.036,82.245,83.092,6.125,12,12.067,31.73,6.853,49.169-8.3,27.765-32.711,41.949-53.9,56.951-13.08,9.263-43.129,31.43-67.914,27.075-52.763-9.273-75.563-88.088-57.011-150C16.785,45.185,29.862,22.036,52.43,8.712,58.117,5.355,64.626,5.344,71.434,2.489Z')
-												image(xlink:href='assets/img/ava-card.jpg' width='100%' height='100%' style="clip-path:url(#clip-card);")
+								.faq-wrap
+									.h2 Частые вопросы
+
+									.faq.faq_white.js-faq
+										-
+											var list=[
+												{
+													head:'А что, если мне станет хуже?',
+													title:'Нагрузка на ваши мышцы будет минимальна на старте, всего 1-5 кг',
+													icon:'question-grey1.png',
+													//- status:'active',
+													text:[
+														'Как правило большую травмоопасность будет представлять собой автобус который повезет вас к нам в центр. Т.к. может резко затормозить или дернуться.',
+														'Так или иначе вы уже поднимаете свой собственный вес нагружая мышцы и суставы, мы в центре дадим локальную нагрузку только на мышцы чтобы создать мышечный контент.',
+														'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.',
+													]
+												},
+												{
+													head:'Разве можно давать нагрузку при болях?',
+													title:'Заголовок 2',
+													icon:'question-grey2.png',
+													text:[
+														'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.',
+													]
+												},
+												{
+													head:'Я слышал(а), что нельзя ходить на зарядку',
+													title:'Заголовок 3',
+													icon:'question-grey3.png',
+													text:[
+														'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+													]
+												},
+												{
+													head:'А мой врач сказал, что мне нельзя',
+													title:'Заголовок 4',
+													icon:'question-grey4.png',
+													text:[
+														'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.',
+														'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+													]
+												},
+											]
+
+										.faq__main
+											each item, index in list
+												.faq__item.js-faq-item(class=item.status?'active':'', data-num="faq"+index)
+													.faq__head.js-faq-head
+														.faq__icon
+															img(src="assets/img/"+item.icon, alt="")
+														.faq__title= item.head
+
+														.faq__arr
+															+svg('ic-arrow-right','ic-arrow-right', '7', '14')
+													
+													.faq__content
+														.h3= item.title 
+
+														each text in item.text
+															p= text
+
+										.faq__more
+											a(href="#") Читать все вопросы
+
+							.diagnosis__sidebar
+								.event-calendar
+									.event-calendar__title Бесплатное лечение
+
+									.event-calendar__list
+										-
+											var list=[
+												{month:'Март', date:'17', text:'Гимнастика “Бодрая старушка” для тех кому за 60'},
+												{month:'Март', date:'24', text:'Зарядка для программиста и тех, кто работает “в кресле”'},
+												{month:'Март', date:'31', text:'Урок похудения для пышных и энергичных'},
+											]
+
+										each item in list
+											.event-calendar__item
+												.calendar-paper
+													.calendar-paper__month= item.month
+													.calendar-paper__date= item.date
+
+												.event-calendar__text= item.text
 
 
-										p.card-person__name Афонина<br>Ольга Владимировна
+									.event-calendar__more
+										a(href="#") Все события центра
 
-										p Врач высшей категории стаж 10 лет
-										p Специализация:<br>невролог-ортопед
-										p Время приёма:
-										p Пн-Пт 9.00 - 21.00
-											br
-											|Сб 9.00 - 18.00
-											br
-											|Вс выходной
+								.card-person
+									.card-person__title Запишитесь на консультацию с врачем центра заранее
 
-										a.btn.btn_green(href='#') Записаться на консультацию
+									.card-person__content.clearfix
+										.card-person__info
+											.card-person__img
+												svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 200 236' preserveAspectRatio='xMinYMin meet')
+													path(fill="#7ea9e0" style="opacity: 0.6" d='M61.1,2.448C72.721,1.037,81.543,1.292,89.893,3.73c32.578,9.511,78,50.524,96.273,78.544,7.819,11.988,16.307,32.15,12.74,51.143-5.679,30.236-29.917,47.932-50.649,66.132-12.8,11.237-42.11,37.99-68.813,36.156C22.6,231.8-10.32,151.142,2.391,83.713c5.674-30.1,16.921-55.993,39.3-72.576C47.336,6.959,54.219,6.221,61.1,2.448Z')
+													path(fill="#7ea9e0" d='M71.086-.884c11.353-.179,19.838.967,27.644,4.17,30.458,12.5,70.089,56.723,84.862,85.638,6.32,12.371,12.451,32.7,7.071,50.677-8.564,28.616-33.752,43.235-55.61,58.7-13.5,9.547-44.5,32.394-70.075,27.905C10.537,216.645-12.989,135.415,6.154,71.6,14.7,43.121,28.192,19.263,51.478,5.531,57.346,2.071,64.061,2.06,71.086-.884Z')
+
+													clippath(id='clip-card')
+														path(fill='#ffffff' d='M71.434,2.489c11-.174,19.227.937,26.792,4.045,29.519,12.128,67.928,55.036,82.245,83.092,6.125,12,12.067,31.73,6.853,49.169-8.3,27.765-32.711,41.949-53.9,56.951-13.08,9.263-43.129,31.43-67.914,27.075-52.763-9.273-75.563-88.088-57.011-150C16.785,45.185,29.862,22.036,52.43,8.712,58.117,5.355,64.626,5.344,71.434,2.489Z')
+													image(xlink:href='assets/img/ava-card.jpg' width='100%' height='100%' style="clip-path:url(#clip-card);")
+
+
+											p.card-person__name Афонина<br>Ольга Владимировна
+
+											p Врач высшей категории стаж 10 лет
+											p Специализация:<br>невролог-ортопед
+											p Время приёма:
+											p Пн-Пт 9.00 - 21.00
+												br
+												|Сб 9.00 - 18.00
+												br
+												|Вс выходной
+
+											a.btn.btn_green(href='#') Записаться на консультацию
+											
 										
-									
-							.card-info
-								.card-info__title О заболевании "Остеохондроз"
+								.card-info
+									.card-info__title О заболевании "Остеохондроз"
 
-								.card-info__text
-									ul.type-list
-										li 
-											a(href="#") Причины возникновения
-										li 
-											a(href="#") Этапы заболевания
-										li 
-											a(href="#") Лечения остеохондроза позвоночника
-										li 
-											a(href="#") Лечение остеохондроза шейного отдела
-										li 
-											a(href="#") Противопоказания
-										li 
-											a(href="#") Срочная помощь
+									.card-info__text
+										ul.type-list
+											li 
+												a(href="#") Причины возникновения
+											li 
+												a(href="#") Этапы заболевания
+											li 
+												a(href="#") Лечения остеохондроза позвоночника
+											li 
+												a(href="#") Лечение остеохондроза шейного отдела
+											li 
+												a(href="#") Противопоказания
+											li 
+												a(href="#") Срочная помощь
 
-									p Лечение остеохондроза, как и любого другого заболевания опорно-двигательного аппарата человека, требует обоснованного и профессионального подхода, от которого зависит не просто положительный результат излечения от болезни, а, чаще всего, дальнейшая судьба пациента. Поэтому каждому больному есть необходимость разобраться в самом понятии «остеохондроз», причин его возникновения и сложности лечения.
+										p Лечение остеохондроза, как и любого другого заболевания опорно-двигательного аппарата человека, требует обоснованного и профессионального подхода, от которого зависит не просто положительный результат излечения от болезни, а, чаще всего, дальнейшая судьба пациента. Поэтому каждому больному есть необходимость разобраться в самом понятии «остеохондроз», причин его возникновения и сложности лечения.
 
-								.card-info__more
-									a(href="#") Читать далее
+									.card-info__more
+										a(href="#") Читать далее
 
-	include ../components/survey
+		include ../components/survey

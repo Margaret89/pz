@@ -1,4 +1,9 @@
 /*-------------- diagnosis -----------------*/
+.diagnosis-wrap{
+	.event-add,
+	.gallery-wrap{margin-top: 106px;}
+}
+
 .diagnosis{
 	.h1, h1{
 		letter-spacing: 0.4px;
@@ -43,6 +48,9 @@
 			&__more{margin-top: 50px;}
 		}
 	}
+
+	& + .event-add,
+	& + .gallery-wrap{margin-top: 0;}
 }
 
 .note{
