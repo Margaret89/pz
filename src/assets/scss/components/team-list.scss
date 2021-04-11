@@ -2,7 +2,10 @@
 .team-sect{
 	&:not(:last-child){margin-bottom: 62px;}
 	h2, .h2{margin-bottom: 20px;}
+	&__more{margin-top: 40px;}
 }
+
+.team.bg-grey{padding: 55px 0;}
 
 .team-list{
 	display: flex;

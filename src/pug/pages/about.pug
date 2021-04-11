@@ -1,0 +1,358 @@
+extends ../layout/main
+
+block variables
+	- var title = 'О центрах Морозова';
+	- var h1 = 'О центрах Игоря Морозова';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'О центрах Игоря Морозова'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	.about-page
+		section.about.bg-grey
+			.container
+				.row
+					.col-12
+						.about__content
+							.fact-list
+								-
+									var list=[
+										{num:'18', text:'лет практики в лечении спины и суставов'},
+										{num:'27 489', text:'пациентов центра, вернувшихся к активному образу жизни'},
+										{num:'99', text:'публикаций с участием Игоря Морозова на ТВ, радио и СМИ'},
+									]
+
+								each item in list
+									.fact-list__item
+										.fact-list__num.js-fact-list-num(data-count=item.num)= item.num
+										.fact-list__text= item.text
+
+							.about__info
+								.about__desc
+									.about__title Способ реабилитации Игоря Морозова безумно прост и гениален!
+									.about__text
+										p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+										p Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+
+								.about__author
+									.about__img
+										svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 211 250' preserveAspectRatio='xMinYMin meet')
+											path(fill="#7ea9e0" style="opacity: 0.6" d='M64.8,2.944C77.089,1.45,86.422,1.721,95.255,4.3,129.721,14.37,177.771,57.79,197.107,87.454c8.272,12.692,17.252,34.037,13.478,54.144-6.008,32.01-31.65,50.745-53.584,70.012-13.542,11.9-44.549,40.221-72.8,38.279C24.062,245.755-10.764,160.364,2.683,88.978c6-31.864,17.9-59.279,41.582-76.834C50.232,7.72,57.515,6.938,64.8,2.944Z')
+											path(fill="#7ea9e0" d='M75.359-.583C87.371-.773,96.347.44,104.605,3.832c32.224,13.233,74.151,60.051,89.779,90.663,6.687,13.1,13.173,34.622,7.482,53.651-9.06,30.294-35.708,45.771-58.833,62.14-14.278,10.107-47.079,34.295-74.135,29.542C11.3,229.71-13.587,143.714,6.665,76.158,15.7,46,29.979,20.746,54.615,6.208,60.822,2.545,67.927,2.533,75.359-.583Z')
+
+											clippath(id='clip-author')
+												path(fill='#ffffff' d='M75.727,2.987C87.368,2.8,96.068,3.98,104.071,7.27c31.23,12.84,71.864,58.266,87.011,87.968,6.48,12.707,12.766,33.592,7.25,52.056-8.78,29.393-34.607,44.41-57.018,60.292-13.838,9.806-45.627,33.275-71.849,28.663-55.82-9.817-79.942-93.256-60.314-158.8,8.761-29.258,22.6-53.765,46.472-67.87C61.638,6.022,68.524,6.01,75.727,2.987Z')
+											image(xlink:href='assets/img/author.jpg' width='100%' height='100%' style="clip-path:url(#clip-author);")
+									.about__name Фамилия<br>Имя Отчество
+									.about__post Врач высшей категории очень известная личность
+
+		section.data-block
+			.container
+				.row
+					.col-lg-5
+						.h2 Особый способ лечения Игоря Морозова запатентован и не&nbsp;имеет аналогов в России
+
+				.row
+					.col-lg-7.order-2.order-lg-1
+						p
+							b Технически весь фокус заключается в том что в момент работы на узколокальных тренажорах нагрузка на суставы сводится практически к нулю.
+
+						p Происходит это за счет правильно подобранных тренажоров с верной гиометрией, только в таких случаях нагрузка переходит с сустава на металлический рычаг тренажора.  Не травмируя при этом поврежденную область.
+
+						p 
+							b Зачем это нужно?
+							br
+							|Суставы человека постоянно самостоятельно востанавливаются, чтобы восстановление было правельным, сустав должен сохранять и практиковать подвижность. Но если сустав поврежден, ему нельзя давать нагрузку.
+
+						p Мышцы наоборот, в состоянии покоя ослабивают и увеличивают нагрузку на суставы уменьшая мышечный карказ. А под нагрузкой укрепляются
+
+						p 
+							b Получается что для того чтобы выздоровить нам нужно сохранить подвижность сустава, наростить мышечный карказ и не давать никакой нагрузки на сустав в момент терапии.
+
+						p Что мы и практикуем в нашем центре.
+
+						a.btn(href='#') Подробнее о технологии лечения
+
+					.col-lg-5.order-1.order-lg-2
+						.data-block__sidebar
+							.data-block__img
+								img(src="assets/img/scheme.jpg", alt="")
+
+		section.about-contact.js-about-contact
+			.container
+				.row
+					.col-12
+						.about-contact__list.js-about-contact-list
+							.about-contact__item.js-about-contact-item(data-item="contact1") Зеленоград
+							.about-contact__item.js-about-contact-item(data-item="contact2") Тверь
+							.about-contact__item.js-about-contact-item(data-item="contact3") Клин
+							.about-contact__item.js-about-contact-item(data-item="contact4") Дубна
+			
+			.about-contact__content.js-about-contact-content
+				#contact1.about-contact__content-item.js-about-contact-content-item
+					.container
+						.row
+							.col-lg-5
+								.about-contact-info
+									.about-contact-info__item
+										.about-contact-info__title О центре
+										.about-contact-info__text Это первый центр основанный Игорем Морозовым в 2001 году совместно с доктором Бубновским, от методики лечения которого вскоре пришлось отойти
+
+									.about-contact-info__item
+										.about-contact-info__title Адрес
+										.about-contact-info__text Москва, Зеленоград, Центральный проспект, корпус 11
+
+									.about-contact-info__item
+										.about-contact-info__title Контакты
+										.about-contact-info__text
+											a.about-contact-info__phone(href="tel:+7 (499) 736-56-84") +7 (499) 736-56-84
+
+									a.btn.btn_green(href='#') Экспресс консультация
+
+							.col-lg-7
+								.about-contact__map
+									iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3Ae711d3af73888746dda702d8373eec7106b7691b4b083eeeb053c5356507e3bf&source=constructor' width='1280' height='527' frameborder='0')
+									img.about-contact__map-bg(src="assets/img/bg-map.svg", alt="")
+
+
+				#contact2.about-contact__content-item.js-about-contact-content-item
+					.container
+						.row
+							.col-lg-5
+								.about-contact-info
+									.about-contact-info__item
+										.about-contact-info__title О центре
+										.about-contact-info__text Тверь
+
+									a.btn.btn_green(href='#') Экспресс консультация
+
+							.col-lg-7
+								.about-contact__map
+									iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3A8967336eb973572aa119de15b672ff659dea427301b497792c1a133c43405564&source=constructor' width='1280' height='527' frameborder='0')
+									img.about-contact__map-bg(src="assets/img/bg-map.svg", alt="")
+
+				#contact3.about-contact__content-item.js-about-contact-content-item
+					.container
+						.row
+							.col-lg-5
+								.about-contact-info
+									.about-contact-info__item
+										.about-contact-info__title О центре
+										.about-contact-info__text Клин
+
+									a.btn.btn_green(href='#') Экспресс консультация
+
+							.col-lg-7
+								.about-contact__map
+									iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3Af9f753d9f4d5fbf1eb4d392d1d749c4ba658763e54dbf7e4b3f9f84e9dae82ba&source=constructor' width='1280' height='527' frameborder='0')
+									img.about-contact__map-bg(src="assets/img/bg-map.svg", alt="")
+
+				#contact4.about-contact__content-item.js-about-contact-content-item
+					.container
+						.row
+							.col-lg-5
+								.about-contact-info
+									.about-contact-info__item
+										.about-contact-info__title О центре
+										.about-contact-info__text Дубна
+
+									a.btn.btn_green(href='#') Экспресс консультация
+
+							.col-lg-7
+								.about-contact__map
+									iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3A2dc7434a4d7f1673e31de3fbc8560dfa791757f00cb6aafa17272b25dae5aa62&source=constructor' width='1280' height='527' frameborder='0')
+									img.about-contact__map-bg(src="assets/img/bg-map.svg", alt="")
+
+		section.docs
+			.container
+				.row
+					.col-12
+						.h2 Лицензии и сертификаты
+				
+						.docs-list
+							.docs-list__content
+								-
+									var list=[
+										{img:'license1.jpg', img_big:'license-big1.jpg'},
+										{img:'license2.jpg', img_big:'license-big2.jpg'},
+										{img:'license3.jpg', img_big:'license-big3.jpg'},
+										{img:'license4.jpg', img_big:'license-big4.jpg'},
+										{img:'license5.jpg', img_big:'license-big4.jpg'},
+									]
+
+								each item, index in list
+									a.docs-list__item(href='assets/img/'+item.img_big, data-fancybox='diploma')
+										img(src='assets/img/'+item.img, alt='')
+
+
+		section.docs
+			.container
+				.row
+					.col-12
+						.h2 Дипломы и награды
+				
+						.docs-list
+							.docs-list__content
+								-
+									var list=[
+										{img:'diploma1.jpg', img_big:'diploma-big1.jpg'},
+										{img:'diploma4.jpg', img_big:'diploma-big4.jpg'},
+										{img:'diploma3.jpg', img_big:'diploma-big3.jpg'},
+										{img:'diploma4.jpg', img_big:'diploma-big4.jpg'},
+										{img:'diploma3.jpg', img_big:'diploma-big3.jpg'},
+									]
+
+								each item, index in list
+										a.docs-list__item(href='assets/img/'+item.img_big, data-fancybox='diploma')
+											img(src='assets/img/'+item.img, alt='')
+
+				.row
+					.col-12
+						.docs__more
+							a.btn(href='#') Показать всех
+
+		section.team.bg-grey
+			.container
+				.row
+					.col-12
+						.team-sect
+							.h2 Коллектив
+				
+							.team-list
+								-
+									var list=[
+										{img:'person1.jpg', lastname:'Афонина', name:'Ольга Владимировна', text:'Врач высшей категории стаж 10 лет', path:'1'},
+										{img:'person2.jpg', lastname:'Баева', name:'Галина Алексеевна', text:'Врач высшей категории', path:'2'},
+										{img:'person3.jpg', lastname:'Белюстов', name:'Василий Васильевич', text:'Врач высшей категории стаж 10 лет', path:'3'},
+										{img:'person4.jpg', lastname:'Гордиеенко', name:'Татьяна Григорьевна', path:'4'},
+										{img:'person5.jpg', lastname:'Зарубина', name:'Ирина Александровна', text:'Врач высшей категории стаж 10 лет', path:'5'},
+										{img:'person6.jpg', lastname:'Кавандин', name:'Игорь Николаевич', text:'Врач высшей категории стаж 10 лет', path:'3'},
+										{img:'person7.jpg', lastname:'Клементьев', name:'Денис Андреевич', path:'4'},
+										{img:'person8.jpg', lastname:'Кульдо', name:'Ольга Николаевна', text:'Врач высшей категории стаж 10 лет', path:'5'},
+										{img:'person9.jpg', lastname:'Лесняк', name:'Лариса Игоревна', text:'Врач высшей категории стаж 10 лет' , path:'1'},
+										{img:'person10.jpg', lastname:'Лепешко', name:'Ирина Владимировна', text:'Врач высшей категории', path:'2'},
+									]
+
+								each item, index in list
+									.team-list__item
+										a(href="#").team-list__img
+											if(item.path == '1')
+												svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 260 243' preserveAspectRatio='xMinYMin meet')
+													path(fill="#7ea9e0" style="opacity: 0.6" d='M96.491,7.327C108.1,5.914,116.917,6.17,125.26,8.611c32.553,9.524,77.935,50.59,96.2,78.647,7.813,12,16.294,32.194,12.73,51.211-5.675,30.276-29.893,48-50.609,66.219-12.792,11.252-42.077,38.041-68.76,36.205-56.8-3.91-89.693-84.675-76.993-152.193C43.5,58.562,54.734,32.633,77.1,16.028,82.736,11.845,89.614,11.106,96.491,7.327Z')
+													path(fill="#7ea9e0" d='M106.468,3.991c11.345-.179,19.823.968,27.623,4.175,30.435,12.516,70.034,56.8,84.795,85.751,6.316,12.387,12.442,32.746,7.067,50.744-8.558,28.653-33.726,43.292-55.567,58.773-13.486,9.56-44.466,32.437-70.02,27.942-54.4-9.57-77.907-90.907-58.779-154.8,8.538-28.52,22.02-52.41,45.289-66.16C92.738,6.95,99.449,6.939,106.468,3.991Z')
+													clippath(id='clip'+index)
+														path(fill='#ffffff' d='M106.815,7.368c11-.174,19.212.938,26.771,4.051,29.5,12.144,67.875,55.109,82.181,83.2,6.12,12.019,12.058,31.772,6.848,49.235-8.293,27.8-32.686,42-53.853,57.026-13.07,9.275-43.095,31.472-67.861,27.11-52.722-9.285-75.5-88.2-56.966-150.2C52.21,50.121,65.276,26.941,87.827,13.6,93.509,10.239,100.012,10.227,106.815,7.368Z')
+													image(xlink:href='assets/img/person1.jpg' width='100%' height='100%' style="clip-path:url(#clip"+index+");")
+
+											else if(item.path == '2')
+												svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 260 243' preserveAspectRatio='xMinYMin meet')
+													path(fill="#7ea9e0" style="opacity: 0.6" d='M245.465,122.654c-2.141,11.483-5.034,19.8-9.871,27.019-18.873,28.156-71.716,59.086-103.988,68.079-13.808,3.848-35.63,5.88-52.714-3.212-27.2-14.473-36.837-42.85-48.01-68.04-6.9-15.555-23.673-51.475-13.9-76.342C37.78,17.223,124.768,10.081,185.408,42.4c27.068,14.427,48.446,32.9,57.576,59.177C245.285,108.2,243.924,114.971,245.465,122.654Z')
+													path(fill="#7ea9e0" d='M245.651,133.157c-3.238,10.86-6.88,18.592-12.286,25.062-21.094,25.242-75.268,49.7-107.344,55.09-13.723,2.305-35,2.043-50.567-8.468-24.783-16.732-31.195-45.091-39.412-70.533-5.074-15.709-17.6-52.072-5.635-75.067C55.89,10.289,140.6,12.257,195.854,49.614c24.662,16.675,43.417,36.673,49.552,62.955C246.952,119.192,244.947,125.588,245.651,133.157Z')
+
+													clippath(id='clip'+index)
+														path(fill='#ffffff' d='M242.323,132.476c-3.137,10.526-6.669,18.019-11.911,24.288-20.457,24.459-73.006,48.149-104.124,53.362-13.313,2.231-33.955,1.971-49.061-8.222-24.048-16.227-30.278-43.716-38.258-68.378-4.927-15.227-17.1-50.477-5.49-72.762,24.706-47.439,106.893-45.5,160.507-9.278,23.931,16.17,42.133,35.559,48.093,61.035C243.581,118.941,241.638,125.139,242.323,132.476Z')
+													image(xlink:href='assets/img/person2.jpg' width='100%' height='100%' style="clip-path:url(#clip"+index+");")
+
+											else if(item.path == '3')
+												svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 260 243' preserveAspectRatio='xMinYMin meet')
+													path(fill="#7ea9e0" style="opacity: 0.6" d='M133.111,238.441c-11.552-1.744-19.97-4.349-27.351-8.932-28.8-17.886-61.546-69.607-71.651-101.534C29.785,114.316,27,92.588,35.5,75.212c13.527-27.662,41.561-38.264,66.357-50.288,15.311-7.423,50.638-25.411,75.834-16.5,53.636,18.961,63.785,105.6,33.573,167.281-13.486,27.531-31.211,49.518-57.165,59.539C147.556,237.766,140.738,236.639,133.111,238.441Z')
+													path(fill="#7ea9e0" d='M122.619,238.987c-10.969-2.861-18.824-6.234-25.478-11.412-25.963-20.2-52.286-73.476-58.783-105.33-2.779-13.629-3.254-34.889,6.715-50.8,15.87-25.328,44-32.705,69.146-41.785,15.528-5.606,51.444-19.37,74.846-8.2,49.817,23.773,50.779,108.457,15.345,164.925-15.816,25.2-35.158,44.625-61.22,51.654C136.624,239.808,130.161,238.025,122.619,238.987Z')
+													
+													clippath(id='clip'+index)
+														path(fill='#ffffff' d='M123.184,235.64c-10.63-2.773-18.243-6.043-24.691-11.065C73.334,204.981,47.835,153.305,41.548,122.4c-2.69-13.222-3.144-33.849,6.523-49.287C63.46,48.539,90.724,41.374,115.1,32.558c15.052-5.444,49.868-18.807,72.547-7.98,48.277,23.05,49.186,105.209,14.826,160-15.337,24.458-34.089,43.305-59.351,50.131C136.758,236.433,130.494,234.7,123.184,235.64Z')
+													image(xlink:href='assets/img/person3.jpg' width='100%' height='100%' style="clip-path:url(#clip"+index+");")
+
+											else if(item.path == '4')
+												svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 260 243' preserveAspectRatio='xMinYMin meet')
+													path(fill="#7ea9e0" style="opacity: 0.6" d='M172.82,16.875c10.332,5.444,17.422,10.668,22.883,17.419,21.308,26.341,35.225,85.9,34.273,119.342-0.407,14.308-4.916,35.721-18.647,49.321-21.859,21.65-51.805,22.435-79.162,25.626-16.892,1.97-56.15,7.325-77.008-9.361C10.759,183.7,29.649,98.627,78.435,50.371,100.211,28.832,124.168,13.917,151.96,13,158.963,12.764,165.028,16.068,172.82,16.875Z')
+													path(fill="#7ea9e0" d='M182.9,19.81c9.413,6.306,15.72,12.07,20.3,19.143,17.869,27.6,25.213,86.507,20.878,118.694-1.854,13.77-8.393,33.984-23.03,45.715-23.3,18.677-52.279,16.39-79,16.688-16.5.185-54.927,1.362-73.347-16.867C9.49,164.376,36.408,84.17,88.411,42.548c23.213-18.579,47.852-30.541,74.763-28.6C169.953,14.431,175.468,18.238,182.9,19.81Z')
+				
+
+													clippath(id='clip'+index)
+														path(fill='#ffffff' d='M181.27,22.781c9.124,6.111,15.236,11.7,19.672,18.556,17.31,26.756,24.4,83.891,20.181,115.111-1.8,13.357-8.154,32.966-22.352,44.352-22.6,18.127-50.694,15.923-76.6,16.227-16,.187-53.254,1.349-71.1-16.323-38-37.617-11.859-115.423,38.58-155.821,22.514-18.032,46.409-29.646,72.5-27.782C168.717,17.572,174.062,21.261,181.27,22.781Z')
+													image(xlink:href='assets/img/person4.jpg' width='100%' height='100%' style="clip-path:url(#clip"+index+");")
+
+											else if(item.path == '5')
+												svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 260 243' preserveAspectRatio='xMinYMin meet')
+													path(fill="#7ea9e0" style="opacity: 0.6" d='M76.462,222.831c-9.9-6.224-16.577-11.981-21.51-19.134C35.7,175.786,26.389,115.316,29.913,82.036,31.421,67.8,37.573,46.789,52.331,34.283c23.5-19.909,53.46-18.388,81.024-19.464,17.02-.665,56.635-2.984,76.179,15.263,41.6,38.843,16.191,122.236-36.241,166.608-23.4,19.806-48.476,32.836-76.3,31.616C89.983,228,84.18,224.235,76.462,222.831Z')
+													path(fill="#7ea9e0" d='M66.618,219.128c-8.915-7.013-14.77-13.248-18.8-20.654C32.1,169.577,29.3,110.259,36.107,78.491,39.019,64.9,47.1,45.244,62.625,34.67,87.334,17.837,116.092,22.349,142.8,24.107c16.492,1.086,54.955,2.87,71.946,22.468,36.171,41.72,3.117,119.64-52.017,157.148C138.119,220.467,112.593,230.5,85.87,226.5,79.136,225.489,73.922,221.268,66.618,219.128Z')
+
+
+													clippath(id='clip'+index)
+														path(fill='#ffffff' d='M68.478,216.29c-8.64-6.8-14.313-12.841-18.216-20.021C35.036,168.252,32.354,110.726,38.971,79.913,41.8,66.731,49.651,47.663,64.706,37.4c23.966-16.338,51.848-11.979,77.743-10.287,15.99,1.045,53.283,2.754,69.747,21.752,35.049,40.442,2.957,116.028-50.521,152.434-23.871,16.251-48.626,26-74.535,22.127C80.612,222.452,75.559,218.361,68.478,216.29Z')
+													image(xlink:href='assets/img/person5.jpg' width='100%' height='100%' style="clip-path:url(#clip"+index+");")
+
+										.team-list__name
+											a(href="#")= item.lastname
+												br
+												= item.name
+										.team-list__text= item.text
+
+							.team-sect__more
+								a.btn(href='#') Все сотрудники центра
+
+
+		section.info-block
+		.container
+			.row
+				.col-lg-7
+					.info-block__content
+						.h2 Мы лечим
+
+						ul.type-list.type-list_col
+							-
+								var list=[
+									{text:'Остеохондроз', link:'true'},
+									{text:'Межпозвоночная грыжа'},
+									{text:'Боли в спине'},
+									{text:'Артрит и артроз'},
+									{text:'Коксартроз'},
+									{text:'Заболевания суставов'},
+									{text:'Остеопороз'},
+									{text:'Плоскостопие'},
+									{text:'Нарушение осанки'},
+									{text:'Плечелопаточный периартрит'},
+								]
+								
+							each item in list
+								li
+									if(item.link)
+										a(href="#")= item.text
+									else
+										= item.text
+
+						a.btn(href='#') Подобрать индивидуальную программу
+
+				.col-lg-5
+					include ../components/event-calendar
+
+		section.about-info
+			.container
+				.row
+					.col-12
+						.h2 История создания центра
+
+				.row
+					.col-lg-7.order-2.order-lg-1
+						.about-info__content
+							p История моего прихода в кинезитерапию берёт своё начало в славные 80-90-ые годы прошлого столетия. Работая инженером в НИИ, получая зарплату 130-150 руб. в месяц, для достойного содержания семьи (двое детей), приходилось много подрабатывать.
+							p В те годы в Советском Союзе, из законных видов подработки, существовали строительные отряды, бригады шабашников и разгрузочные работы в Северном речном порту или на ПОКе. Всеми этими подработками и приходилось заниматься во время отпуска, в выходные дни или по ночам. Механизации никакой, всё на собственном горбу.
+							p Так к 27 годам начались проблемы с нижней частью спины, поясницей. На протяжении 10-ти лет я честно выполнял все рекомендации врачей. Мне говорят уколы, я делаю уколы. Мне назначают физиотерапевтические процедуры, я их честно принимаю. Мне назначают массаж, и я его делаю. Далее мануальные терапевты, иголки, пиявки, колдуны, «великие врачеватели», доктора медицинских наук, академики, профессора и т.д и т.п.
+
+							a.btn(href='#') Читать далее
+
+					.col-lg-5.order-1.order-lg-2
+						.about-info__img
+							svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 375 309' preserveAspectRatio='xMinYMin meet')
+								path(fill="#a4c2e6" d='M123.384,6.062l46.363-4.406c62.011,1.952,121.524,4.1,158.173,41.5,13.542,13.82,25.279,29.176,33.889,50.193,29.443,71.87,3.353,150.751-35.474,185.454-28.075,25.092-75.157,35.279-114.3,27.482-69.836-13.909-143.482-47.512-184.4-102C7.021,176.841-8.666,125.661,7.075,86.358,20.408,53.066,47.287,32.431,82.848,16.97L108.87,9.036Z')
+								path(fill="#7ea9e0" d='M130.034-1.007L175-.355c59.6,8.428,116.783,16.779,149.507,56.678,12.091,14.742,22.338,30.774,29.183,51.93,23.4,72.342-7.171,145.574-46.967,174.9-28.776,21.207-74.834,26.049-112.008,14.4C128.4,276.789,59.775,236.642,24.121,179.838,6.158,151.221-5.422,100.261,12.453,64.063,27.594,33.4,54.91,16.36,90.232,5.221l25.615-4.9Z')
+
+								clippath(id='clip-gallery-'+index)
+									path(fill="#ffffff" d='M138.53,1.4l43.706,3.256C239.879,16.311,295.171,27.75,325.471,68.369c11.2,15.009,20.549,31.162,26.4,52.087,20,71.553-12.536,140.82-52.361,166.955-28.8,18.9-73.773,20.908-109.481,7.441-63.7-24.023-128.906-66.978-161.41-124.17C12.24,141.868,2.925,91.751,21.692,57.673c15.9-28.866,43.114-43.8,77.892-52.551l25.1-3.256Z')
+								image(xlink:href='assets/img/gallery1.jpg' width='100%' height='100%' style="clip-path:url(#clip-gallery-"+index+");")

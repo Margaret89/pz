@@ -230,3 +230,17 @@ if ($('.js-read-more').length) {
 		lessLink: '<a href="#" class="more-link">Свернуть</a>'
 	});
 }
+
+// tabs for about contact
+if ($('.js-about-contact').length) {
+	$('.js-about-contact-list .js-about-contact-item:first').addClass('active')
+	$('.js-about-contact-content .js-about-contact-content-item:first').fadeIn();
+
+	$('.js-about-contact-item').on('click', function(e) {
+		e.preventDefault();
+		$('.js-about-contact-content-item').hide();
+		$('.js-about-contact-item').removeClass('active');
+		$(this).addClass('active');
+		$('#' + $(this).attr('data-item')).fadeIn();
+	});
+}

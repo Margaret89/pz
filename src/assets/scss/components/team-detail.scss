@@ -1,4 +1,8 @@
 /*-------------- team-detail -----------------*/
+.team-detail-wrap{
+	& + .review-wrap{margin-top: 107px;}
+}
+
 .team-detail-top{
 	display: flex;
 	flex-wrap: wrap;
@@ -96,6 +100,10 @@
 }
 
 @media (max-width: 767px) {
+	.team-detail-wrap{
+		& + .review-wrap{margin-top: 60px;}
+	}
+
 	.team-det-info{
 		&__content{
 			width: 100%;
