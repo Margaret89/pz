@@ -1,0 +1,29 @@
+/*-------------- materials -----------------*/
+.materials-video{
+	h2, .h2{margin-bottom: 50px;}
+
+	&__content{
+		padding-top: 56%;
+		position: relative;
+
+		iframe{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.materials{
+		.article-short{margin-top: 60px;}
+	}
+}
+
+@media (max-width: 767px) {
+	.materials{
+		h2, .h2{margin-bottom: 30px;}
+	}
+}

@@ -1,14 +1,10 @@
 /*-------------- gallery -----------------*/
-.gallery{
-	display: flex;
-	flex-wrap: wrap;
-	margin-left: -15px;
-	margin-right: -15px;
+.gallery-wrap{
+	& + .history{margin-top: 67px;}
+}
 
-	&__item{
-		width: calc(33.33% - 30px);
-		margin: 15px;
-	}
+.gallery{
+	&__item{margin: 15px 0;}
 }
 
 @media (max-width: 480px) {

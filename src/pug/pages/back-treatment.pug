@@ -95,15 +95,17 @@ block content
 					.col-12
 						.h2 Как проходят занятия
 
-						.gallery
-							-
-								var list=[
-									'gallery1.jpg',
-									'gallery2.jpg',
-									'gallery3.jpg',
-								]
+				.gallery
+					.row
+						-
+							var list=[
+								'gallery1.jpg',
+								'gallery2.jpg',
+								'gallery3.jpg',
+							]
 
-							each item, index in list
+						each item, index in list
+							.col-sm-6.col-md-4
 								.gallery__item
 									svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 375 309' preserveAspectRatio='xMinYMin meet')
 										path(fill="#a4c2e6" d='M123.384,6.062l46.363-4.406c62.011,1.952,121.524,4.1,158.173,41.5,13.542,13.82,25.279,29.176,33.889,50.193,29.443,71.87,3.353,150.751-35.474,185.454-28.075,25.092-75.157,35.279-114.3,27.482-69.836-13.909-143.482-47.512-184.4-102C7.021,176.841-8.666,125.661,7.075,86.358,20.408,53.066,47.287,32.431,82.848,16.97L108.87,9.036Z')

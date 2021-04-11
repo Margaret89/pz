@@ -34,6 +34,29 @@
 	.btn{margin-top: 35px;}
 }
 
+.article-short{
+	&__item{
+		display: flex;
+		align-items: center;
+	}
+
+	&__item:not(:last-child){margin-bottom: 5px;}
+
+	&__img{
+		flex: 0 0 150px;
+		margin-right: 20px;
+	}
+
+	&__title{
+		@include font(normal, 500, 1.6rem, 1.5, $color-dark-blue);
+	}
+
+	&__text{
+		@include font(normal, 500, 1.6rem, 1.5, $color-text);
+		margin-top: 24px;
+	}
+}
+
 @media (max-width: 991px) {
 	.article-list{
 		&__item:not(:last-child){margin-bottom: 60px;}
@@ -56,5 +79,12 @@
 			margin-top: 30px;
 			.btn{margin-top: 30px;}
 		}
+	}
+
+	.article-short{
+		&__item{display: block;}
+		&__item:not(:last-child){margin-bottom: 30px;}
+		&__img{max-width: 200px;}
+		&__text{margin-top: 10px;}
 	}
 }
