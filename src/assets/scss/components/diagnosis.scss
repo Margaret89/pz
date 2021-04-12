@@ -73,6 +73,13 @@
 	}
 
 	& + .history{margin-top: 85px;}
+
+	&_beige{
+		background: $color-beige;
+		color: $color-text;
+	}
+
+	&_beige &__title{color: $color-dark-blue;}
 }
 
 .history{
@@ -314,6 +321,15 @@
 	}
 
 	&__more{margin-top: 15px;}
+
+	&__bottom{
+		padding: 37px 50px 0;
+		margin-left: -50px;
+		margin-right: -50px;
+		border-top: 3px dashed #fff;
+
+		.btn:not(:last-child){margin-bottom: 60px;}
+	}
 }
 
 @media (max-width: 1279px) {
@@ -460,7 +476,10 @@
 		}
 	}
 
-	.card-info{padding: 20px 20px 25px;}
+	.card-info{
+		padding: 20px 20px 25px;
+		&__bottom .btn:not(:last-child){margin-bottom: 30px;}
+	}
 
 	.person-h-top{
 		margin-bottom: 30px;

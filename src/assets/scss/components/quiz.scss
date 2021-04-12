@@ -70,6 +70,13 @@
 			@include font(normal, 900, 1.6rem, 1.2, $color-text);
 		}
 	}
+
+	&_big &__title{font-size: 3rem;}
+
+	&_big .quiz__title{
+		font-family: $font-lora;
+		@include font(normal, bold, 2.1rem, 1.2, $color-dark-blue);
+	}
 }
 
 .quiz{
@@ -197,7 +204,12 @@
 		&__title{font-size: 3rem;}
 	}
 
-	.quiz-wrap{padding: 20px 15px 25px;}
+	.quiz-wrap{
+		padding: 20px 15px 25px;
+
+		&_big &__title{font-size: 2.2rem;}
+		&_big .quiz__title{font-size: 1.8rem;}
+	}
 
 	.quiz{
 		&__title{font-size: 2.2rem;}

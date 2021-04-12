@@ -17,3 +17,23 @@
 		margin-right: 5px;
 	}
 }
+
+.list-black{
+	&,
+	li{
+		list-style: none;
+	}
+
+	li::before{
+		content: '';
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: $color-text;
+		margin-right: 5px;
+	}
+
+	li{margin-bottom: 25px;}
+	b{font-weight: 900;}
+}

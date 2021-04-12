@@ -1,0 +1,97 @@
+/*-------------- symptoms -----------------*/
+.symptoms{
+	&__layuot{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__content{
+		width: 50%;
+		font-size: 1.6rem;
+		line-height: 1.5;
+
+		p{line-height: 1.5;}
+
+		.h2, h2{line-height: 1.2;}
+	}
+
+	&__sidebar{
+		width: calc(50% - 110px);
+		padding-top: 12px;
+	}
+
+	.quiz-wrap:not(:last-child){margin-bottom: 106px;}
+
+	.note{
+		font-size: 1.6rem;
+		line-height: 1.5;
+
+		ul:last-child,
+		ul:last-child li:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	.card-info__text li{margin-bottom: 25px;}
+
+	& + .search-abc-wrap{margin-top: 60px;}
+}
+
+.symptoms-author{
+	display: flex;
+	align-items: center;
+	@include font(normal, normal, 1.4rem, 1.7, $color-text);
+	margin-bottom: 37px;
+
+	&__img{
+		flex: 0 0 46px;
+		margin-right: 7px;
+	}
+}
+
+@media (max-width: 1279px) {
+	.symptoms{
+		&__sidebar{width: calc(50% - 30px);}
+	}
+}
+
+@media (max-width: 991px) {
+	.symptoms{
+		&__layuot{display: block;}
+
+		&__content,
+		&__sidebar{
+			width: 100%;
+		}
+
+		&__sidebar{
+			padding-top: 0;
+			margin-top: 40px;
+		}
+
+		.quiz-wrap:not(:last-child){margin-bottom: 60px;}
+	}
+}
+
+@media (max-width: 991px) {
+	.symptoms{
+		&__content{
+			font-size: 1.4rem;
+			line-height: 1.7;
+
+			p{line-height: 1.7;}
+		}
+
+		// &__content,
+		// &__sidebar{
+		// 	width: 100%;
+		// }
+
+		// &__sidebar{
+		// 	padding-top: 0;
+		// 	margin-top: 40px;
+		// }
+
+		// .quiz-wrap:not(:last-child){margin-bottom: 60px;}
+	}
+}

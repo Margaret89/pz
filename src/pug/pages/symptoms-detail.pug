@@ -1,0 +1,226 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Боли в спине';
+	- var h1 = 'Боли в спине';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Симптомы'},
+			{href:'#',name:'Боли в спине'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	.symptoms-wrap
+		section.symptoms
+			.container
+				.row
+					.col-12
+						.symptoms__layuot
+							.symptoms__content
+								.symptoms-author
+									.symptoms-author__img
+										svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 46 52' preserveAspectRatio='xMinYMin meet')
+											path(fill="#7ea9e0" style="opacity: 0.65" d='M13.03-.127a15.673,15.673,0,0,1,6.43.285c7.276,2.109,17.42,11.205,21.5,17.42,1.746,2.659,3.642,7.13,2.846,11.343C42.539,35.626,37.126,39.551,32.5,43.587c-2.859,2.492-9.4,8.426-15.369,8.019C4.43,50.74-2.922,32.851-.083,17.9,1.184,11.221,3.7,5.478,8.7,1.8,9.955,0.874,11.493.71,13.03-.127Z')
+											path(fill="#7ea9e0" d='M18.26,2.134a15.186,15.186,0,0,1,6.174.925c6.8,2.772,15.654,12.58,18.953,18.993,1.412,2.744,2.781,7.253,1.579,11.239-1.913,6.347-7.538,9.589-12.42,13.018C29.532,48.427,22.608,53.494,16.9,52.5,4.737,50.379-.518,32.363,3.758,18.211,5.666,11.894,8.68,6.6,13.88,3.557,15.191,2.79,16.691,2.787,18.26,2.134Z')
+
+											clippath(id='clip-author')
+												path(fill='#ffffff' d='M17.337,1.882a14.7,14.7,0,0,1,5.984.9C29.914,5.47,38.492,14.986,41.69,21.208c1.368,2.662,2.7,7.037,1.531,10.905-1.854,6.158-7.306,9.3-12.037,12.631-2.921,2.054-9.633,6.971-15.168,6C4.231,48.692-.861,31.212,3.282,17.481c1.85-6.13,4.77-11.263,9.811-14.218C14.363,2.518,15.817,2.516,17.337,1.882Z')
+											image(xlink:href='assets/img/symptoms-author.jpg' width='100%' height='100%' style="clip-path:url(#clip-author);")
+
+									.symptoms-author__text
+										.symptoms-author__name Автор: 
+											a(href="#") Афонина Ольга Владимировна
+										.symptoms-author__post
+											a(href="#") Отоларинголог, 
+												|доктор медицинских наук
+
+								p Жалоба на боль в горле – одна из самых распространённых. Немногие из нас могут похвастаться, что у них никогда не болело горло. Боль в горле может быть сильной, резкой, стреляющей, а может проявляться умеренным жжением или дискомфортом, наблюдающемся постоянно или только при сглатывании или при разговоре. При жалобах на боль в горле на осмотре обычно выявляются покраснение горла и его отек.
+
+								.note.note_beige
+									.note__title Когда нельзя медлить
+									.note__text
+										ul.list-black
+											li <b>паратонзиллярный абсцесс</b> – воспаление тканей, прилегающих к миндалинам. Обычно развивается как осложнение ангины или стрептококкового фарингита. Характеризуется возобновлением боли в горле, сильной и «стреляющей», высокой температурой - до 39 °C, увеличением миндалины с одной стороны;
+											li <b>ларингит</b> – воспаление гортани. Для ларингита характерны першение в горле, кашель и боль при глотании.
+
+
+								.h2 Заболевания, при которых боль в спине является основным или типичным симптомом:
+								ul.list-black
+									li <b>фарингит</b> – воспаление глотки. В горле ощущается сухость и першение, становится больно глотать, поднимается температура (до 37,5-38 °C). Часто развивается на фоне насморка;
+									li <b>ангина (тонзиллит)</b> – воспаление нёбных миндалин. Характеризуется сильной болью в горле, наиболее выраженной при глотании, резким подъёмом температуры до 38 °C и выше, отеком и покраснением миндалин. Увеличиваются подчелюстные лимфатические узлы, наблюдается общая слабость;
+									li <b>паратонзиллярный абсцесс</b> – воспаление тканей, прилегающих к миндалинам. Обычно развивается как осложнение ангины или стрептококкового фарингита. Характеризуется возобновлением боли в горле, сильной и «стреляющей», высокой температурой - до 39 °C, увеличением миндалины с одной стороны;
+									li <b>ларингит</b> – воспаление гортани. Для ларингита характерны першение в горле, кашель и боль при глотании.
+
+								.h2 Обязательно следует обратиться к врачу, если:
+								ul.list-black
+									li боль в горле <b>не проходит в течение двух дней</b> при домашнем лечении;
+									li боль <b>очень сильная, трудно глотать или открывать рот</b>;
+									li боль сопровождается <b>резким повышением температуры</b>;
+									li боли в горле сопровождаются <b>сыпью на коже</b>;
+									li дискомфорт в горле и болевые ощущения легко возвращаются.
+								
+							.symptoms__sidebar
+								.quiz-wrap.quiz-wrap_big
+									.quiz-wrap__title Пройдите тест, чтобы получить персональные рекомендации
+
+									form.quiz.js-quiz
+										.quiz__step.js-quiz-step.active(data-step='1')
+											.quiz__title Охарактеризуйте свой привычный образ жизни
+
+											.quiz__list
+												.quiz__item
+													.quiz__radio
+														.input-radio
+															input#radio1(type='radio', name='param1', checked='checked')
+															label.input-radio__label(for='radio1')
+																span.input-radio__mark
+																span.input-radio__text Малоподвижный образ жизни
+
+													.quiz__radio
+														.input-radio
+															input#radio2(type='radio' name='param1')
+															label.input-radio__label(for='radio2')
+																span.input-radio__mark
+																span.input-radio__text Много двигаюсь / Занимаюсь спортом
+
+													.quiz__radio
+														.input-radio
+															input#radio3(type='radio' name='param1')
+															label.input-radio__label(for='radio3')
+																span.input-radio__mark
+																span.input-radio__text Занимаюсь тяжёлым физическим трудом
+
+										.quiz__step.js-quiz-step(data-step='2')
+											.quiz__title Личные данные
+
+											.quiz__list
+												.quiz__item
+													.quiz__label Ваш возраст
+													input(type='number', value='18')
+
+												.quiz__item
+													.quiz__label Ваш вес (кг.)
+													input(type='number', value='40')
+
+												.quiz__item
+													.quiz__label Ваш рост (см.)
+													input(type='number', value='180')
+
+												.quiz__item
+													.quiz__label Пол
+
+													.quiz__radio
+														.input-radio
+															input#man(type='radio', name='param2', checked='checked')
+															label.input-radio__label(for='man')
+																span.input-radio__mark
+																span.input-radio__text М
+
+													.quiz__radio
+														.input-radio
+															input#woman(type='radio', name='param2')
+															label.input-radio__label(for='woman')
+																span.input-radio__mark
+																span.input-radio__text М
+
+										.quiz__step.js-quiz-step(data-step='3')
+											.quiz__title Что вас беспокоит?
+
+											.quiz__list.js-req-check
+												.quiz__check
+													.input-check
+														input#check1(type='checkbox')
+														label.input-check__label(for='check1')
+															span.input-check__mark
+																+svg('ic-tick','ic-tick', '10', '8')
+															span.input-check__text Спина
+
+												.quiz__check
+													.input-check
+														input#check2(type='checkbox')
+														label.input-check__label(for='check2')
+															span.input-check__mark
+																+svg('ic-tick','ic-tick', '10', '8')
+															span.input-check__text Суставы
+
+												.quiz__check
+													.input-check
+														input#check3(type='checkbox')
+														label.input-check__label(for='check3')
+															span.input-check__mark
+																+svg('ic-tick','ic-tick', '10', '8')
+															span.input-check__text Ничего не беспокоит
+
+										.quiz__error.js-quiz-error Выберите один из пунктов
+
+										button.btn.js-quiz-next(type='submit')
+											span Далее
+											+svg('ic-arrow-right','ic-arrow-right', '7', '14')
+
+										.quiz__success.js-quiz-success Спасибо за пройденный тест!
+										
+								.card-info
+									.h2 Ответы на вопросы
+
+									.card-info__text
+										ul.type-list
+											li Может ли быть так что боли в спине могуть приводить к онимениям в конечностях?
+											li 
+												a(href="#") Какие обследования нужно пройти для подтверждения диагноза, который поставил врач в поликлинике?
+											li 
+												a(href="#") Началась боль без причины
+
+									.card-info__bottom
+										a.btn(href="#") Смотреть все ответы
+										a.btn.btn_green(href="#") Задать вопрос
+
+		section.search-abc-wrap
+			.container
+				.row
+					.col-12
+						.h2 Другие возможные симптомы
+
+						form.search-abc
+							.search-abc__top
+								.search-abc__nav
+									a.btn.btn_small(href='#') Все
+									.search-letters
+										-
+											var list=[
+												{text:'А'},
+												{text:'Б', status:'active'},
+												{text:'В'},
+												{text:'Г'},
+												{text:'Д'},
+												{text:'Е'},
+												{text:'Ж'},
+												{text:'З'},
+												{text:'И'},
+												{text:'К'},
+												{text:'Л'},
+												{text:'М'},
+												{text:'Н'},
+												{text:'О'},
+												{text:'П'},
+												{text:'Р'},
+												{text:'С'},
+												{text:'Т'},
+												{text:'У'},
+												{text:'Ф'},
+												{text:'Х'},
+												{text:'Ц'},
+												{text:'Ч'},
+												{text:'Щ'},
+											]
+
+										each item in list
+											.search-letters__item(class=item.status?'active':'')= item.text
+
+								.search-abc__field
+									input(type="text", placeholder="Поиск по названию заболевания")
+									input.btn.btn_green.btn_small(type="button", value="Искать")
