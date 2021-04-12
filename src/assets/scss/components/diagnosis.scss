@@ -455,6 +455,10 @@
 		&:not(:last-child){margin-bottom: 40px;}
 	}
 
+	.diagnosis-wrap{
+		.gallery-wrap{margin-top: 40px;}
+	}
+
 	.diagnosis{
 		.faq-wrap{
 			.h2, h2{margin-bottom: 30px;}

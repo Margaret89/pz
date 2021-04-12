@@ -1,10 +1,17 @@
 /*-------------- gallery -----------------*/
 .gallery-wrap{
 	& + .history{margin-top: 67px;}
+	& + .prices-wrap{margin-top: 100px;}
 }
 
 .gallery{
 	&__item{margin: 15px 0;}
+}
+
+@media (max-width: 991px) {
+	.gallery-wrap{
+		& + .prices-wrap{margin-top: 60px;}
+	}
 }
 
 @media (max-width: 480px) {

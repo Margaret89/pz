@@ -1,0 +1,353 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Программы лечения';
+	- var h1 = 'Программы лечения';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Программы лечения'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	.prices-wrap
+		section.prices-sect
+			.container
+				.row
+					.col-12
+						.h2 Комплексное лечение до результата
+		
+			.container
+				.row
+					-
+						var list=[
+							{
+								title:'Здоровая спина с гарантией за 4 месяца',
+								price:'70 000',
+								cur:'р',
+								text:'в рассрочку по 5 750 р. в месяц',
+								color:'blue',
+								check:[
+									{text:'Тренажерный зал'},
+									{text:'Гимнастический зал'},
+									{text:'Личный инструктор'},
+									{text:'Наблюдение у врача'},
+									{text:'Личная программа оздоровления'},
+								]
+							},
+							{
+								title:'Реабилитация после операции',
+								price:'70 000',
+								cur:'р',
+								text:'в рассрочку по 5 750 р. в месяц',
+								color:'blue',
+								check:[
+									{text:'Тренажерный зал'},
+									{text:'Гимнастический зал'},
+									{text:'Личный инструктор'},
+									{text:'Наблюдение у врача'},
+									{text:'Личная программа оздоровления'},
+								]
+							},
+							{
+								title:'Программа похудения - 20 кг за 5 месяцев',
+								price:'70 000',
+								cur:'р',
+								text:'в рассрочку по 5 750 р. в месяц',
+								color:'blue',
+								check:[
+									{text:'Гимнастический зал'},
+									{text:'Личный инструктор'},
+									{text:'Наблюдение у врача'},
+									{text:'Личная программа оздоровления'},
+								]
+							},
+						]
+
+					each item, index in list
+						.col-md-6.col-lg-4
+							.program-card(class=item.color?'program-card_'+item.color:'')
+								.program-card__content
+									.program-card__title= item.title
+
+									.program-card__main
+										.program-card__info
+											.program-card__desc
+												if(item.free)
+													.program-card__price.program-card__price_big=item.free
+												else
+													.program-card__price
+														|от 
+														span.program-card__num= item.price
+														|&nbsp;
+														= item.cur
+
+												if(item.text)
+													.program-card__text= item.text
+
+											if(item.check)
+												.program-card__params
+													each check, num in item.check
+														.input-check
+															input(type='checkbox', id='check'+index+num)
+															label.input-check__label(for='check'+index+num)
+																span.input-check__mark
+																	+svg('ic-tick','ic-tick', '10', '8')
+																span.input-check__text= check.text
+
+										.program-card__more.program-card__more_js
+											a.btn.btn_border(href='#') Выбрать тариф
+											img.program-card__quest(src="assets/img/quest-beige.png", alt="")
+		
+		section.prices-sect
+			.container
+				.row
+					.col-12
+						.h2 Тарифные планы на работу с инструктором
+		
+			.container
+				.row
+					-
+						var list=[
+							{
+								title:'Для начинающих',
+								price:'30 000',
+								cur:'р / месяц',
+								text:'в рассрочку по 5 750 р. в месяц',
+								color:'green',
+								check:[
+									{text:'Тренажерный зал'},
+									{text:'Гимнастический зал'},
+									{text:'Личный инструктор'},
+									{text:'Наблюдение у врача'},
+									{text:'Личная программа оздоровления'},
+								]
+							},
+							{
+								title:'Для постоянных посетителей',
+								price:'20 000',
+								cur:'р / месяц',
+								text:'в рассрочку по 5 750 р. в месяц',
+								color:'blue',
+								check:[
+									{text:'Тренажерный зал'},
+									{text:'Гимнастический зал'},
+									{text:'Личный инструктор'},
+									{text:'Наблюдение у врача'},
+									{text:'Личная программа оздоровления'},
+								]
+							},
+							{
+								title:'Сам себе инструктор',
+								price:'10 000',
+								cur:'р / месяц',
+								text:'в рассрочку по 5 750 р. в месяц',
+								//- color:'blue',
+								check:[
+									{text:'Тренажерный зал'},
+									{text:'Наблюдение у врача'},
+								]
+							},
+						]
+
+					each item, index in list
+						.col-md-6.col-lg-4
+							.program-card(class=item.color?'program-card_'+item.color:'')
+								.program-card__content
+									.program-card__title= item.title
+
+									.program-card__main
+										.program-card__info
+											.program-card__desc
+												if(item.free)
+													.program-card__price.program-card__price_big=item.free
+												else
+													.program-card__price
+														span.program-card__num= item.price
+														|&nbsp;
+														= item.cur
+
+												if(item.text)
+													.program-card__text= item.text
+
+											if(item.check)
+												.program-card__params
+													each check, num in item.check
+														.input-check
+															input(type='checkbox', id='check'+index+num)
+															label.input-check__label(for='check'+index+num)
+																span.input-check__mark
+																	+svg('ic-tick','ic-tick', '10', '8')
+																span.input-check__text= check.text
+
+										.program-card__more.program-card__more_js
+											a.btn.btn_border(href='#') Выбрать тариф
+											img.program-card__quest(src="assets/img/quest-beige.png", alt="")
+		
+		section.prices-sect
+			.container
+				.row
+					.col-12
+						.h2 Программы гимнастического зала
+		
+			.container
+				.row
+					-
+						var list=[
+							{
+								title:'Для тех кто в кресле',
+								price:'5 000',
+								cur:'р / месяц',
+								text:'скидка 40% при оплате за год',
+								color:'blue',
+								check:[
+									{text:'Тренажерный зал'},
+									{text:'Личный инструктор'},
+									{text:'Наблюдение у врача'},
+									{text:'Личная программа оздоровления'},
+								]
+							},
+							{
+								title:'Реабилитация после операции',
+								price:'2 000',
+								old_price:'4 000',
+								cur:'р / месяц',
+								text:'при оплате за год',
+								color:'blue',
+								check:[
+									{text:'Тренажерный зал'},
+									{text:'Гимнастический зал'},
+									{text:'Личный инструктор'},
+									{text:'Наблюдение у врача'},
+									{text:'Личная программа оздоровления'},
+								]
+							},
+							{
+								title:'Для пышных дам и каваллеров',
+								price:'5 000',
+								cur:'р / месяц',
+								text:'скидка 40% при оплате за год',
+								color:'blue',
+								check:[
+									{text:'Гимнастический зал'},
+									{text:'Личный инструктор'},
+									{text:'Наблюдение у врача'},
+									{text:'Личная программа оздоровления'},
+								]
+							},
+						]
+
+					each item, index in list
+						.col-md-6.col-lg-4
+							.program-card(class=item.color?'program-card_'+item.color:'')
+								.program-card__content
+									.program-card__title= item.title
+
+									.program-card__main
+										.program-card__info
+											.program-card__desc
+												if(item.free)
+													.program-card__price.program-card__price_big=item.free
+												else
+													.program-card__price
+														if(item.old_price)
+															span.program-card__price-old= item.old_price
+															| 
+														span.program-card__num= item.price
+														|&nbsp;
+														= item.cur
+
+												if(item.text)
+													.program-card__text= item.text
+
+											if(item.check)
+												.program-card__params
+													each check, num in item.check
+														.input-check
+															input(type='checkbox', id='check'+index+num)
+															label.input-check__label(for='check'+index+num)
+																span.input-check__mark
+																	+svg('ic-tick','ic-tick', '10', '8')
+																span.input-check__text= check.text
+
+										.program-card__more.program-card__more_js
+											a.btn.btn_border(href='#') Выбрать тариф
+											img.program-card__quest(src="assets/img/quest-beige.png", alt="")
+	
+		section.prices-sect
+			.container
+				.row
+					.col-12
+						.h2 Прочие услуги центра
+		
+			.container
+				.row
+					-
+						var list=[
+							{
+								title:'Мануальная терапия',
+								price:'2 600',
+								cur:'р / посещение',
+								text:'скидки от 10 посещений',
+								color:'blue',
+								check:[
+									{text:'Осмотр'},
+									{text:'Массаж'},
+									{text:'Коррекция'},
+									{text:'Укрепление мышечного каркаса'},
+								]
+							},
+							{
+								title:'Обследование врачем',
+								price:'2 000',
+								cur:'р',
+								color:'blue',
+								check:[
+									{text:'Осмотр'},
+									{text:'Индивидуальные рекомендации'},
+									{text:'Расшифровка диагнозов'},
+								]
+							},
+						]
+
+					each item, index in list
+						.col-md-6.col-lg-4
+							.program-card(class=item.color?'program-card_'+item.color:'')
+								.program-card__content
+									.program-card__title= item.title
+
+									.program-card__main
+										.program-card__info
+											.program-card__desc
+												if(item.free)
+													.program-card__price.program-card__price_big=item.free
+												else
+													.program-card__price
+														if(item.old_price)
+															span.program-card__price-old= item.old_price
+														span.program-card__num= item.price
+														|&nbsp;
+														= item.cur
+
+												if(item.text)
+													.program-card__text= item.text
+
+											if(item.check)
+												.program-card__params
+													each check, num in item.check
+														.input-check
+															input(type='checkbox', id='check'+index+num)
+															label.input-check__label(for='check'+index+num)
+																span.input-check__mark
+																	+svg('ic-tick','ic-tick', '10', '8')
+																span.input-check__text= check.text
+
+										.program-card__more.program-card__more_js
+											a.btn.btn_border(href='#') Выбрать тариф
+											img.program-card__quest(src="assets/img/quest-beige.png", alt="")
+
+		include ../components/survey
