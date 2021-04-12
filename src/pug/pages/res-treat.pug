@@ -1,0 +1,38 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Цель лечения';
+	- var h1 = 'Какова цель вашего лечения?';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Цель лечения'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.res-treat-wrap
+		.container
+			.row
+				.col-12
+					.res-treat
+						-
+							var list=[
+								{title:'Чтобы боль прошла и больше не появлялась', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo....', img:'res-treat1.jpg', bg:'bg-res-treat1.png'},
+								{title:'Хотите вскопать огород без боли в спине', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo....', img:'res-treat2.jpg', bg:'bg-res-treat2.png'},
+								{title:'Снова начать кататься на сноуборде после переломов', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo....', img:'res-treat3.jpg', bg:'bg-res-treat3.png'},
+							]
+
+						each item in list
+							.res-treat__item
+								.res-treat__content
+									.res-treat__title= item.title
+									.res-treat__text= item.text
+
+									a.btn(href="#") Читать полностью
+
+								.res-treat__img(style="background-image: url(assets/img/"+item.img+")")
+									img.res-treat__img-bg(src="assets/img/"+item.bg, alt="")

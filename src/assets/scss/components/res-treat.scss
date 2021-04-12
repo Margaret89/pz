@@ -1,0 +1,77 @@
+/*-------------- res-treat -----------------*/
+.res-treat{
+	&__item{
+		display: flex;
+		justify-content: space-between;
+		background: $color-light-grey;
+		border-radius: 5px;
+		overflow: hidden;
+	}
+
+	&__item:not(:last-child){margin-bottom: 57px;}
+
+	&__content{
+		width: calc(50% - 15px);
+		padding: 45px 45px 57px 45px;
+	}
+
+	&__title{
+		max-width: 300px;
+		font-family: $font-lora;
+		@include font(normal, bold, 2.4rem, 1.2, $color-dark-blue);
+	}
+
+	&__text{
+		@include font(normal, 500, 1.6rem, 1.5, $color-text);
+		margin-top: 22px;
+	}
+
+	.btn{margin-top: 32px;}
+
+	&__img{
+		width: calc(50% - 15px);
+		background-repeat: no-repeat;
+		background-position: top right;
+		background-size: cover;
+		position: relative;
+	}
+
+	&__img-bg{
+		height: 100%;
+		width: 119px;
+		position: absolute;
+		top: 0;
+		left: -1px;
+	}
+}
+
+@media (max-width: 991px) {
+	.res-treat{
+		&__content{padding-right: 0;}
+	}
+}
+
+@media (max-width: 767px) {
+	.res-treat{
+		&__item{
+			flex-direction: column-reverse;
+		}
+
+		&__content,
+		&__img{
+			width: auto;
+		}
+
+		&__img{height: 300px;}
+		&__img-bg{display: none;}
+		&__content{padding: 20px 15px;}
+		&__title{font-size: 2rem;}
+		&__text{font-size: 1.4rem;}
+	}
+}
+
+@media (max-width: 479px) {
+	.res-treat{
+		&__img{height: 200px;}
+	}
+}
