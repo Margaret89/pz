@@ -1,0 +1,110 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Симптомы';
+	- var h1 = 'Симптомы';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Симптомы'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.search-abc-wrap
+		.container
+			.row
+				.col-12
+					form.search-abc
+						.search-abc__top
+							.search-abc__nav
+								a.btn.btn_small(href='#') Все
+								.search-letters
+									-
+										var list=[
+											{text:'А'},
+											{text:'Б', status:'active'},
+											{text:'В'},
+											{text:'Г'},
+											{text:'Д'},
+											{text:'Е'},
+											{text:'Ж'},
+											{text:'З'},
+											{text:'И'},
+											{text:'К'},
+											{text:'Л'},
+											{text:'М'},
+											{text:'Н'},
+											{text:'О'},
+											{text:'П'},
+											{text:'Р'},
+											{text:'С'},
+											{text:'Т'},
+											{text:'У'},
+											{text:'Ф'},
+											{text:'Х'},
+											{text:'Ц'},
+											{text:'Ч'},
+											{text:'Щ'},
+										]
+
+									each item in list
+										.search-letters__item(class=item.status?'active':'')= item.text
+
+							.search-abc__field
+								input(type="text", placeholder="Поиск по названию заболевания")
+								input.btn.btn_green.btn_small(type="button", value="Искать")
+
+						.search-abc__content
+							ul.type-list
+								-
+									var list=[
+										{text:'Боли в груди',},
+										{text:'Боли в коленях',},
+										{text:'Болит шейный отдел',},
+										{text:'Больно поворачивать шею',},
+										{text:'Болит позвоночник', status:'active'},
+										{text:'Болит поясница',},
+										{text:'Болит спина',},
+										{text:'Болит в области таза',},
+										{text:'Болит шея',},
+										{text:'Боль под лопаткой',},
+										{text:'Боли в груди',},
+										{text:'Боли в коленях',},
+										{text:'Болит шейный отдел',},
+										{text:'Больно поворачивать шею',},
+										{text:'Болит позвоночник',},
+										{text:'Болит поясница',},
+										{text:'Болит спина',},
+										{text:'Болит в области таза',},
+										{text:'Болит шея',},
+										{text:'Боль под лопаткой',},
+										{text:'Боли в груди',},
+										{text:'Боли в коленях',},
+										{text:'Болит шейный отдел',},
+										{text:'Больно поворачивать шею',},
+										{text:'Болит позвоночник',},
+										{text:'Болит поясница',},
+										{text:'Болит спина',},
+										{text:'Болит в области таза',},
+										{text:'Болит шея',},
+										{text:'Боль под лопаткой',},
+										{text:'Боли в груди',},
+										{text:'Боли в коленях',},
+										{text:'Болит шейный отдел',},
+										{text:'Больно поворачивать шею',},
+										{text:'Болит позвоночник',},
+										{text:'Болит поясница',},
+										{text:'Болит спина',},
+										{text:'Болит в области таза',},
+										{text:'Болит шея',},
+										{text:'Боль под лопаткой',},
+									]
+								each item in list
+									li(class=item.status?'active':'')
+										a(href="#")= item.text
+
+	include ../components/survey
