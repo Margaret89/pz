@@ -115,43 +115,7 @@ block content
 
 							a.btn.btn_green(href='#') Задать вопрос
 
-	section.program-wrap
-		.container
-			.row
-				.col-12
-					.h2 Программы лечения
-			
-		.program-list
-			.container
-				.row
-					-
-						var list=[
-							{title:'Комплексное лечение до результата', price:'30 000', cur:'р' , text:'в рассрочку по 750р. в неделю'},
-							{title:'Кинезитерапия', price:'19 500', cur:'р / месяц', color:'yellow'},
-							{title:'Мануальная терапия', price:'2 350', cur:'р / посещение', text:'скидки  от 10 посещений', color:'green'},
-							{title:'Программы гимнастического зала', price:'350', cur:'р / месяц', text:'в группах до 20 человек', color:'grey'},
-						]
-
-					each item in list
-						.col-md-6.col-xl-3
-							.program-card(class=item.color?'program-card_'+item.color:'')
-								.program-card__content
-									.program-card__title= item.title
-
-									.program-card__main
-										.program-card__info
-											.program-card__desc
-												.program-card__price
-													|от&nbsp;
-													span.program-card__num= item.price
-													|&nbsp;
-													= item.cur
-
-												if(item.text)
-													.program-card__text= item.text
-											
-										.program-card__more
-											a.btn.btn_border(href='#') Узнать больше
+	include ../components/program-treat
 
 	section.faq-wrap
 		.container

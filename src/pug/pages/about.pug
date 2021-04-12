@@ -299,38 +299,38 @@ block content
 
 
 		section.info-block
-		.container
-			.row
-				.col-lg-7
-					.info-block__content
-						.h2 Мы лечим
+			.container
+				.row
+					.col-lg-7
+						.info-block__content
+							.h2 Мы лечим
 
-						ul.type-list.type-list_col
-							-
-								var list=[
-									{text:'Остеохондроз', link:'true'},
-									{text:'Межпозвоночная грыжа'},
-									{text:'Боли в спине'},
-									{text:'Артрит и артроз'},
-									{text:'Коксартроз'},
-									{text:'Заболевания суставов'},
-									{text:'Остеопороз'},
-									{text:'Плоскостопие'},
-									{text:'Нарушение осанки'},
-									{text:'Плечелопаточный периартрит'},
-								]
-								
-							each item in list
-								li
-									if(item.link)
-										a(href="#")= item.text
-									else
-										= item.text
+							ul.type-list.type-list_col
+								-
+									var list=[
+										{text:'Остеохондроз', link:'true'},
+										{text:'Межпозвоночная грыжа'},
+										{text:'Боли в спине'},
+										{text:'Артрит и артроз'},
+										{text:'Коксартроз'},
+										{text:'Заболевания суставов'},
+										{text:'Остеопороз'},
+										{text:'Плоскостопие'},
+										{text:'Нарушение осанки'},
+										{text:'Плечелопаточный периартрит'},
+									]
+									
+								each item in list
+									li
+										if(item.link)
+											a(href="#")= item.text
+										else
+											= item.text
 
-						a.btn(href='#') Подобрать индивидуальную программу
+							a.btn(href='#') Подобрать индивидуальную программу
 
-				.col-lg-5
-					include ../components/event-calendar
+					.col-lg-5
+						include ../components/event-calendar
 
 		section.about-info
 			.container

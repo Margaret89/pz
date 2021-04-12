@@ -1,0 +1,51 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Что мы лечим';
+	- var h1 = 'Что мы лечим';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Что мы лечим'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.info-block
+		.container
+			.row
+				.col-lg-7
+					.info-block__content
+						ul.type-list.type-list_col
+							-
+								var list=[
+									{text:'Остеохондроз', link:'true'},
+									{text:'Межпозвоночная грыжа'},
+									{text:'Боли в спине'},
+									{text:'Артрит и артроз'},
+									{text:'Коксартроз'},
+									{text:'Заболевания суставов'},
+									{text:'Остеопороз'},
+									{text:'Плоскостопие'},
+									{text:'Нарушение осанки'},
+									{text:'Плечелопаточный периартрит'},
+								]
+								
+							each item in list
+								li
+									if(item.link)
+										a(href="#")= item.text
+									else
+										= item.text
+
+						a.btn(href='#') Подобрать индивидуальную программу
+
+				.col-lg-5
+					include ../components/event-calendar
+
+	include ../components/program-treat
+
+	include ../components/survey
