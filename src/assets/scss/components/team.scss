@@ -133,6 +133,23 @@
 	}
 
 	.team-slider{
-		padding: 0 20px;
+		padding: 0;
+		margin-left: -15px;
+		margin-right: -15px;
+
+		&__img{
+			width: 195px;
+			height: 175px;
+		}
+
+		&__name{
+			font-size: 1.5rem;
+			line-height: 1.2;
+		}
+
+		&__text{
+			font-size: 1.2rem;
+			line-height: 1;
+		}
 	}
 }

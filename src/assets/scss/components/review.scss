@@ -190,10 +190,16 @@
 		&__item:not(:last-child){margin-bottom: 40px;}
 
 		&__content::before{
-			width: 18px;
-			height: 18px;
+			width: 16px;
+			height: 16px;
+			top: 4px;
 		}
 
-		&__title{font-size: 2rem;}
+		&__title{
+			font-size: 1.8rem;
+			margin-bottom: 20px;
+		}
+
+		&__text{font-size: 1.4rem;}
 	}
 }

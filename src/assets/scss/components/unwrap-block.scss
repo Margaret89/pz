@@ -103,10 +103,12 @@
 @media (max-width: 767px) {
 	.unwrap-block{
 		&__head{
-			font-size: 1.6rem;
+			font-size: 1.4rem;
 			padding-left: 15px;
 			padding-right: 10px;
 		}
+
+		&__icon{flex: 0 0 35px;}
 
 		&__content{padding: 35px 0;}
 		&__desc::after{display: none;}

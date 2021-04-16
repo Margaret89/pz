@@ -32,6 +32,9 @@ block content
 								.top-slider-img__item
 									img(src="assets/img/"+item, alt="")
 
+
+						.top-slider-dots.js-top-slider-dots.d-md-none
+
 	section.info-block
 		.container
 			.row
@@ -39,59 +42,126 @@ block content
 					.info-block__content
 						.h2 Мы лечим
 
-						ul.type-list.type-list_col
-							-
-								var list=[
-									{text:'Остеохондроз', link:'true'},
-									{text:'Межпозвоночная грыжа'},
-									{text:'Боли в спине'},
-									{text:'Артрит и артроз'},
-									{text:'Коксартроз'},
-									{text:'Заболевания суставов'},
-									{text:'Остеопороз'},
-									{text:'Плоскостопие'},
-									{text:'Нарушение осанки'},
-									{text:'Плечелопаточный периартрит'},
-								]
-								
-							each item in list
-								li
-									if(item.link)
-										a(href="#")= item.text
-									else
-										= item.text
+						.type-list-col
+							ul.type-list
+								-
+									var list=[
+										{text:'Остеохондроз', link:'true'},
+										{text:'Межпозвоночная грыжа'},
+										{text:'Боли в спине'},
+										{text:'Артрит и артроз'},
+										{text:'Коксартроз'},
+									]
+									
+								each item in list
+									li
+										if(item.link)
+											a(href="#")= item.text
+										else
+											= item.text
 
-						.h2 Какая у вас цель лечения?
-						
-						ul.type-list.type-list_col
-							-
-								var list=[
-									{text:'чтобы не болело'},
-									{text:'чтобы похудеть'},
-									{text:'чтобы вскопать огород без боли'},
-									{text:'чтобы активно играть с внуками'},
-									{text:'чтобы полететь в космос'},
-									{text:'реабилитация после операции	'},
-									{text:'поддержка здорового состояния'},
-									{text:'чтобы зарядиться энергией'},
-								]
+							ul.type-list
+								-
+									var list=[
+										{text:'Заболевания суставов'},
+										{text:'Остеопороз'},
+										{text:'Плоскостопие'},
+										{text:'Нарушение осанки'},
+										{text:'Плечелопаточный периартрит'},
+									]
+									
+								each item in list
+									li
+										if(item.link)
+											a(href="#")= item.text
+										else
+											= item.text
 
-							each item in list
-								li
-									if(item.link)
-										a(href="#")= item.text
-									else
-										= item.text
+						.d-none.d-md-block
+							.h2 Какая у вас цель лечения?
+							
+							.type-list-col
+								ul.type-list
+									-
+										var list=[
+											{text:'чтобы не болело'},
+											{text:'чтобы похудеть'},
+											{text:'чтобы вскопать огород без боли'},
+											{text:'чтобы активно играть с внуками'},
+										]
 
-						p
-							a(href="#") Допишите свой вариант
+									each item in list
+										li
+											if(item.link)
+												a(href="#")= item.text
+											else
+												= item.text
+							
+								ul.type-list
+									-
+										var list=[
+											{text:'чтобы полететь в космос'},
+											{text:'реабилитация после операции	'},
+											{text:'поддержка здорового состояния'},
+											{text:'чтобы зарядиться энергией'},
+										]
 
-						a.btn(href='#') Подобрать индивидуальную программу
+									each item in list
+										li
+											if(item.link)
+												a(href="#")= item.text
+											else
+												= item.text
+
+							p
+								a(href="#") Допишите свой вариант
+
+							a.btn(href='#') Подобрать индивидуальную программу
 
 				.col-lg-5
 					include ../components/event-calendar
 
-	section.fact
+
+					.d-md-none
+						.h2 Какая у вас цель лечения?
+						
+						.type-list-col
+							ul.type-list
+								-
+									var list=[
+										{text:'чтобы не болело'},
+										{text:'чтобы похудеть'},
+										{text:'чтобы вскопать огород без боли'},
+										{text:'чтобы активно играть с внуками'},
+									]
+
+								each item in list
+									li
+										if(item.link)
+											a(href="#")= item.text
+										else
+											= item.text
+						
+							ul.type-list
+								-
+									var list=[
+										{text:'чтобы полететь в космос'},
+										{text:'реабилитация после операции	'},
+										{text:'поддержка здорового состояния'},
+										{text:'чтобы зарядиться энергией'},
+									]
+
+								each item in list
+									li
+										if(item.link)
+											a(href="#")= item.text
+										else
+											= item.text
+
+
+						a.btn(href='#') Подобрать индивидуальную программу
+
+	section.fact.d-none.d-md-block
 		.container
 			.row
 				.col-12
@@ -213,6 +283,11 @@ block content
 										each text in item.text
 											p= text
 
+
+							.faq__btn.d-md-none
+								a.btn.btn_green(href='#') Задать свой вопрос
+								a.btn(href='#') Перейти в раздел Вопрос-ответ
+
 	section.team-wrap.bg-grey
 		.container
 			.row
@@ -284,16 +359,18 @@ block content
 					.h2 Истории успеха
 
 			.row
-				.col-lg-6
+				.col-lg-6.order-2.order-md-1
 					.history-content
-						.h3 Из инвалиндной коляски на сноуборд!
+						.h3.d-none.d-md-block Из инвалиндной коляски на сноуборд!
 						p Как правило большую травмоопасность будет представлять собой автобус который повезет вас к нам в центр. Т.к. может резко затормозить или дернуться.
 						p Так или иначе вы уже поднимаете свой собственный вес нагружая мышцы и суставы, мы в центре дадим локальную нагрузку только на мышцы чтобы создать мышечный контент. 
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
 
 						a.btn(href='#') Читать всю историю оздоровления
 
-				.col-lg-6
+				.col-lg-6.order-1.order-md-2
+					.h3.d-md-none Из инвалиндной коляски на сноуборд!
+
 					.history-comp
 						.history-comp__item
 							.history-comp__img
@@ -328,9 +405,9 @@ block content
 				.col-12
 					.h2 Новости центра
 
-		.news-list
+		.news-list.news-list_md-nowrap
 			.container
-				.row
+				.row.news-list__content
 					-
 						var list=[
 							{img:'news1.jpg', title:'Холодовая травма: неотложная помощь (в прозе и стихах)', text:'Как правило большую травмоопасность будет представлять собой автобус который повезет вас к нам в центр. Т.к. может резко затормозить или дернуться. Так или иначе вы уже поднимаете свой собственный вес нагружая мышцы. и суставы, мы в центре дадим ', date:'15.03.2018'},

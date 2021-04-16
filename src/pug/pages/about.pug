@@ -305,27 +305,40 @@ block content
 						.info-block__content
 							.h2 Мы лечим
 
-							ul.type-list.type-list_col
-								-
-									var list=[
-										{text:'Остеохондроз', link:'true'},
-										{text:'Межпозвоночная грыжа'},
-										{text:'Боли в спине'},
-										{text:'Артрит и артроз'},
-										{text:'Коксартроз'},
-										{text:'Заболевания суставов'},
-										{text:'Остеопороз'},
-										{text:'Плоскостопие'},
-										{text:'Нарушение осанки'},
-										{text:'Плечелопаточный периартрит'},
-									]
-									
-								each item in list
-									li
-										if(item.link)
-											a(href="#")= item.text
-										else
-											= item.text
+							.type-list-col
+								ul.type-list
+									-
+										var list=[
+											{text:'Остеохондроз', link:'true'},
+											{text:'Межпозвоночная грыжа'},
+											{text:'Боли в спине'},
+											{text:'Артрит и артроз'},
+											{text:'Коксартроз'},
+										]
+										
+									each item in list
+										li
+											if(item.link)
+												a(href="#")= item.text
+											else
+												= item.text
+								
+								ul.type-list
+									-
+										var list=[
+											{text:'Заболевания суставов'},
+											{text:'Остеопороз'},
+											{text:'Плоскостопие'},
+											{text:'Нарушение осанки'},
+											{text:'Плечелопаточный периартрит'},
+										]
+										
+									each item in list
+										li
+											if(item.link)
+												a(href="#")= item.text
+											else
+												= item.text
 
 							a.btn(href='#') Подобрать индивидуальную программу
 

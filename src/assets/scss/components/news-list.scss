@@ -53,6 +53,47 @@
 	.news-list{
 		&__item{display: block;}
 		&__img{margin: 0 0 20px;}
-		&__more{margin-top: 0;}
+
+		&__more{
+			width: 100%;
+			margin-top: 0;
+
+			.btn{
+				display: table;
+				width: 100%;
+				max-width: 340px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+
+	.news-list_md-nowrap{
+		flex-wrap: nowrap;
+
+		.news-list{
+			&__content{
+				&.row{
+					flex-wrap: nowrap;
+					overflow-x: auto;
+					margin-left: -10px;
+					margin-right: -10px;
+				}
+		
+				[class^=col-]{
+					flex: 0 0 auto;
+					width: auto;
+					max-width: 500px;
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+			}
+
+			&__item{display: flex;}
+			&__img{
+				flex: 0 0 175px;
+				margin: 0 20px 0 0;
+			}
+		}
 	}
 }

@@ -122,8 +122,8 @@ block content
 												{month:'Март', date:'31', text:'Урок похудения для пышных и энергичных'},
 											]
 
-										each item in list
-											.event-calendar__item
+										each item, index in list
+											.event-calendar__item(class=index!=0?'d-none d-md-flex':'')
 												.calendar-paper
 													.calendar-paper__month= item.month
 													.calendar-paper__date= item.date

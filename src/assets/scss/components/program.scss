@@ -150,14 +150,69 @@
 	.program-wrap{
 		margin-top: 55px;
 		margin-bottom: 25px;
+
+		.h2, h2{margin-bottom: 20px;}
 	}
 
 	.program-card{
+		flex-wrap: nowrap;
 		&__title,
 		&__info{
 			min-height: auto;
 		}
 
 		&__price_big{font-size: 1.6rem;}
+	}
+
+	.program-list_nowrap{
+		.row{
+			flex-wrap: nowrap;
+			overflow-x: auto;
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+
+		[class^=col-]{
+			flex: 0 0 auto;
+			max-width: 200px;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		.program-card{
+			&__title{
+				min-height: 100px;
+				font-size: 1.4rem;
+				line-height: 1.3;
+				padding: 20px;
+				border-width: 2px;
+			}
+
+			&__info{padding: 18px 20px;}
+			&__price{font-size: 1.2rem;}
+			&__num{font-size: 1.4rem;}
+
+			&__text{
+				font-size: 1rem;
+				margin-top: 4px;
+			}
+
+			&__more{padding: 0 20px 17px;}
+
+			&__more .btn {
+				min-width: 120px;
+				min-height: 2rem;
+				font-size: 1rem;
+				line-height: 1.2rem;
+				padding: 7px 15px;
+			}
+
+			&__params{
+				margin-top: 10px;
+				margin-bottom: 20px;
+			}
+
+			.input-check__label{font-size: 1.2rem;}
+		}
 	}
 }

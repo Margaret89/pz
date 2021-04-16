@@ -118,6 +118,18 @@
 			right: 30px;
 		}
 
-		&__title{font-size: 2rem;}
+		&__title{
+			font-size: 2rem;
+			margin-bottom: 20px;
+		}
+
+		&__text{font-size: 1.4rem;}
+	}
+
+	.team-spec{
+		&__item{
+			font-size: 1.4rem;
+			margin: 10px;
+		}
 	}
 }

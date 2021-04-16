@@ -54,7 +54,25 @@
 @media (max-width: 767px) {
 	.data-block{
 		.gallery{
-			&__item{width: calc(50% - 30px);}
+			flex-wrap: nowrap;
+			overflow-x: auto;
+
+			&__item{
+				flex: 0 0 auto;
+				width: 100%;
+				max-width: 160px;
+				position: relative;
+			}
+
+			&__item::after{
+				content: '';
+				display: inline-block;
+				width: 15px;
+				height: 15px;
+				position: absolute;
+				top: 0;
+				left: 100%;
+			}
 		}
 	}
 }

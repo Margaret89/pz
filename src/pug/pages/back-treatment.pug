@@ -47,8 +47,8 @@ block content
 												{month:'Март', date:'31', text:'Зарядка для программиста и тех кто работает "в кресле"'},
 											]
 
-										each item in list
-											.event-calendar__item
+										each item, index in list
+											.event-calendar__item(class=index!=0?'d-none d-md-flex':'')
 												.calendar-paper
 													.calendar-paper__month= item.month
 													.calendar-paper__date= item.date
@@ -121,78 +121,79 @@ block content
 					.col-12
 						.h2 Стоимость посещения
 		
-			.container
-				.row
-					-
-						var list=[
-							{title:'Первое посещение', free:"Бесплатно", color:'green'},
-							{title:'Разовые посещения', price:'500', cur:'р / занятие', text:'при оплате 10 занятий скидка 10%', color:'yellow'},
-							{title:'Абонемент', price:'3 000', cur:'р / месяц', text:'при оптате за год скидка 40%', check:'long'},
-						]
+			.program-list.program-list_nowrap
+				.container
+					.row
+						-
+							var list=[
+								{title:'Первое посещение', free:"Бесплатно", color:'green'},
+								{title:'Разовые посещения', price:'500', cur:'р / занятие', text:'при оплате 10 занятий скидка 10%', color:'yellow'},
+								{title:'Абонемент', price:'3 000', cur:'р / месяц', text:'при оптате за год скидка 40%', check:'long'},
+							]
 
-					each item,index in list
-						.col-md-6.col-lg-4
-							.program-card(class=item.color?'program-card_'+item.color:'')
-								.program-card__content
-									.program-card__title= item.title
+						each item,index in list
+							.col-md-6.col-lg-4
+								.program-card(class=item.color?'program-card_'+item.color:'')
+									.program-card__content
+										.program-card__title= item.title
 
-									.program-card__main
-										.program-card__info
-											.program-card__desc
-												if(item.free)
-													.program-card__price.program-card__price_big=item.free
-												else
-													.program-card__price
-														span.program-card__num= item.price
-														|&nbsp;
-														= item.cur
+										.program-card__main
+											.program-card__info
+												.program-card__desc
+													if(item.free)
+														.program-card__price.program-card__price_big=item.free
+													else
+														.program-card__price
+															span.program-card__num= item.price
+															|&nbsp;
+															= item.cur
 
-												if(item.text)
-													.program-card__text= item.text
+													if(item.text)
+														.program-card__text= item.text
 
-											.program-card__params
-												if(item.check == 'long')
-													.input-check
-														input(type='checkbox', id='check'+index+'1')
-														label.input-check__label(for='check'+index+'1')
-															span.input-check__mark
-																+svg('ic-tick','ic-tick', '10', '8')
-															span.input-check__text Гимнастический зал
+												.program-card__params
+													if(item.check == 'long')
+														.input-check
+															input(type='checkbox', id='check'+index+'1')
+															label.input-check__label(for='check'+index+'1')
+																span.input-check__mark
+																	+svg('ic-tick','ic-tick', '10', '8')
+																span.input-check__text Гимнастический зал
 
-													.input-check
-														input(type='checkbox', id='check'+index+'2')
-														label.input-check__label(for='check'+index+'2')
-															span.input-check__mark
-																+svg('ic-tick','ic-tick', '10', '8')
-															span.input-check__text Личный инструктор
+														.input-check
+															input(type='checkbox', id='check'+index+'2')
+															label.input-check__label(for='check'+index+'2')
+																span.input-check__mark
+																	+svg('ic-tick','ic-tick', '10', '8')
+																span.input-check__text Личный инструктор
 
-													.input-check
-														input(type='checkbox', id='check'+index+'3')
-														label.input-check__label(for='check'+index+'3')
-															span.input-check__mark
-																+svg('ic-tick','ic-tick', '10', '8')
-															span.input-check__text Наблюдение у врача
+														.input-check
+															input(type='checkbox', id='check'+index+'3')
+															label.input-check__label(for='check'+index+'3')
+																span.input-check__mark
+																	+svg('ic-tick','ic-tick', '10', '8')
+																span.input-check__text Наблюдение у врача
 
-													.input-check
-														input(type='checkbox', id='check'+index+'4')
-														label.input-check__label(for='check'+index+'4')
-															span.input-check__mark
-																+svg('ic-tick','ic-tick', '10', '8')
-															span.input-check__text Личная программа оздоровления
-												else
-													.input-check
-														input(type='checkbox', id='check'+index+'1')
-														label.input-check__label(for='check'+index+'1')
-															span.input-check__mark
-																+svg('ic-tick','ic-tick', '10', '8')
-															span.input-check__text Гимнастический зал
+														.input-check
+															input(type='checkbox', id='check'+index+'4')
+															label.input-check__label(for='check'+index+'4')
+																span.input-check__mark
+																	+svg('ic-tick','ic-tick', '10', '8')
+																span.input-check__text Личная программа оздоровления
+													else
+														.input-check
+															input(type='checkbox', id='check'+index+'1')
+															label.input-check__label(for='check'+index+'1')
+																span.input-check__mark
+																	+svg('ic-tick','ic-tick', '10', '8')
+																span.input-check__text Гимнастический зал
 
-													.input-check
-														input(type='checkbox', id='check'+index+'2')
-														label.input-check__label(for='check'+index+'2')
-															span.input-check__mark
-																+svg('ic-tick','ic-tick', '10', '8')
-															span.input-check__text Личный инструктор
-										
-										.program-card__more
-											a.btn.btn_border(href='#') Выбрать тариф
+														.input-check
+															input(type='checkbox', id='check'+index+'2')
+															label.input-check__label(for='check'+index+'2')
+																span.input-check__mark
+																	+svg('ic-tick','ic-tick', '10', '8')
+																span.input-check__text Личный инструктор
+											
+											.program-card__more
+												a.btn.btn_border(href='#') Выбрать тариф

@@ -88,5 +88,12 @@
 }
 
 @media (max-width: 767px) {
-	.event-calendar{padding: 20px 15px;}
+	.event-calendar{
+		padding: 25px 15px 30px;
+		margin: 20px -15px;
+
+		&__title{font-size: 1.8rem;}
+		&__item:not(:last-child){margin-bottom: 20px;}
+		&__more{margin-top: 20px;}
+	}
 }

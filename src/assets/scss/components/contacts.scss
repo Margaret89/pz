@@ -65,9 +65,13 @@
 			margin-top: 25px;
 			margin-bottom: 25px;
 		}
+
+
+		&__item:first-child{margin-top: 0;}
 	}
 
 	.contact{
+		font-size: 1.4rem;
 		&__phone{font-size: 1.8rem;}
 		&__item:not(:last-child){margin-bottom: 20px;}
 	}

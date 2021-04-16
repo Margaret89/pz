@@ -131,6 +131,7 @@
 	.events-item{
 		&__top{padding: 20px 15px;}
 		&__title{font-size: 1.8rem;}
+		&__text{font-size: 1.4rem;}
 		&__content{padding: 20px 15px 30px;}
 	}
 
@@ -140,9 +141,36 @@
 
 	.events{
 		.form-site-wrap{margin-top: 40px;}
+
+		.form-site .h2, .form-site h2{margin-bottom: 40px;}
 	}
 
 	.events-small-list{
-		.events-small{width: calc(100% - 30px);}
+		flex-wrap: nowrap;
+		overflow-x: auto;
+
+		.events-small{
+			margin: 10px;
+			width: 100%;
+			max-width: 300px;
+			position: relative;
+
+			&:last-child::after{
+				content: '';
+				display: inline-block;
+				width: 15px;
+				height: 15px;
+				position: absolute;
+				top: 0;
+				left: 100%;
+			}
+		}
+	}
+
+	.events-small{
+		padding: 15px 20px 20px;
+		&__title{font-size: 1.6rem;}
+		.calendar-paper{margin-right: 20px;}
+		.btn{margin-top: 30px;}
 	}
 }

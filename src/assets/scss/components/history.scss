@@ -44,6 +44,26 @@
 	}
 
 	.history-comp{
+		margin-top: 30px;
+		margin-bottom: 50px;
+
 		&__label{font-size: 2rem;}
+
+		&__img{
+			max-width: 140px;
+			margin-bottom: 7px;
+		}
+
+		&__label{font-size: 1.3rem;}
+	}
+
+	.history-content{
+		.btn{
+			display: table;
+			width: 100%;
+			max-width: 340px;
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 }

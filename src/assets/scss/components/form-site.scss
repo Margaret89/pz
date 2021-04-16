@@ -191,10 +191,22 @@
 			margin-top: 10px;
 		}
 
-		&__label{font-size: 1.5rem;}
+		&__label,
+		&__btn{font-size: 1.4rem;}
+
+		&__label{margin-top: 7px;}
 	}
 
 	.form-site{
-		&__note{font-size: 1.6rem;}
+		&__note{font-size: 1.4rem;}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="number"],
+		textarea{
+			font-size: 1.4rem;
+		}
+
+		.btn{margin-top: 20px;}
 	}
 }

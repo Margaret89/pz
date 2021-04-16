@@ -16,6 +16,15 @@ if($('.js-top-slider-img').length){
 		infinite: true,
 		arrows: false,
 		dots: true,
+		responsive: [
+			{
+			  breakpoint: 768,
+			  settings: {
+				appendDots:$('.js-top-slider-dots'),
+			  }
+			},
+
+		  ]
 	});
 }
 
@@ -56,8 +65,17 @@ if($('.js-team-slider').length){
 			{
 				breakpoint: 768,
 				settings: {
-				  slidesToShow: 1,
+				  slidesToShow: 3,
 				  slidesToScroll: 1,
+				  arrows: false,
+				}
+			  },
+			{
+				breakpoint: 480,
+				settings: {
+				  slidesToShow: 2,
+				  slidesToScroll: 1,
+				  arrows: false,
 				}
 			  },
 		  ]
@@ -90,8 +108,17 @@ if($('.js-staf-slider').length){
 			{
 				breakpoint: 768,
 				settings: {
-				  slidesToShow: 1,
+				  slidesToShow: 3,
 				  slidesToScroll: 1,
+				  arrows: false,
+				}
+			  },
+			{
+				breakpoint: 480,
+				settings: {
+				  slidesToShow: 2,
+				  slidesToScroll: 1,
+				  arrows: false,
 				}
 			  },
 		  ]

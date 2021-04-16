@@ -273,14 +273,20 @@ iframe + p{margin-top: 20px;}
 	.container{max-width: 100%!important;}
 	.wrapper{overflow: hidden;}
 	main{padding-bottom: 50px;}
-	body{font-size: 1.5rem;}
+	body{font-size: 1.4rem;}
 	.fancybox-content{padding: 30px 15px;}
 	h1,.h1{font-size: 3rem;}
-	h2,.h2{font-size: 2.2rem; margin-bottom: 20px;}
-	h3,.h3{font-size: 2rem;}
-	h4,.h4{font-size: 1.8rem;}
-	h5,.h5{font-size: 1.6rem;}
+	h2,.h2{font-size: 2.4rem; margin-bottom: 10px;}
+	h3,.h3{font-size: 1.8rem; margin-bottom: 10px;}
+	h4,.h4{font-size: 1.6rem;}
+	h5,.h5{font-size: 1.4rem;}
+	li{margin-bottom: 5px;}
 	ul + .h2, ul + h2{margin-top: 40px;}
+	
+	p{
+		margin-bottom: 15px;
+		line-height: 1.5;
+	}
 
 	.page-title{
 		margin-bottom: 40px;
@@ -288,5 +294,16 @@ iframe + p{margin-top: 20px;}
 			display: block;
 			.btn{margin: 10px 0;}
 		}
+
+		.h1, h1{
+			margin-right: 0;
+			margin-bottom: 15px;
+		}
+	}
+
+	.btn,
+	button.btn,
+	input[type="submit"].btn{
+		font-size: 1.4rem;
 	}
 }

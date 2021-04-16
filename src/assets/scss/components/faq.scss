@@ -271,10 +271,32 @@
 	.faq-wrap{
 		margin-top: 25px;
 		margin-bottom: 55px;
+
+		.h2, h2{margin-bottom: 20px;}
+	}
+
+	.faq{
+		&__title{font-size: 1.4rem;}
+		&__icon{flex: 0 0 35px;}
+		&__head{min-height: 44px;}
+		&__more{font-size: 1.4rem;}
+
+		&__btn{
+			margin-top: 20px;
+			
+			.btn{
+				display: table;
+				width: 100%;
+				max-width: 340px;
+				margin: 7px auto;
+			}
+		}
 	}
 
 	.faq-page{
 		.faq{
+			&__head{padding-left: 15px;}
+
 			&__content{
 				padding-left: 15px;
 				padding-right: 15px;

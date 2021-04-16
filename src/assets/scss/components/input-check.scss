@@ -36,3 +36,9 @@
 
 	input[type=checkbox]:checked + &__label &__mark .icon{display: inline-block;}
 }
+
+@media (max-width: 767px) {
+	.input-check{
+		&__label{font-size: 1.4rem;}
+	}
+}

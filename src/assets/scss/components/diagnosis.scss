@@ -437,7 +437,10 @@
 			left: -10px;
 		}
 
-		&__res{padding: 20px 20px 25px;}
+		&__res{
+			font-size: 1.4rem;
+			padding: 20px 20px 25px;
+		}
 	}
 
 	.history-bottom{
@@ -453,6 +456,27 @@
 	.person-history{
 		padding-bottom: 10px;
 		&:not(:last-child){margin-bottom: 40px;}
+
+		.gallery{
+			flex-wrap: nowrap;
+
+			&__item{width: 100%;}
+
+			.row{
+				flex-wrap: nowrap;
+				overflow-x: auto;
+				margin-left: -10px;
+				margin-right: -10px;
+			}
+	
+			[class^=col-]{
+				flex: 0 0 auto;
+				max-width: 175px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+	
+		}
 	}
 
 	.diagnosis-wrap{
@@ -467,6 +491,8 @@
 		&__sidebar{
 			.card-person,
 			.event-calendar{margin-bottom: 40px;}
+
+			.event-calendar{padding-bottom: 20px;}
 		}
 	}
 	
@@ -476,12 +502,13 @@
 		&__img{
 			max-width: 150px;
 			float: none;
-			margin: 0 auto 20px;
+			margin: 0 auto 30px;
 		}
 	}
 
 	.card-info{
 		padding: 20px 20px 25px;
+		&__text{font-size: 1.4rem;}
 		&__bottom .btn:not(:last-child){margin-bottom: 30px;}
 	}
 
@@ -491,6 +518,30 @@
 		&__img{
 			max-width: 250px;
 			margin: 0 auto 30px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.diagnosis-wrap{
+		.gallery{
+			flex-wrap: nowrap;
+
+			&__item{width: 100%;}
+
+			.row{
+				flex-wrap: nowrap;
+				overflow-x: auto;
+				margin-left: -10px;
+				margin-right: -10px;
+			}
+	
+			[class^=col-]{
+				flex: 0 0 auto;
+				max-width: 175px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
 		}
 	}
 }
