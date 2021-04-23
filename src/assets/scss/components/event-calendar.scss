@@ -92,8 +92,26 @@
 		padding: 25px 15px 30px;
 		margin: 20px -15px;
 
-		&__title{font-size: 1.8rem;}
-		&__item:not(:last-child){margin-bottom: 20px;}
+		&__list{
+			display: flex;
+			overflow-x: auto;
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+
+		&__item{
+			flex: 0 0 80%;
+			width: 80%;
+			padding: 20px 15px;
+			margin-right: 20px;
+		}
+
+		&__title{
+			font-size: 1.8rem;
+			margin-bottom: 14px;
+		}
+
+		&__item:not(:last-child){margin-bottom: 0;}
 		&__more{margin-top: 20px;}
 	}
 }

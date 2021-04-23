@@ -73,9 +73,10 @@ if($('.js-team-slider').length){
 			{
 				breakpoint: 480,
 				settings: {
-				  slidesToShow: 2,
-				  slidesToScroll: 1,
+				  slidesToShow: 2.5,
+				  slidesToScroll: 2,
 				  arrows: false,
+				  infinite: false,
 				}
 			  },
 		  ]

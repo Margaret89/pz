@@ -315,7 +315,8 @@
 
 		p{line-height: 1.5;}
 		p:last-child{margin-bottom: 0;}
-		ul li::marker{color: $color-text;}
+		// ul li::marker{color: $color-text;}
+		.type-list li::before{background: $color-text;}
 		li{margin-bottom: 6px;}
 		ul, ol{margin-bottom: 30px;}
 	}

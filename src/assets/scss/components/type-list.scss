@@ -13,6 +13,28 @@
 }
 
 .type-list{
+	&,
+	li{
+		list-style: none;
+	}
+
+	li{
+		position: relative;
+		padding-left: 12px;
+	}
+
+	li::before{
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: $color-blue;
+		margin-right: 6px;
+		margin-left: -12px;
+	}
+
 	&_col{
 		column-count: 2;
 		column-gap: 30px;
@@ -53,12 +75,15 @@
 
 @media (max-width: 767px) {
 	.type-list-col{
-		margin-left: -10px;
-		margin-right: -10px;
+		margin-left: -15px;
+		margin-right: -15px;
+		padding-left: 5px;
+		padding-right: 5px;
 		flex-wrap: nowrap;
 		overflow-x: auto;
 
 		ul{
+			flex: 0 0 80%;
 			min-width: 217px;
 			border: 1px solid #dbe8f1;
 			padding: 20px 16px;
@@ -76,6 +101,19 @@
 			position: absolute;
 			top: 0;
 			left: 100%;
+		}
+	}
+
+	.type-list{
+		li{
+			padding-left: 10px;
+		}
+	
+		li::before{
+			width: 5px;
+			height: 5px;
+			margin-right: 5px;
+			margin-left: -10px;
 		}
 	}
 }

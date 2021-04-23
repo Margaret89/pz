@@ -168,13 +168,14 @@
 		.row{
 			flex-wrap: nowrap;
 			overflow-x: auto;
-			margin-left: -10px;
-			margin-right: -10px;
+			margin-left: -15px;
+			margin-right: -15px;
+			padding: 0 5px;
 		}
 
 		[class^=col-]{
 			flex: 0 0 auto;
-			max-width: 200px;
+			max-width: 70%;
 			padding-left: 10px;
 			padding-right: 10px;
 		}
